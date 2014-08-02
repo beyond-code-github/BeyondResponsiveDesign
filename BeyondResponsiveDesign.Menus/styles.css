@@ -143,6 +143,9 @@ article > section > section.content {
   right: 0;
   bottom: 0;
 }
+article > section > section.content .presentation > section {
+  padding: .75rem .75rem 0 .75rem;
+}
 article nav.toolbar {
   position: relative;
   min-height: 3em;
