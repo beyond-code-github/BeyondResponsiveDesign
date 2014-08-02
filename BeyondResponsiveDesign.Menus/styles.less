@@ -1,0 +1,55 @@
+﻿@base-background: #ffffff;
+@sidebar-width: 16.5em;
+@sidebar-color: #f2f2f2;
+
+body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: left;
+    overflow: hidden;
+    line-height: 1.5;
+    margin: 0;
+    
+    > section.wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    overflow: hidden;
+    
+    & > section {
+        position: absolute;
+        top: 0;
+        left: @sidebar-width;
+        right: 0;
+        bottom: 0;
+        background: @base-background;
+        z-index: 2;
+    }
+}
+
+article > aside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: @sidebar-width;
+    max-width: @sidebar-width;
+    padding: 0;
+    z-index: 1;
+    background-color: @sidebar-color;
+}
