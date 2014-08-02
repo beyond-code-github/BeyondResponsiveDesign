@@ -1,60 +1,73 @@
 ﻿@sidebar-width: 16.5em;
 @header-height: 3em;
 
-body {
-    position: fixed;
-    top: 0;
-    left: 0;
+.originFixed (@top: 0, @left: 0) {
+    position: absolute;
+    top: @top;
+    left: @left;
     right: 0;
     bottom: 0;
+}
+
+body {
+    .originFixed;
     text-align: left;
     overflow: hidden;
     line-height: 1.5;
     margin: 0;
-    
+
     > section.wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+       .originFixed;
+    }
+}
+
+.scrollcontainer {
+    overflow: hidden;
+
+    > .scrollcontainer {
+        height: 100%;
+
+        > .wrapper {
+            xmin-height: 100%;
+        }
+    }
+}
+
+.vscroll {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.vscroll-scroll {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.hscroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    & > .wrapper {
+        display: inline-block;
+        min-width: 100%;
     }
 }
 
 article {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    .originFixed;
     z-index: 2;
     overflow: hidden;
-    
-    & > section {
-        position: absolute;
-        top: 0;
-        left: @sidebar-width;
-        right: 0;
-        bottom: 0;
-        z-index: 2;
-    }
 }
 
 article > aside {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
+   .originFixed;
     width: @sidebar-width;
     max-width: @sidebar-width;
     padding: 0;
     z-index: 1;
 
-     & > nav {
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
+    & > nav {
+        .originFixed;
         width: @sidebar-width;
         max-width: @sidebar-width;
         padding: 0;
@@ -89,6 +102,57 @@ article > aside {
                     }
                 }
             }
+        }
+    }
+}
+
+article > section {
+    .originFixed(@left: @sidebar-width);
+    z-index: 2;
+
+    > header {
+        .originFixed;
+        z-index: 4;
+        height: @header-height;
+
+        > div {
+            float: left;
+            width: 100%;
+
+            > h1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            > nav {
+                position: relative;
+                width: 100%;
+            }
+        }
+    }
+
+    > section.content {
+        .originFixed(@top: @header-height);
+    }
+}
+
+article nav.toolbar {
+    position: relative;
+    min-height: 3em;
+
+    > ul {
+        position: relative;
+        margin: 0;
+        min-height: 3em;
+
+        > li {
+            line-height: 2.9375em;
+            text-indent: 0;
+            margin: 0;
+            display: inline-block;
         }
     }
 }
