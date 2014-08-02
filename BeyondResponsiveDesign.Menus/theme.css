@@ -237,6 +237,11 @@ article > section > section.content .presentation > header > h2 {
   line-height: 2.9375rem;
   border-bottom: 1px solid #b2b2b2;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 article > section > section.content .presentation > header > h2 > i.fa {
   position: relative;
@@ -250,11 +255,6 @@ article > section > section.content .presentation > header > h2 > span {
   font-weight: 400;
   font-size: 1.125rem;
   text-indent: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
 }
 article nav.toolbar > ul {
   list-style-type: none;
