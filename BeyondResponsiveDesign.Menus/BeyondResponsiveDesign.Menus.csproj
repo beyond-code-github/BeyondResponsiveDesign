@@ -72,15 +72,126 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\opensans_bolditalic_macroman\OpenSans-BoldItalic-demo.html" />
+    <Content Include="fonts\opensans_bolditalic_macroman\OpenSans-BoldItalic-webfont.svg" />
+    <Content Include="fonts\opensans_bolditalic_macroman\specimen_files\easytabs.js" />
+    <Content Include="fonts\opensans_bolditalic_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="fonts\opensans_bolditalic_macroman\specimen_files\OpenSans-BoldItalic-cleartype.png" />
+    <Content Include="fonts\opensans_bolditalic_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="fonts\opensans_bolditalic_macroman\stylesheet.css" />
+    <Content Include="fonts\opensans_bold_macroman\OpenSans-Bold-demo.html" />
+    <Content Include="fonts\opensans_bold_macroman\OpenSans-Bold-webfont.svg" />
+    <Content Include="fonts\opensans_bold_macroman\specimen_files\easytabs.js" />
+    <Content Include="fonts\opensans_bold_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="fonts\opensans_bold_macroman\specimen_files\OpenSans-Bold-cleartype.png" />
+    <Content Include="fonts\opensans_bold_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="fonts\opensans_bold_macroman\stylesheet.css" />
+    <Content Include="fonts\opensans_extrabolditalic_macroman\OpenSans-ExtraBoldItalic-demo.html" />
+    <Content Include="fonts\opensans_extrabolditalic_macroman\OpenSans-ExtraBoldItalic-webfont.svg" />
+    <Content Include="fonts\opensans_extrabolditalic_macroman\specimen_files\easytabs.js" />
+    <Content Include="fonts\opensans_extrabolditalic_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="fonts\opensans_extrabolditalic_macroman\specimen_files\OpenSans-ExtraBoldItalic-cleartype.png" />
+    <Content Include="fonts\opensans_extrabolditalic_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="fonts\opensans_extrabolditalic_macroman\stylesheet.css" />
+    <Content Include="fonts\opensans_extrabold_macroman\OpenSans-ExtraBold-demo.html" />
+    <Content Include="fonts\opensans_extrabold_macroman\OpenSans-ExtraBold-webfont.svg" />
+    <Content Include="fonts\opensans_extrabold_macroman\specimen_files\easytabs.js" />
+    <Content Include="fonts\opensans_extrabold_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="fonts\opensans_extrabold_macroman\specimen_files\OpenSans-ExtraBold-cleartype.png" />
+    <Content Include="fonts\opensans_extrabold_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="fonts\opensans_extrabold_macroman\stylesheet.css" />
+    <Content Include="fonts\opensans_italic_macroman\OpenSans-Italic-demo.html" />
+    <Content Include="fonts\opensans_italic_macroman\OpenSans-Italic-webfont.svg" />
+    <Content Include="fonts\opensans_italic_macroman\specimen_files\easytabs.js" />
+    <Content Include="fonts\opensans_italic_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="fonts\opensans_italic_macroman\specimen_files\OpenSans-Italic-cleartype.png" />
+    <Content Include="fonts\opensans_italic_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="fonts\opensans_italic_macroman\stylesheet.css" />
+    <Content Include="fonts\opensans_lightitalic_macroman\OpenSans-LightItalic-demo.html" />
+    <Content Include="fonts\opensans_lightitalic_macroman\OpenSans-LightItalic-webfont.svg" />
+    <Content Include="fonts\opensans_lightitalic_macroman\specimen_files\easytabs.js" />
+    <Content Include="fonts\opensans_lightitalic_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="fonts\opensans_lightitalic_macroman\specimen_files\OpenSans-LightItalic-cleartype.png" />
+    <Content Include="fonts\opensans_lightitalic_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="fonts\opensans_lightitalic_macroman\stylesheet.css" />
+    <Content Include="fonts\opensans_light_macroman\OpenSans-Light-demo.html" />
+    <Content Include="fonts\opensans_light_macroman\OpenSans-Light-webfont.svg" />
+    <Content Include="fonts\opensans_light_macroman\specimen_files\easytabs.js" />
+    <Content Include="fonts\opensans_light_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="fonts\opensans_light_macroman\specimen_files\OpenSans-Light-cleartype.png" />
+    <Content Include="fonts\opensans_light_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="fonts\opensans_light_macroman\stylesheet.css" />
+    <Content Include="fonts\opensans_regular_macroman\OpenSans-Regular-demo.html" />
+    <Content Include="fonts\opensans_regular_macroman\OpenSans-Regular-webfont.svg" />
+    <Content Include="fonts\opensans_regular_macroman\specimen_files\easytabs.js" />
+    <Content Include="fonts\opensans_regular_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="fonts\opensans_regular_macroman\specimen_files\OpenSans-Regular-cleartype.png" />
+    <Content Include="fonts\opensans_regular_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="fonts\opensans_regular_macroman\stylesheet.css" />
+    <Content Include="fonts\opensans_semibolditalic_macroman\OpenSans-SemiboldItalic-demo.html" />
+    <Content Include="fonts\opensans_semibolditalic_macroman\OpenSans-SemiboldItalic-webfont.svg" />
+    <Content Include="fonts\opensans_semibolditalic_macroman\specimen_files\easytabs.js" />
+    <Content Include="fonts\opensans_semibolditalic_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="fonts\opensans_semibolditalic_macroman\specimen_files\OpenSans-SemiboldItalic-cleartype.png" />
+    <Content Include="fonts\opensans_semibolditalic_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="fonts\opensans_semibolditalic_macroman\stylesheet.css" />
+    <Content Include="fonts\opensans_semibold_macroman\OpenSans-Semibold-demo.html" />
+    <Content Include="fonts\opensans_semibold_macroman\OpenSans-Semibold-webfont.svg" />
+    <Content Include="fonts\opensans_semibold_macroman\specimen_files\easytabs.js" />
+    <Content Include="fonts\opensans_semibold_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="fonts\opensans_semibold_macroman\specimen_files\OpenSans-Semibold-cleartype.png" />
+    <Content Include="fonts\opensans_semibold_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="fonts\opensans_semibold_macroman\stylesheet.css" />
+    <Content Include="logo-small.png" />
     <Content Include="packages.config" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="theme.css">
+      <DependentUpon>theme.less</DependentUpon>
+    </Content>
+    <Content Include="theme.min.css">
+      <DependentUpon>theme.css</DependentUpon>
+    </Content>
     <Content Include="styles.less" />
     <Content Include="styles.css.map">
       <DependentUpon>styles.css</DependentUpon>
     </Content>
+    <Content Include="theme.less" />
+    <Content Include="theme.css.map">
+      <DependentUpon>theme.css</DependentUpon>
+    </Content>
+    <Content Include="fonts\opensans_bolditalic_macroman\OpenSans-BoldItalic-webfont.eot" />
+    <Content Include="fonts\opensans_bolditalic_macroman\OpenSans-BoldItalic-webfont.ttf" />
+    <Content Include="fonts\opensans_bolditalic_macroman\OpenSans-BoldItalic-webfont.woff" />
+    <Content Include="fonts\opensans_bold_macroman\OpenSans-Bold-webfont.eot" />
+    <Content Include="fonts\opensans_bold_macroman\OpenSans-Bold-webfont.ttf" />
+    <Content Include="fonts\opensans_bold_macroman\OpenSans-Bold-webfont.woff" />
+    <Content Include="fonts\opensans_extrabolditalic_macroman\OpenSans-ExtraBoldItalic-webfont.eot" />
+    <Content Include="fonts\opensans_extrabolditalic_macroman\OpenSans-ExtraBoldItalic-webfont.ttf" />
+    <Content Include="fonts\opensans_extrabolditalic_macroman\OpenSans-ExtraBoldItalic-webfont.woff" />
+    <Content Include="fonts\opensans_extrabold_macroman\OpenSans-ExtraBold-webfont.eot" />
+    <Content Include="fonts\opensans_extrabold_macroman\OpenSans-ExtraBold-webfont.ttf" />
+    <Content Include="fonts\opensans_extrabold_macroman\OpenSans-ExtraBold-webfont.woff" />
+    <Content Include="fonts\opensans_italic_macroman\OpenSans-Italic-webfont.eot" />
+    <Content Include="fonts\opensans_italic_macroman\OpenSans-Italic-webfont.ttf" />
+    <Content Include="fonts\opensans_italic_macroman\OpenSans-Italic-webfont.woff" />
+    <Content Include="fonts\opensans_lightitalic_macroman\OpenSans-LightItalic-webfont.eot" />
+    <Content Include="fonts\opensans_lightitalic_macroman\OpenSans-LightItalic-webfont.ttf" />
+    <Content Include="fonts\opensans_lightitalic_macroman\OpenSans-LightItalic-webfont.woff" />
+    <Content Include="fonts\opensans_light_macroman\OpenSans-Light-webfont.eot" />
+    <Content Include="fonts\opensans_light_macroman\OpenSans-Light-webfont.ttf" />
+    <Content Include="fonts\opensans_light_macroman\OpenSans-Light-webfont.woff" />
+    <Content Include="fonts\opensans_regular_macroman\OpenSans-Regular-webfont.eot" />
+    <Content Include="fonts\opensans_regular_macroman\OpenSans-Regular-webfont.ttf" />
+    <Content Include="fonts\opensans_regular_macroman\OpenSans-Regular-webfont.woff" />
+    <Content Include="fonts\opensans_semibolditalic_macroman\OpenSans-SemiboldItalic-webfont.eot" />
+    <Content Include="fonts\opensans_semibolditalic_macroman\OpenSans-SemiboldItalic-webfont.ttf" />
+    <Content Include="fonts\opensans_semibolditalic_macroman\OpenSans-SemiboldItalic-webfont.woff" />
+    <Content Include="fonts\opensans_semibold_macroman\OpenSans-Semibold-webfont.eot" />
+    <Content Include="fonts\opensans_semibold_macroman\OpenSans-Semibold-webfont.ttf" />
+    <Content Include="fonts\opensans_semibold_macroman\OpenSans-Semibold-webfont.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

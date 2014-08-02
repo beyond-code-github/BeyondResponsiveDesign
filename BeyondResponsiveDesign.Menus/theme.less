@@ -1,0 +1,200 @@
+﻿@base-background: #ffffff;
+
+@heavy: 600;
+@bold: 400;
+@regular: 300;
+
+@base-color: #607d8b;
+@base-color-light: lighten(@base-color, 20%);
+@base-invert-color: #ffffff;
+
+@body-font: "OpenSans","Helvetica Neue","Helvetica","Arial","sans-serif";
+@body-text-color: #666666;
+@body-text-light-color: lighten(@body-text-color, 20%);
+@body-highlight-color: lighten(@body-text-color, 20%);
+
+@sidebar-color: #f2f2f2;
+@sidebar-text-color: @body-text-color;
+@sidebar-text-active-color: @base-invert-color;
+@sidebar-child-active-color: @sidebar-text-active-color;
+@sidebar-active-color: @base-color;
+@sidebar-child-accent-background-color: lighten(@base-color, 20%);
+
+@font-face{ 
+	font-family: 'OpenSans';
+	src: url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot');
+	src: url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?iefix') format('eot'),
+	     url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff') format('woff'),
+	     url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.ttf') format('truetype'),
+	     url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.svg#webfont') format('svg');
+}
+
+body {
+    font-family: @body-font;
+}
+
+a {
+    color: @body-text-color;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+a:hover {
+    color: @body-highlight-color;
+}
+
+article {
+    & > section {
+        background: @base-background;
+    }
+}
+
+article > aside {
+    background-color: @sidebar-color;
+
+    & > nav > div > div > ul {
+        list-style-type: none;
+        text-indent: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        > li {
+            color: @sidebar-text-color;
+            text-indent: 0;
+            padding: 0;
+            margin: 0;
+            vertical-align: middle;
+            position: relative;
+
+            img {
+                vertical-align: middle;
+            }
+
+            > a {
+                position: relative;
+                z-index: 2;
+
+                > h2 {
+                    font-size: 1em;
+                    font-weight: @bold;
+                    vertical-align: middle;
+                    color: @sidebar-text-color;
+                    line-height: 3em/1em;
+                    margin: 0;
+                    padding: 0 0.75em 0 0.75em;
+                    text-transform: capitalize;
+                    -ms-text-overflow: ellipsis;
+                    -o-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    position: relative;
+
+                    > span {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        -ms-text-overflow: ellipsis;
+                        -o-text-overflow: ellipsis;
+                        text-overflow: ellipsis;
+                    }
+
+                    > i.fa {
+                        float: left;
+                        outline: none;
+                        line-height: 3rem;
+                        font-size: 1.1875rem;
+                        width: 1.5rem;
+                    }
+                }
+            }
+
+            > div {
+                overflow: hidden;
+                /*height: 0;*/
+                height: auto;
+
+                > ul {
+                    list-style-type: none;
+                    text-indent: 0;
+                    margin: 0;
+                    padding: 0;
+
+                    > li {
+                        font-size: 0.875em;
+                        line-height: 2rem;
+                        text-indent: 0;
+                        margin: 0;
+                        padding: 0;
+                        vertical-align: middle;
+                        color: @sidebar-text-color;
+                        position: relative;
+
+                        > a {
+                            display: block;
+                            margin: 0;
+                            padding: 0 0.75rem 0 1.5rem;
+                            color: @sidebar-text-color;
+                            outline: none;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            -ms-text-overflow: ellipsis;
+                            -o-text-overflow: ellipsis;
+                            text-overflow: ellipsis;
+
+                            > i.fa {
+                                float: left;
+                                outline: none;
+                                line-height: 2rem;
+                                width: 1.25rem;
+                                max-width: 1.25rem;
+                            }
+                        }
+
+                        &.active {
+                            > a {
+                                color: @sidebar-child-active-color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                > div {
+                    overflow: hidden;
+                    height: auto;
+
+                    > ul {
+                        > li {
+                            &.active {
+                                background-color: @sidebar-child-accent-background-color;
+                                color: @sidebar-child-active-color;
+
+                                > a {
+                                    color: @sidebar-child-active-color;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                > a {
+                    color: @sidebar-text-active-color;
+                    text-decoration: none;
+                    background-color: @sidebar-active-color;
+
+                    > h2 {
+                        color: @sidebar-text-active-color;
+                        text-decoration: none;
+                        background-color: @sidebar-active-color;
+
+                        > i[data-icon="add"] {
+                            background-image: url('../images/plus_white.svg');
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
