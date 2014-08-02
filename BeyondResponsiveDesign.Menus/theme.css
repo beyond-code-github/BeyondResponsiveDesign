@@ -6,6 +6,9 @@
 body {
   font-family: "OpenSans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
   color: #666666;
+  text-align: left;
+  line-height: 1.5;
+  margin: 0;
 }
 a {
   color: #666666;
@@ -33,6 +36,11 @@ a:hover {
 }
 article > aside {
   background-color: #f2f2f2;
+  padding: 0;
+}
+article > aside > nav {
+  margin: 0;
+  padding: 0;
 }
 article > aside > nav > div > div > ul {
   list-style-type: none;
@@ -168,6 +176,7 @@ article > section > header > div > h1 {
   font-weight: 400;
   color: #ffffff;
   text-align: center;
+  margin: 0 auto;
 }
 article > section > header > div > nav > ul {
   float: left;
@@ -218,7 +227,10 @@ article > section > header > div > nav > ul > li.active {
   cursor: pointer;
   background: #ffffff;
 }
-article > section > section.content .presentation > header > h1 {
+article > section > section.content .presentation > section {
+  padding: .75rem .75rem 0 .75rem;
+}
+article > section > section.content .presentation > header > h2 {
   background: #fff;
   display: block;
   width: 100%;
@@ -226,15 +238,15 @@ article > section > section.content .presentation > header > h1 {
   border-bottom: 1px solid #b2b2b2;
   margin: 0;
 }
-article > section > section.content .presentation > header > h1 > i.fa {
-  position: absolute;
-  top: 4.0625rem;
+article > section > section.content .presentation > header > h2 > i.fa {
+  position: relative;
+  top: 0.0625rem;
   left: .5625rem;
   font-weight: 300;
   font-size: 1.5rem;
 }
-article > section > section.content .presentation > header > h1 > span {
-  padding: 0 3.75rem 0 2.75rem;
+article > section > section.content .presentation > header > h2 > span {
+  padding: 0 3.75rem 0 1rem;
   font-weight: 400;
   font-size: 1.125rem;
   text-indent: 0;
@@ -248,6 +260,7 @@ article nav.toolbar > ul {
   list-style-type: none;
   padding: 0 1em 0 1em;
   background: #f2f2f2;
+  margin: 0;
 }
 article nav.toolbar > ul::after {
   position: absolute;
@@ -260,6 +273,9 @@ article nav.toolbar > ul::after {
 }
 article nav.toolbar > ul > li {
   padding: 0 1em 0 0;
+  line-height: 2.9375em;
+  text-indent: 0;
+  margin: 0;
 }
 article nav.toolbar > ul > li > a {
   font-weight: 400;

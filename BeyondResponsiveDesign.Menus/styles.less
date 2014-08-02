@@ -11,10 +11,7 @@
 
 body {
     .originFixed;
-    text-align: left;
     overflow: hidden;
-    line-height: 1.5;
-    margin: 0;
 
     > section.wrapper {
         .originFixed;
@@ -63,15 +60,12 @@ article > aside {
     .originFixed;
     width: @sidebar-width;
     max-width: @sidebar-width;
-    padding: 0;
     z-index: 1;
 
     & > nav {
         .originFixed;
         width: @sidebar-width;
         max-width: @sidebar-width;
-        padding: 0;
-        margin: 0;
 
         > div {
             > div {
@@ -87,8 +81,6 @@ article > aside {
                             display: block;
                             width: @sidebar-width;
                             height: @header-height;
-                            margin: 0;
-                            padding: 0;
 
                             > img {
                                 display: block;
@@ -124,7 +116,6 @@ article > section {
                 top: 0;
                 left: 0;
                 width: 100%;
-                margin: 0 auto;
             }
 
             > nav {
@@ -149,10 +140,6 @@ article > section {
 
     > section.content {
         .originFixed(@top: @header-height);
-
-        .presentation > section {
-            padding: .75rem .75rem 0 .75rem;
-        }
     }
 }
 
@@ -162,13 +149,9 @@ article nav.toolbar {
 
     > ul {
         position: relative;
-        margin: 0;
         min-height: 3em;
 
         > li {
-            line-height: 2.9375em;
-            text-indent: 0;
-            margin: 0;
             display: inline-block;
         }
     }
