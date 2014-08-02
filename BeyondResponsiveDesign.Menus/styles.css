@@ -126,6 +126,16 @@ article > section > header > div > nav {
   position: relative;
   width: 100%;
 }
+article > section > header > div > nav > ul {
+  height: 3em;
+}
+article > section > header > div > nav > ul > li {
+  line-height: 3em;
+  height: 3em;
+}
+article > section > header > div > nav > ul > li > a {
+  line-height: 3em;
+}
 article > section > section.content {
   position: absolute;
   top: 3em;

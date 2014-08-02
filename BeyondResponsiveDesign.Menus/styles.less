@@ -17,7 +17,7 @@ body {
     margin: 0;
 
     > section.wrapper {
-       .originFixed;
+        .originFixed;
     }
 }
 
@@ -60,7 +60,7 @@ article {
 }
 
 article > aside {
-   .originFixed;
+    .originFixed;
     width: @sidebar-width;
     max-width: @sidebar-width;
     padding: 0;
@@ -130,12 +130,29 @@ article > section {
             > nav {
                 position: relative;
                 width: 100%;
+
+                > ul {
+                    height: @header-height;
+
+                    > li {
+                        line-height: @header-height;
+                        height: @header-height;
+
+                        > a {
+                            line-height: @header-height;
+                        }
+                    }
+                }
             }
         }
     }
 
     > section.content {
         .originFixed(@top: @header-height);
+
+        .presentation > section {
+            padding: .75rem .75rem 0 .75rem;
+        }
     }
 }
 
