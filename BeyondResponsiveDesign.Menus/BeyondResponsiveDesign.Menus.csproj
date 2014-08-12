@@ -192,6 +192,13 @@
     <Content Include="fonts\opensans_semibold_macroman\OpenSans-Semibold-webfont.eot" />
     <Content Include="fonts\opensans_semibold_macroman\OpenSans-Semibold-webfont.ttf" />
     <Content Include="fonts\opensans_semibold_macroman\OpenSans-Semibold-webfont.woff" />
+    <Content Include="transforms.css">
+      <DependentUpon>transforms.less</DependentUpon>
+    </Content>
+    <Content Include="transforms.less" />
+    <Content Include="transforms.css.map">
+      <DependentUpon>transforms.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -209,6 +216,9 @@
     </Content>
     <Content Include="styles.min.css">
       <DependentUpon>styles.css</DependentUpon>
+    </Content>
+    <Content Include="transforms.min.css">
+      <DependentUpon>transforms.css</DependentUpon>
     </Content>
     <Content Include="Web.config" />
   </ItemGroup>
