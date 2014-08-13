@@ -13,7 +13,7 @@
         .animate;
     }
 
-    body.sidebarCollapse {
+    /*body.sidebarCollapse {
         article {
             & > section {
                 -webkit-transform: translateX(-@sidebar-width);
@@ -24,15 +24,19 @@
                 margin-right: -@sidebar-width;
             }
         }
-    }
+    }*/
 }
 
 @media only screen and (max-width: 800px) {
 
-    body:not(.guest) > section.wrapper {
+    body > section.wrapper {
         left: -@sidebar-width;
         margin-left: -1px;
         .animate;
+
+        .menuToggle {
+            display: block;
+        }
     }
 
     body.sidebar > section.wrapper {

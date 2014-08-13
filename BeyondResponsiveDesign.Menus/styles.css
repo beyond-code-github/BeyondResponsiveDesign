@@ -124,6 +124,9 @@ article > section > header > div > nav > ul > li {
   line-height: 3em;
   height: 3em;
 }
+article > section > header > div > nav > ul > li.menuToggle {
+  display: none;
+}
 article > section > header > div > nav > ul > li > a {
   line-height: 3em;
 }

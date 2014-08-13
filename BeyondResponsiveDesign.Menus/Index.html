@@ -11,6 +11,14 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="Scripts/interactions.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            interactions.init();
+        });
+    </script>
 </head>
 <body>
     <section class="wrapper">
@@ -86,7 +94,7 @@
                     <div>
                         <nav>
                             <ul>
-                                <li>
+                                <li class="menuToggle">
                                     <a href="javascript:void(0)">
                                         <i class="fa-bars fa fa-lg"></i>
                                     </a>
