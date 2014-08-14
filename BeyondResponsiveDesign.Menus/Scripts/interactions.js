@@ -1,6 +1,7 @@
 ﻿(function (interactions) {
 
     interactions.init = function () {
+        $.detectSwipe.preventDefault = false;
         $('body').on('touchmove', function (e) {
             var searchTerms = '.vscroll, .vscroll-scroll, .hscroll',
                 $target = $(e.target),
@@ -14,7 +15,7 @@
             }
         });
 
-        $(document.body).on('click', 'nav>ul>li.menuToggle', function(e) {
+        $(document.body).on('click', 'nav>ul>li.menuToggle', function (e) {
             $(this).trigger('blur');
             e.preventDefault();
             e.stopPropagation();
@@ -22,15 +23,26 @@
             interactions.ToggleSideBar(e);
         });
 
+        interactions.activateTabOne = function () {
+            $("#contentOne").removeClass("offLeft");
+            $("#contentOne").addClass("active");
+            $("#contentTwo").addClass("offRight");
+            $("#contentTwo").removeClass("active");
+        }
+
+        interactions.activateTabTwo = function () {
+            $("#contentOne").addClass("offLeft");
+            $("#contentOne").removeClass("active");
+            $("#contentTwo").removeClass("offRight");
+            $("#contentTwo").addClass("active");
+        }
+
         $(document.body).on('click', 'article>section>nav>ul>li.toolbar1', function (e) {
             $(this).trigger('blur');
             e.preventDefault();
             e.stopPropagation();
 
-            $("#contentOne").removeClass("offLeft");
-            $("#contentOne").addClass("active");
-            //$("#contentTwo").removeClass("active");
-            $("#contentTwo").addClass("offRight");
+            interactions.activateTabOne();
         });
 
         $(document.body).on('click', 'article>section>nav>ul>li.toolbar2', function (e) {
@@ -38,10 +50,23 @@
             e.preventDefault();
             e.stopPropagation();
 
-            $("#contentOne").addClass("offLeft");
-            //$("#contentOne").removeClass("active");
-            $("#contentTwo").removeClass("offRight");
-            $("#contentTwo").addClass("active");
+            interactions.activateTabTwo();
+        });
+
+        $("article").on('swiperight', function (e) {
+            if ($("#contentOne").hasClass("active")) {
+                interactions.ShowSideBar(e);
+            } else {
+                interactions.activateTabOne();
+            }
+        });
+
+        $("article").on('swipeleft', function (e) {
+            if ($('body').hasClass("sidebar")) {
+                interactions.HideSideBar(e);
+            } else {
+                interactions.activateTabTwo();
+            }
         });
     };
 
@@ -64,7 +89,7 @@
         return false;
     };
 
-    interactions.HidePopups = function(e) {
+    interactions.HidePopups = function (e) {
 
     };
 
