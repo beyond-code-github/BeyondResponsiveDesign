@@ -12,10 +12,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
+    <script src="Scripts/fastclick.js"></script>
     <script src="Scripts/jquery-2.1.1.js"></script>
     <script src="Scripts/interactions.js"></script>
     <script type="text/javascript">
         $(function () {
+            FastClick.attach(document.body);
             interactions.init();
         });
     </script>
