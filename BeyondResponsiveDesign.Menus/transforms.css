@@ -25,7 +25,7 @@ article > section > section.content.offLeft {
   transform: translate3d(-100%, 0, 0);
 }
 @media only screen and (min-width: 801px) {
-  body:not(.guest) > section.wrapper {
+  body:not(.guest) > section.wrapper > article {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -33,7 +33,15 @@ article > section > section.content.offLeft {
   }
 }
 @media only screen and (max-width: 800px) {
-  body > section.wrapper {
+  body > section.wrapper > header > nav > ul > li.menuToggle {
+    display: block;
+    left: -1.2em;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  body > section.wrapper > article {
     left: -16.5em;
     margin-left: -1px;
     -webkit-transition: all 0.3s ease-in-out;
@@ -41,17 +49,17 @@ article > section > section.content.offLeft {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  body > section.wrapper .menuToggle {
-    display: block;
+  body.sidebar > section.wrapper > header > nav > ul > li.menuToggle {
+    left: -1.5em;
   }
-  body.sidebar > section.wrapper {
+  body.sidebar > section.wrapper > article {
     -webkit-transform: translateX(16.5em);
     -ms-transform: translateX(16.5em);
     -moz-transform: translateX(16.5em);
     -o-transform: translateX(16.5em);
     transform: translateX(16.5em);
   }
-  body:not(.sidebar) > section.wrapper {
+  body:not(.sidebar) > section.wrapper > article {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     -moz-transform: translateX(0);

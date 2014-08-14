@@ -10,6 +10,13 @@
     bottom: 0;
 }
 
+html
+{
+  position:fixed;
+  width:100%;
+  height:100%;
+}
+
 body {
     .originFixed;
     overflow: hidden;
@@ -57,8 +64,67 @@ article {
     overflow: hidden;
 }
 
-article > aside {
+section.wrapper > header {
     .originFixed;
+    z-index: 4;
+    height: @header-height;
+    float: left;
+    width: 100%;
+
+    > h1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    > nav {
+        position: relative;
+        width: 100%;
+
+        > ul {
+            height: @header-height;
+
+            > li {
+                line-height: @header-height;
+                height: @header-height;
+
+                &.menuToggle {
+                    display: none;
+                    position: absolute;
+                    z-index: 2;
+                    min-width: 5em;
+                }
+
+                > a {
+                    line-height: @header-height;
+                }
+            }
+
+            > li.logo > a {
+                position: relative;
+                top: 0;
+                left: 0;
+                display: block;
+                width: @sidebar-width;
+                height: @header-height;
+                z-index: 1;
+
+                > img {
+                    display: block;
+                    border: 0 none;
+                    height: 2rem;
+                    max-height: 2rem;
+                    max-width: 15rem;
+                    padding: 0.5rem 0 0 0.3rem;
+                }
+            }
+        }
+    }
+}
+
+article > aside {
+    .originFixed(@top: @header-height);
     width: @sidebar-width;
     max-width: @sidebar-width;
     z-index: 2;
@@ -67,84 +133,15 @@ article > aside {
         .originFixed;
         width: @sidebar-width;
         max-width: @sidebar-width;
-
-        > div {
-            > div {
-                > header {
-                    width: @sidebar-width;
-                    height: @header-height;
-
-                    > div {
-                        > a.logo {
-                            position: relative;
-                            top: 0;
-                            left: 0;
-                            display: block;
-                            width: @sidebar-width;
-                            height: @header-height;
-
-                            > img {
-                                display: block;
-                                border: 0 none;
-                                height: 2rem;
-                                max-height: 2rem;
-                                max-width: 15rem;
-                                padding: 0.5rem 0 0 0.75rem;
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 }
 
 article > section {
-    .originFixed(@left: @sidebar-width);
+    .originFixed(@top: @header-height, @left: @sidebar-width);
     z-index: 1;
 
-    > header {
-        .originFixed;
-        z-index: 4;
-        height: @header-height;
-
-        > div {
-            float: left;
-            width: 100%;
-
-            > h1 {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-            }
-
-            > nav {
-                position: relative;
-                width: 100%;
-
-                > ul {
-                    height: @header-height;
-
-                    > li {
-                        line-height: @header-height;
-                        height: @header-height;
-
-                        &.menuToggle {
-                            display: none;
-                        }
-
-                        > a {
-                            line-height: @header-height;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     > section.content {
-        .originFixed(@top: @header-height + @toolbar-height);
+        .originFixed(@top: @toolbar-height);
         display: block;
         visibility: visible;
         opacity: 1;
@@ -153,12 +150,11 @@ article > section {
 
 article nav.toolbar {
     position: relative;
-    top: 3em;
-    min-height: 3em;
+    min-height: @toolbar-height;
 
     > ul {
         position: relative;
-        min-height: 3em;
+        min-height: @toolbar-height;
 
         > li {
             display: inline-block;

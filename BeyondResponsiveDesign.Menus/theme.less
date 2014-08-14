@@ -14,7 +14,7 @@
 @body-text-light-color: lighten(@body-text-color, 20%);
 @body-highlight-color: lighten(@body-text-color, 20%);
 
-@header-color: @base-color;
+@header-color: #005800;
 @header-height: 3em;
 @header-color-light: #ffffff;
 @header-text-color: #ffffff;
@@ -28,8 +28,8 @@
 @sidebar-text-color: @body-text-color;
 @sidebar-text-active-color: @base-invert-color;
 @sidebar-child-active-color: @sidebar-text-active-color;
-@sidebar-active-color: @base-color;
-@sidebar-child-accent-background-color: lighten(@base-color, 20%);
+@sidebar-active-color: #227122;
+@sidebar-child-accent-background-color: #31A431;
 
 @font-face {
     font-family: 'OpenSans';
@@ -69,6 +69,80 @@ h1, h2, h3 {
 
 a:hover {
     color: @body-highlight-color;
+}
+
+section.wrapper > header {
+    background: @header-color;
+    box-shadow: rgba(0,0,0,0.4) 0 1px 0.25rem;
+    clip: rect(auto, auto, @header-height + 0.375rem, auto);
+
+    > h1 {
+        font-size: 1.5em;
+        line-height: 2em;
+        font-weight: @bold;
+        color: @header-text-color;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    > nav {
+        > ul {
+            float: left;
+            color: @header-text-color;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            white-space: nowrap;
+
+            > li {
+                position: relative;
+                float: left;
+                margin: 0;
+                white-space: nowrap;
+                text-align: left;
+                color: @header-text-color;
+                outline: none;
+                padding: 0;
+                font-weight: @bold;
+                font-size: 1em;
+
+                > a {
+                    display: block;
+                    float: left;
+                    padding: 0 0.75em 0 0.75em;
+                    color: @header-text-color;
+                    outline: none;
+                    -webkit-tap-highlight-color: rgba(0,0,0,0);
+                    margin: 0;
+
+                    &:visited {
+                        color: @header-text-color;
+                    }
+
+                    > i {
+                        margin: 0;
+                        padding: 0;
+
+                        + span {
+                            padding-left: 0.5em;
+                        }
+                    }
+
+                    &:hover {
+                        color: @header-text-color;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+                }
+
+                &.active {
+                    color: @header-active-text-color;
+                    cursor: pointer;
+                    background: @header-color-light;
+                }
+            }
+        }
+    }
 }
 
 article > aside {
@@ -230,82 +304,6 @@ article > aside {
 
 article > section {
     background: @base-background;
-
-    > header {
-        background: @header-color;
-        box-shadow: rgba(0,0,0,0.4) 0 1px 0.25rem;
-        clip: rect(auto, auto, @header-height + 0.375rem, auto);
-
-        > div {
-            > h1 {
-                font-size: 1.5em;
-                line-height: 2em;
-                font-weight: @bold;
-                color: @header-text-color;
-                text-align: center;
-                margin: 0 auto;
-            }
-
-            > nav {
-                > ul {
-                    float: left;
-                    color: @header-text-color;
-                    margin: 0;
-                    padding: 0;
-                    list-style-type: none;
-                    white-space: nowrap;
-
-                    > li {
-                        position: relative;
-                        float: left;
-                        margin: 0;
-                        white-space: nowrap;
-                        text-align: left;
-                        color: @header-text-color;
-                        outline: none;
-                        padding: 0;
-                        font-weight: @bold;
-                        font-size: 1em;
-
-                        > a {
-                            display: block;
-                            float: left;
-                            padding: 0 0.75em 0 0.75em;
-                            color: @header-text-color;
-                            outline: none;
-                            -webkit-tap-highlight-color: rgba(0,0,0,0);
-                            margin: 0;
-
-                            &:visited {
-                                color: @header-text-color;
-                            }
-
-                            > i {
-                                margin: 0;
-                                padding: 0;
-
-                                + span {
-                                    padding-left: 0.5em;
-                                }
-                            }
-
-                            &:hover {
-                                color: @header-text-color;
-                                cursor: pointer;
-                                text-decoration: none;
-                            }
-                        }
-
-                        &.active {
-                            color: @header-active-text-color;
-                            cursor: pointer;
-                            background: @header-color-light;
-                        }
-                    }
-                }
-            }
-        }
-    }
 
     > section.content {
         .presentation > section {

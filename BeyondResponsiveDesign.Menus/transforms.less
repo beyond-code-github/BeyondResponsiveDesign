@@ -10,7 +10,7 @@
 
 article > section > section.content {
     .animate;
-    
+
     &.offRight {
         -webkit-transform: translate3d(100%,0,0);
         -moz-transform: translate3d(100%,0,0);
@@ -29,24 +29,32 @@ article > section > section.content {
 }
 
 @media only screen and (min-width: 801px) {
-    body:not(.guest) > section.wrapper {
+    body:not(.guest) > section.wrapper > article {
         .animate;
     }
 }
 
 @media only screen and (max-width: 800px) {
-
     body > section.wrapper {
-        left: -@sidebar-width;
-        margin-left: -1px;
-        .animate;
-
-        .menuToggle {
+        > header > nav > ul > li.menuToggle {
             display: block;
+            left: -1.2em;
+            .animate;
+        }
+
+        > article {
+            left: -@sidebar-width;
+            margin-left: -1px;
+            .animate;
         }
     }
 
-    body.sidebar > section.wrapper {
+    body.sidebar > section.wrapper > header > nav > ul > li.menuToggle
+    {
+        left: -1.5em;
+    }
+
+    body.sidebar > section.wrapper > article {
         -webkit-transform: translateX(@sidebar-width);
         -ms-transform: translateX(@sidebar-width);
         -moz-transform: translateX(@sidebar-width);
@@ -54,7 +62,7 @@ article > section > section.content {
         transform: translateX(@sidebar-width);
     }
 
-    body:not(.sidebar) > section.wrapper {
+    body:not(.sidebar) > section.wrapper > article {
         -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
         -moz-transform: translateX(0);

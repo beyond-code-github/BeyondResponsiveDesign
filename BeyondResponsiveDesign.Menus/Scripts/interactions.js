@@ -1,6 +1,19 @@
 ﻿(function (interactions) {
 
-    interactions.init = function() {
+    interactions.init = function () {
+        $('body').on('touchmove', function (e) {
+            var searchTerms = '.vscroll, .vscroll-scroll, .hscroll',
+                $target = $(e.target),
+                parents = $target.parents(searchTerms);
+
+            if (parents.length || $target.hasClass(searchTerms)) {
+                // ignore as we want the scroll to happen
+                // (This is where we may need to check if at limit)
+            } else {
+                e.preventDefault();
+            }
+        });
+
         $(document.body).on('click', 'nav>ul>li.menuToggle', function(e) {
             $(this).trigger('blur');
             e.preventDefault();

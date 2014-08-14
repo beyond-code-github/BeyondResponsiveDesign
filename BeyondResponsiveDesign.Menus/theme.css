@@ -34,6 +34,68 @@ h3 {
 a:hover {
   color: #999999;
 }
+section.wrapper > header {
+  background: #005800;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 1px 0.25rem;
+  clip: rect(auto, auto, 3.375em, auto);
+}
+section.wrapper > header > h1 {
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 auto;
+}
+section.wrapper > header > nav > ul {
+  float: left;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  white-space: nowrap;
+}
+section.wrapper > header > nav > ul > li {
+  position: relative;
+  float: left;
+  margin: 0;
+  white-space: nowrap;
+  text-align: left;
+  color: #ffffff;
+  outline: none;
+  padding: 0;
+  font-weight: 400;
+  font-size: 1em;
+}
+section.wrapper > header > nav > ul > li > a {
+  display: block;
+  float: left;
+  padding: 0 0.75em 0 0.75em;
+  color: #ffffff;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin: 0;
+}
+section.wrapper > header > nav > ul > li > a:visited {
+  color: #ffffff;
+}
+section.wrapper > header > nav > ul > li > a > i {
+  margin: 0;
+  padding: 0;
+}
+section.wrapper > header > nav > ul > li > a > i + span {
+  padding-left: 0.5em;
+}
+section.wrapper > header > nav > ul > li > a:hover {
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+}
+section.wrapper > header > nav > ul > li.active {
+  color: #607d8b;
+  cursor: pointer;
+  background: #ffffff;
+}
 article > aside {
   background-color: #f2f2f2;
   box-shadow: rgba(0, 0, 0, 0.3) 1px 0 0.125rem;
@@ -143,7 +205,7 @@ article > aside > nav > div > div > ul > li.active > div {
   height: auto;
 }
 article > aside > nav > div > div > ul > li.active > div > ul > li.active {
-  background-color: #99aeb8;
+  background-color: #31a431;
   color: #ffffff;
 }
 article > aside > nav > div > div > ul > li.active > div > ul > li.active > a {
@@ -152,79 +214,17 @@ article > aside > nav > div > div > ul > li.active > div > ul > li.active > a {
 article > aside > nav > div > div > ul > li.active > a {
   color: #ffffff;
   text-decoration: none;
-  background-color: #607d8b;
+  background-color: #227122;
 }
 article > aside > nav > div > div > ul > li.active > a > h2 {
   color: #ffffff;
   text-decoration: none;
-  background-color: #607d8b;
+  background-color: #227122;
 }
 article > aside > nav > div > div > ul > li.active > a > h2 > i[data-icon="add"] {
   background-image: url('../images/plus_white.svg');
 }
 article > section {
-  background: #ffffff;
-}
-article > section > header {
-  background: #607d8b;
-  box-shadow: rgba(0, 0, 0, 0.4) 0 1px 0.25rem;
-  clip: rect(auto, auto, 3.375em, auto);
-}
-article > section > header > div > h1 {
-  font-size: 1.5em;
-  line-height: 2em;
-  font-weight: 400;
-  color: #ffffff;
-  text-align: center;
-  margin: 0 auto;
-}
-article > section > header > div > nav > ul {
-  float: left;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  white-space: nowrap;
-}
-article > section > header > div > nav > ul > li {
-  position: relative;
-  float: left;
-  margin: 0;
-  white-space: nowrap;
-  text-align: left;
-  color: #ffffff;
-  outline: none;
-  padding: 0;
-  font-weight: 400;
-  font-size: 1em;
-}
-article > section > header > div > nav > ul > li > a {
-  display: block;
-  float: left;
-  padding: 0 0.75em 0 0.75em;
-  color: #ffffff;
-  outline: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  margin: 0;
-}
-article > section > header > div > nav > ul > li > a:visited {
-  color: #ffffff;
-}
-article > section > header > div > nav > ul > li > a > i {
-  margin: 0;
-  padding: 0;
-}
-article > section > header > div > nav > ul > li > a > i + span {
-  padding-left: 0.5em;
-}
-article > section > header > div > nav > ul > li > a:hover {
-  color: #ffffff;
-  cursor: pointer;
-  text-decoration: none;
-}
-article > section > header > div > nav > ul > li.active {
-  color: #607d8b;
-  cursor: pointer;
   background: #ffffff;
 }
 article > section > section.content .presentation > section {
