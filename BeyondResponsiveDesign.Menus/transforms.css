@@ -4,6 +4,10 @@
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+article > section > section.content.slideTabContainer {
+  height: auto;
+  -webkit-overflow-scrolling: auto;
+}
 article > section > section.content > div {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
