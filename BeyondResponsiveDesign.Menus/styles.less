@@ -1,5 +1,6 @@
 ﻿@sidebar-width: 16.5em;
 @header-height: 3em;
+@toolbar-height: 3em;
 
 .originFixed (@top: 0, @left: 0) {
     position: absolute;
@@ -60,7 +61,7 @@ article > aside {
     .originFixed;
     width: @sidebar-width;
     max-width: @sidebar-width;
-    z-index: 1;
+    z-index: 2;
 
     & > nav {
         .originFixed;
@@ -100,7 +101,7 @@ article > aside {
 
 article > section {
     .originFixed(@left: @sidebar-width);
-    z-index: 2;
+    z-index: 1;
 
     > header {
         .originFixed;
@@ -128,7 +129,7 @@ article > section {
                     > li {
                         line-height: @header-height;
                         height: @header-height;
-                        
+
                         &.menuToggle {
                             display: none;
                         }
@@ -143,12 +144,16 @@ article > section {
     }
 
     > section.content {
-        .originFixed(@top: @header-height);
+        .originFixed(@top: @header-height + @toolbar-height);
+        display: block;
+        visibility: visible;
+        opacity: 1;
     }
 }
 
 article nav.toolbar {
     position: relative;
+    top: 3em;
     min-height: 3em;
 
     > ul {

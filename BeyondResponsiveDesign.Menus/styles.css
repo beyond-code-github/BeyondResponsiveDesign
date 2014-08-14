@@ -55,7 +55,7 @@ article > aside {
   bottom: 0;
   width: 16.5em;
   max-width: 16.5em;
-  z-index: 1;
+  z-index: 2;
 }
 article > aside > nav {
   position: absolute;
@@ -92,7 +92,7 @@ article > section {
   left: 16.5em;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 1;
 }
 article > section > header {
   position: absolute;
@@ -132,13 +132,17 @@ article > section > header > div > nav > ul > li > a {
 }
 article > section > section.content {
   position: absolute;
-  top: 3em;
+  top: 6em;
   left: 0;
   right: 0;
   bottom: 0;
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 article nav.toolbar {
   position: relative;
+  top: 3em;
   min-height: 3em;
 }
 article nav.toolbar > ul {

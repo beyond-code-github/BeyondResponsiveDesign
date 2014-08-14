@@ -36,6 +36,7 @@ a:hover {
 }
 article > aside {
   background-color: #f2f2f2;
+  box-shadow: rgba(0, 0, 0, 0.3) 1px 0 0.125rem;
   padding: 0;
 }
 article > aside > nav {
@@ -163,7 +164,6 @@ article > aside > nav > div > div > ul > li.active > a > h2 > i[data-icon="add"]
 }
 article > section {
   background: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.3) -1px 0 0.125rem;
 }
 article > section > header {
   background: #607d8b;

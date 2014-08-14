@@ -8,23 +8,30 @@
     transition: all @animation-speed ease-in-out;
 }
 
+article > section > section.content {
+    .animate;
+    
+    &.offRight {
+        -webkit-transform: translate3d(100%,0,0);
+        -moz-transform: translate3d(100%,0,0);
+        -ms-transform: translate3d(100%,0,0);
+        -o-transform: translate3d(100%,0,0);
+        transform: translate3d(100%,0,0);
+    }
+
+    &.offLeft {
+        -webkit-transform: translate3d(-100%,0,0);
+        -moz-transform: translate3d(-100%,0,0);
+        -ms-transform: translate3d(-100%,0,0);
+        -o-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0);
+    }
+}
+
 @media only screen and (min-width: 801px) {
     body:not(.guest) > section.wrapper {
         .animate;
     }
-
-    /*body.sidebarCollapse {
-        article {
-            & > section {
-                -webkit-transform: translateX(-@sidebar-width);
-                -ms-transform: translateX(-@sidebar-width);
-                -moz-transform: translateX(-@sidebar-width);
-                -o-transform: translateX(-@sidebar-width);
-                transform: translateX(-@sidebar-width);
-                margin-right: -@sidebar-width;
-            }
-        }
-    }*/
 }
 
 @media only screen and (max-width: 800px) {
