@@ -99,7 +99,6 @@ section.wrapper > header > nav > ul > li.logo > a {
   z-index: 1;
 }
 section.wrapper > header > nav > ul > li.logo > a > img {
-  display: block;
   border: 0 none;
   height: 2rem;
   max-height: 2rem;
@@ -115,6 +114,7 @@ article > aside {
   width: 16.5em;
   max-width: 16.5em;
   z-index: 2;
+  background-color: white;
 }
 article > aside > nav {
   position: absolute;
@@ -139,6 +139,8 @@ article > section > section.content {
   left: 0;
   right: 0;
   bottom: 0;
+}
+article > section > section.content > div {
   display: block;
   visibility: visible;
   opacity: 1;
