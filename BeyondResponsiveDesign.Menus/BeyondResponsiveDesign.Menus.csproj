@@ -72,6 +72,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="favicon.ico" />
     <Content Include="fonts\opensans_bolditalic_macroman\OpenSans-BoldItalic-demo.html" />
     <Content Include="fonts\opensans_bolditalic_macroman\OpenSans-BoldItalic-webfont.svg" />
     <Content Include="fonts\opensans_bolditalic_macroman\specimen_files\easytabs.js" />
@@ -142,6 +143,8 @@
     <Content Include="fonts\opensans_semibold_macroman\specimen_files\OpenSans-Semibold-cleartype.png" />
     <Content Include="fonts\opensans_semibold_macroman\specimen_files\specimen_stylesheet.css" />
     <Content Include="fonts\opensans_semibold_macroman\stylesheet.css" />
+    <Content Include="icon-128.png" />
+    <Content Include="icon-196.png" />
     <Content Include="logo-small-green.png" />
     <Content Include="logo-small.png" />
     <Content Include="packages.config" />
