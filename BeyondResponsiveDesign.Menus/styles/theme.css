@@ -3,6 +3,13 @@
   src: url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot');
   src: url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?iefix') format('eot'), url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff') format('woff'), url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.ttf') format('truetype'), url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.svg#webfont') format('svg');
 }
+.rounded {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
 body {
   font-family: "OpenSans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
   color: #666666;
@@ -47,6 +54,17 @@ table.agenda > tbody > tr:not(.session) {
   cursor: auto;
   color: #999999;
 }
+table.accommodation > tbody > tr > td {
+  display: block;
+  float: left;
+}
+table.accommodation > tbody > tr > td > img {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
 table > tbody > tr {
   border-bottom: 1px solid #f2f2f2;
   cursor: pointer;
@@ -55,7 +73,7 @@ table > tbody > tr > td {
   vertical-align: top;
   padding: 0.5em 0.5em 0.5em 0.5em;
   overflow: hidden;
-  height: 3rem;
+  min-height: 3rem;
 }
 table > tbody > tr > td > h2 {
   font-weight: 400;

@@ -13,10 +13,9 @@
     .animate(@animation-speed-fast);
 }
 
-table > tbody > tr > td {
-    &.expand {
-        display: none;
-    }
+div.responsiveimage > img {
+  max-width: 100%;
+  height: auto;
 }
 
 article > aside > nav > div > div > ul > li:not(.active) > div {
@@ -116,6 +115,9 @@ article > section > nav.toolbar > ul > li {
 }
 
 @media only screen and (max-width: 800px) {
+    table.accommodation > tbody > tr > td > p {
+        max-width: 14em;
+    }
 
     body > section.wrapper {
         > header > nav > ul > li.menuToggle {
@@ -156,12 +158,6 @@ article > section > nav.toolbar > ul > li {
     table > tbody > tr > td {
         &.bio {
             display: none;
-        }
-    }
-
-    table > tbody > tr > td {
-        &.expand {
-            display: table-cell;
         }
     }
 }

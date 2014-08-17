@@ -82,7 +82,16 @@
     <Content Include="content\presentation.html" />
     <Content Include="content\agenda.html" />
     <Content Include="content\home.html" />
+    <Content Include="images\accommodation\doubletree-hilton.jpg" />
+    <Content Include="images\accommodation\premierinn-a14-j32.jpg" />
+    <Content Include="images\accommodation\travelodge-cambridge-central.jpg" />
+    <Content Include="images\accommodation\travelodge-newmarket-road.jpg" />
+    <Content Include="images\accommodation\travelodge-orchard-park.jpg" />
+    <Content Include="images\accommodation\university-arms.jpg" />
+    <Content Include="images\accommodation\varsity.jpg" />
     <Content Include="images\favicon.ico" />
+    <Content Include="images\googleplaystore.gif" />
+    <Content Include="images\itunesappstore.gif" />
     <Content Include="images\logo-notext-green.png" />
     <Content Include="images\speakers\11.jpg" />
     <Content Include="images\speakers\1313.jpg" />
@@ -109,6 +118,7 @@
     <Content Include="images\speakers\53.jpg" />
     <Content Include="images\speakers\5333.jpg" />
     <Content Include="images\speakers\62.jpg" />
+    <Content Include="images\venue.jpg" />
     <Content Include="scripts\knockout-3.1.0.debug.js" />
     <Content Include="scripts\knockout-3.1.0.js" />
     <Content Include="styles\fonts\opensans_bolditalic_macroman\OpenSans-BoldItalic-demo.html" />

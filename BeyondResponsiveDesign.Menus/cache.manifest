@@ -2,12 +2,16 @@
 # 2014-08-14:v1.5
 
 # Explicitly cached 'master entries'.
-NETWORK:
+CACHE:
 images/favicon.ico
 images/icon-128.png
 images/icon-196.png
 images/logo-small-green.png
 images/logo-small.png
+images/logo-notext-green.png
+images/googleplaystore.gif
+images/itunesappstore.gif
+images/venue.jpg
 images/speakers/11.jpg
 images/speakers/1313.jpg
 images/speakers/23.jpg
@@ -33,6 +37,13 @@ images/speakers/48.jpg
 images/speakers/53.jpg
 images/speakers/5333.jpg
 images/speakers/62.jpg
+images/accommodation/doubletree-hilton.jpg
+images/accommodation/premierinn-a14-j32.jpg
+images/accommodation/travelodge-cambridge-central.jpg
+images/accommodation/travelodge-newmarket-road.jpg
+images/accommodation/travelodge-orchard-park.jpg
+images/accommodation/university-arms.jpg
+images/accommodation/travelodge-cambridge-central.jpg
 styles/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot
 styles/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?iefix
 styles/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.svg#webfont
