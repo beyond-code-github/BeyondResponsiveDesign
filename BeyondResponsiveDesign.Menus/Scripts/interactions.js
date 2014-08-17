@@ -83,14 +83,19 @@
             var menuitem = $("article > aside > nav > div > div > ul li#menu-" + location);
             menuitem.addClass("active");
 
+            var title = menuitem.find("a span").first().text();
+            $("#paneTitle").text(title);
+
             var parentDiv = menuitem.parents("div").first();
+            var selected = null;
             if (parentDiv.hasClass("wrapper")) {
-                var childItem = menuitem.children("li").first();
-                if (childItem) {
-                    childItem.addClass("active");
-                }
+                selected = menuitem.children("li").first();
             } else {
-                parentDiv.parent().addClass("active");
+                selected = parentDiv.parent();
+            }
+
+            if (selected) {
+                selected.addClass("active");
             }
         });
     }

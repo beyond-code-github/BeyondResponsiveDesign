@@ -83,6 +83,7 @@
     <Content Include="content\agenda.html" />
     <Content Include="content\home.html" />
     <Content Include="images\favicon.ico" />
+    <Content Include="images\logo-notext-green.png" />
     <Content Include="images\speakers\11.jpg" />
     <Content Include="images\speakers\1313.jpg" />
     <Content Include="images\speakers\23.jpg" />

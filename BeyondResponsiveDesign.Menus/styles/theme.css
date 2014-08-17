@@ -94,6 +94,10 @@ section.wrapper > header > nav > ul > li {
   font-weight: 400;
   font-size: 1em;
 }
+section.wrapper > header > nav > ul > li > h2 {
+  color: #ffffff;
+  font-weight: 400;
+}
 section.wrapper > header > nav > ul > li > a {
   display: block;
   float: left;
