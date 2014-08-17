@@ -1,13 +1,38 @@
 ﻿CACHE MANIFEST
-# 2014-08-14:v1.4
+# 2014-08-14:v1.5
 
 # Explicitly cached 'master entries'.
-CACHE:
+NETWORK:
 images/favicon.ico
 images/icon-128.png
 images/icon-196.png
 images/logo-small-green.png
 images/logo-small.png
+images/speakers/11.jpg
+images/speakers/1313.jpg
+images/speakers/23.jpg
+images/speakers/2311.jpg
+images/speakers/2312.jpg
+images/speakers/2314.jpg
+images/speakers/2316.jpg
+images/speakers/293.jpg
+images/speakers/30.jpg
+images/speakers/302.jpg
+images/speakers/303.jpg
+images/speakers/309.jpg
+images/speakers/3319.jpg
+images/speakers/3320.jpg
+images/speakers/3322.jpg
+images/speakers/3323.jpg
+images/speakers/3324.jpg
+images/speakers/34.jpg
+images/speakers/4328.jpg
+images/speakers/4331.jpg
+images/speakers/4332.jpg
+images/speakers/48.jpg
+images/speakers/53.jpg
+images/speakers/5333.jpg
+images/speakers/62.jpg
 styles/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot
 styles/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?iefix
 styles/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.svg#webfont
@@ -27,14 +52,17 @@ scripts/fastclick.js
 scripts/interactions.js
 scripts/jquery-2.1.1.min.js
 scripts/jquery.detect_swipe.js
+scripts/knockout-3.1.0.js
 Index.html
 content/accommodation.html
+content/agenda.json
 content/agenda.html
 content/cfp.html
 content/contact.html
 content/home.html
 content/presentation.html
 content/sessions.html
+content/speakers.json
 content/speakers.html
 content/sponsors.html
 content/venue.html

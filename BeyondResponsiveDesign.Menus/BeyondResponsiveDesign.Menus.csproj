@@ -83,6 +83,33 @@
     <Content Include="content\agenda.html" />
     <Content Include="content\home.html" />
     <Content Include="images\favicon.ico" />
+    <Content Include="images\speakers\11.jpg" />
+    <Content Include="images\speakers\1313.jpg" />
+    <Content Include="images\speakers\23.jpg" />
+    <Content Include="images\speakers\2311.jpg" />
+    <Content Include="images\speakers\2312.jpg" />
+    <Content Include="images\speakers\2314.jpg" />
+    <Content Include="images\speakers\2316.jpg" />
+    <Content Include="images\speakers\293.jpg" />
+    <Content Include="images\speakers\30.jpg" />
+    <Content Include="images\speakers\302.jpg" />
+    <Content Include="images\speakers\303.jpg" />
+    <Content Include="images\speakers\309.jpg" />
+    <Content Include="images\speakers\3319.jpg" />
+    <Content Include="images\speakers\3320.jpg" />
+    <Content Include="images\speakers\3322.jpg" />
+    <Content Include="images\speakers\3323.jpg" />
+    <Content Include="images\speakers\3324.jpg" />
+    <Content Include="images\speakers\34.jpg" />
+    <Content Include="images\speakers\4328.jpg" />
+    <Content Include="images\speakers\4331.jpg" />
+    <Content Include="images\speakers\4332.jpg" />
+    <Content Include="images\speakers\48.jpg" />
+    <Content Include="images\speakers\53.jpg" />
+    <Content Include="images\speakers\5333.jpg" />
+    <Content Include="images\speakers\62.jpg" />
+    <Content Include="scripts\knockout-3.1.0.debug.js" />
+    <Content Include="scripts\knockout-3.1.0.js" />
     <Content Include="styles\fonts\opensans_bolditalic_macroman\OpenSans-BoldItalic-demo.html" />
     <Content Include="styles\fonts\opensans_bolditalic_macroman\OpenSans-BoldItalic-webfont.svg" />
     <Content Include="styles\fonts\opensans_bolditalic_macroman\specimen_files\easytabs.js" />
@@ -166,6 +193,7 @@
     <Content Include="scripts\interactions.js" />
     <None Include="cache.manifest" />
     <None Include="content\agenda.json" />
+    <Content Include="content\speakers.json" />
     <None Include="scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="scripts\jquery-2.1.1.js" />
     <Content Include="scripts\jquery-2.1.1.min.js" />
@@ -249,6 +277,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

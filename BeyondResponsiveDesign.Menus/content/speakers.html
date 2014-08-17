@@ -1,13 +1,30 @@
 ﻿<section class="content notoolbar">
     <div id="contentOne" class="scrollcontainer vscroll">
-        <div class="presentation">
+        <div>
             <header>
                 <h2>
                     <i class="fa fa-lg fa-group"></i>
-                    <span>Welcome to DDD East Anglia!</span>
+                    <span>Speakers</span>
                 </h2>
             </header>
-            <section></section>
+            <section>
+                <table>
+                    <tbody data-bind="foreach: speakers">
+                        <tr>
+                            <td><img height="100" width="100" data-bind="attr: { src: 'images/speakers/' + Id + '.jpg' }" /></td>
+                            <td><h2 data-bind="text: Name"></h2></td>
+                            <td class="bio" data-bind="html: Bio"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </div>
     </div>
 </section>
+<script type="text/javascript">
+    $(function() {
+        $.get("content/speakers.json").done(function (data) {
+            ko.applyBindings({ speakers: data }, $("section.content")[0]);
+        });
+    });
+</script>

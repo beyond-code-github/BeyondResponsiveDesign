@@ -4,6 +4,9 @@
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
+table > tbody > tr > td.expand {
+  display: none;
+}
 article > aside > nav > div > div > ul > li:not(.active) > div {
   overflow: hidden;
   height: 0;
@@ -134,6 +137,14 @@ article > section > nav.toolbar > ul > li.active > .highlight {
     -moz-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0);
+  }
+}
+@media only screen and (max-width: 480px) {
+  table > tbody > tr > td.bio {
+    display: none;
+  }
+  table > tbody > tr > td.expand {
+    display: table-cell;
   }
 }
 /*# sourceMappingURL=transforms.css.map */

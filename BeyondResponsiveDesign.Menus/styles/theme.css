@@ -17,7 +17,7 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 p {
-  line-height: 2rem;
+  line-height: 1.5rem;
   padding: 0;
   margin: 0 0 0.5rem 0;
 }
@@ -33,6 +33,33 @@ h3 {
 }
 a:hover {
   color: #31a431;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  empty-cells: show;
+  table-layout: auto;
+}
+table.agenda > tbody > tr:not(.session) {
+  cursor: auto;
+  color: #999999;
+}
+table > tbody > tr {
+  border-bottom: 1px solid #f2f2f2;
+  cursor: pointer;
+}
+table > tbody > tr > td {
+  vertical-align: top;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  overflow: hidden;
+  height: 3rem;
+}
+table > tbody > tr > td > h2 {
+  font-weight: 400;
+  color: #222;
 }
 section.wrapper > header {
   background: #005800;
@@ -230,10 +257,10 @@ article > aside > nav > div > div > ul > li.active > a > h2 > i[data-icon="add"]
 article > section {
   background: #ffffff;
 }
-article > section > section.content .presentation > section {
+article > section > section.content > div > div.presentation > section {
   padding: .75rem .75rem 0 .75rem;
 }
-article > section > section.content .presentation > header > h2 {
+article > section > section.content > div > div > header > h2 {
   background: #fff;
   display: block;
   width: 100%;
@@ -246,14 +273,14 @@ article > section > section.content .presentation > header > h2 {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
-article > section > section.content .presentation > header > h2 > i.fa {
+article > section > section.content > div > div > header > h2 > i.fa {
   position: relative;
   top: 0.0625rem;
   left: .5625rem;
   font-weight: 300;
   font-size: 1.5rem;
 }
-article > section > section.content .presentation > header > h2 > span {
+article > section > section.content > div > div > header > h2 > span {
   padding: 0 3.75rem 0 1rem;
   font-weight: 400;
   font-size: 1.125rem;

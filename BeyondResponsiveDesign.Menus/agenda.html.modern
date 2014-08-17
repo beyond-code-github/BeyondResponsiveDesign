@@ -1,4 +1,4 @@
-﻿<nav class="toolbar">
+<nav class="toolbar">
     <header>Rooms:</header>
     <ul>
         <li id="tab-one" class="active">
@@ -25,7 +25,7 @@
 </nav>
 <section class="content slideTabContainer">
     <!-- ko foreach: { data: Tracks, as: 'track' } -->
-    <div data-bind="attr: {id : track.Identifier}" class="slideTab vscroll offRight">
+    <div data-bind="attr: {id : track.Identifier}" class="slideTab vscroll active">
         <div>
             <header>
                 <h2>
@@ -35,18 +35,14 @@
             </header>
             <section>
                 <table class="agenda">
-                    <tbody data-bind="foreach: { data: $root.TimeSlots, as: 'timeSlot' }">
-                        <tr data-bind="attr: { class: $root.timeSlotContainsSession(timeSlot.Id) ? 'session' : '' }">
-                            <td><span data-bind="text: $root.prettifyTime(timeSlot.From)"></span></td>
+                    <tbody data-bind="foreach: { data: TimeSlots, as: 'timeSlot' }">
+                        <tr>
+                            <td><span data-bind="text: timeSlot.From"></span></td>
                             <td>
-                                <div>
-                                    <span data-bind="text: timeSlot.Info"></span>
-                                    <span><a data-bind="text: $root.sessionInfo(track.Id, timeSlot.Id).Title"></a></span>
-                                </div>
-                                <div>
-                                    <span data-bind="text: $root.sessionInfo(track.Id, timeSlot.Id).Speaker"></span>
-                                </div>
+                                <span data-bind="text: timeSlot.Info"></span>
+                                <span data-bind="text: $root.sessionInfo(track.Id, timeSlot.Id).Title"></span>
                             </td>
+                            <td data-bind="text: $root.sessionInfo(track.Id, timeSlot.Id).Speaker"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -59,9 +55,8 @@
     var agendaLoaded = function (data) {
         var sessionInfo = function (trackId, timeSlotId) {
             if (timeSlotContainsSession(timeSlotId)) {
-                console.log(trackId, timeSlotId);
                 return ko.utils.arrayFirst(data.Sessions, function (session) {
-                    return session.TrackId == trackId && session.TimeSlotId == timeSlotId;
+                    return session.TrackId = trackId && session.TimeSlotId == timeSlotId;
                 });
             }
             return { Title: "", Speaker: "" };
@@ -72,32 +67,20 @@
         viewModel.TimeSlots = data.TimeSlots;
         viewModel.sessionInfo = sessionInfo;
         viewModel.prettifyTime = prettifyTime;
-        viewModel.timeSlotContainsSession = timeSlotContainsSession;
 
         ko.applyBindings(viewModel, $("section.content")[0]);
-        interactions.slideToTab('one');
     }
 
-    var prettifyTime = function (datetimeString) {
-        var datetime = new Date(Date.parse(datetimeString));
-        return datetime.getHours() + ":" + pad("00", datetime.getMinutes());
+    var prettifyTime = function(datetime) {
+        return datetime.getHours + ":" + datetime.getMinutes;
     }
 
     var timeSlotContainsSession = function (timeSlotId) {
         return timeSlotId > 1 && timeSlotId < 13 && timeSlotId % 2 > 0;
     }
 
-    function pad(pad, str, padLeft) {
-        if (str == undefined) return pad;
-        if (padLeft) {
-            return (pad + str).slice(-pad.length);
-        } else {
-            return (str + pad).substring(0, pad.length);
-        }
-    }
-
     $(function () {
         $.get("content/agenda.json").done(agendaLoaded);
     });
-
+    
 </script>

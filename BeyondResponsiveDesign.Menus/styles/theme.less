@@ -8,6 +8,7 @@
 @base-color: #607d8b;
 @base-color-light: lighten(@base-color, 20%);
 @base-invert-color: #ffffff;
+@border-line-color: #f2f2f2;
 @border-dark: #b2b2b2;
 
 @body-font: "OpenSans","Helvetica Neue","Helvetica","Arial","sans-serif";
@@ -54,7 +55,7 @@ a {
 }
 
 p {
-    line-height: 2rem;
+    line-height: 1.5rem;
     padding: 0;
     margin: 0 0 0.5rem 0;
 }
@@ -70,6 +71,38 @@ h1, h2, h3 {
 
 a:hover {
     color: @sidebar-child-accent-background-color;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    empty-cells: show;
+    table-layout: auto;
+
+    &.agenda > tbody > tr:not(.session) {
+        cursor: auto;
+        color: @body-text-light-color;
+    }
+    
+   > tbody > tr {
+        border-bottom: 1px solid @border-line-color;
+        cursor: pointer;
+
+        > td {
+            vertical-align: top;
+            padding: 0.5em 0.5em 0.5em 0.5em;
+            overflow: hidden;
+            height: 3rem;
+
+            > h2 {
+                font-weight: 400;
+                color: #222;
+            }
+        }
+    }
 }
 
 section.wrapper > header {
@@ -310,12 +343,12 @@ article > aside {
 article > section {
     background: @base-background;
 
-    > section.content {
-        .presentation > section {
+    > section.content > div > div {
+        &.presentation > section {
             padding: .75rem .75rem 0 .75rem;
         }
 
-        .presentation > header {
+        > header {
             > h2 {
                 background: #fff;
                 display: block;
@@ -377,7 +410,7 @@ article nav.toolbar {
             margin: 0;
             min-height: 3em;
             overflow: hidden;
-            
+
             > .highlight {
                 display: none;
                 position: relative;

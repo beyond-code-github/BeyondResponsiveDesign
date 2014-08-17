@@ -17,6 +17,14 @@
             }
         });
 
+        window.onresize = function () {
+            $(document.body).width(window.innerWidth).height(window.innerHeight);
+        }
+
+        $(function () {
+            window.onresize();
+        });
+
         $(document.body).on('click', 'nav>ul>li.menuToggle', function (e) {
             $(this).trigger('blur');
             e.preventDefault();
