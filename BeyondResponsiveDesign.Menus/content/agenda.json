@@ -1,0 +1,367 @@
+{  
+    "Tracks":[  
+       {  
+           "Id":1,
+           "Name":"Track 1",
+           "RoomName":"Room 1"
+       },
+       {  
+           "Id":2,
+           "Name":"Track 2",
+           "RoomName":"Room 2"
+       },
+       {  
+           "Id":3,
+           "Name":"Track 3",
+           "RoomName":"Room 3"
+       },
+       {  
+           "Id":4,
+           "Name":"Track 4",
+           "RoomName":"Room 4"
+       },
+       {  
+           "Id":5,
+           "Name":"Track 5",
+           "RoomName":"Room 5"
+       }
+    ],
+    "TimeSlots":[  
+       {  
+           "Id":1,
+           "From":"2014-09-13T08:30:00",
+           "To":"2014-09-13T09:00:00",
+           "Info":"Registration, Refreshments (sponsored by Compare the Market)"
+       },
+       {  
+           "Id":2,
+           "From":"2014-09-13T09:00:00",
+           "To":"2014-09-13T09:30:00",
+           "Info":"Welcome & Housekeeping"
+       },
+       {  
+           "Id":3,
+           "From":"2014-09-13T09:15:00",
+           "To":"2014-09-13T10:15:00",
+           "Info":null
+       },
+       {  
+           "Id":4,
+           "From":"2014-09-13T10:15:00",
+           "To":"2014-09-13T10:35:00",
+           "Info":"Break"
+       },
+       {  
+           "Id":5,
+           "From":"2014-09-13T10:35:00",
+           "To":"2014-09-13T11:35:00",
+           "Info":null
+       },
+       {  
+           "Id":6,
+           "From":"2014-09-13T11:35:00",
+           "To":"2014-09-13T11:55:00",
+           "Info":"Break"
+       },
+       {  
+           "Id":7,
+           "From":"2014-09-13T11:55:00",
+           "To":"2014-09-13T12:55:00",
+           "Info":null
+       },
+       {  
+           "Id":8,
+           "From":"2014-09-13T12:55:00",
+           "To":"2014-09-13T14:00:00",
+           "Info":"Lunch, Grok Talks (sponsored by Huddle)"
+       },
+       {  
+           "Id":9,
+           "From":"2014-09-13T14:00:00",
+           "To":"2014-09-13T15:00:00",
+           "Info":null
+       },
+       {  
+           "Id":10,
+           "From":"2014-09-13T15:00:00",
+           "To":"2014-09-13T15:20:00",
+           "Info":"Break"
+       },
+       {  
+           "Id":11,
+           "From":"2014-09-13T15:20:00",
+           "To":"2014-09-13T16:20:00",
+           "Info":null
+       },
+       {  
+           "Id":12,
+           "From":"2014-09-13T16:20:00",
+           "To":"2014-09-13T16:30:00",
+           "Info":"Break"
+       },
+       {  
+           "Id":13,
+           "From":"2014-09-13T16:30:00",
+           "To":"2014-09-13T17:00:00",
+           "Info":"Wrap-up"
+       },
+       {  
+           "Id":14,
+           "From":"2014-09-13T17:00:00",
+           "To":"2014-09-13T17:00:00",
+           "Info":"Close"
+       }
+    ],
+    "Sessions":[  
+       {  
+           "Id":1,
+           "DDDEventId":1,
+           "TrackId":1,
+           "TimeSlotId":3,
+           "Title":"OWIN, Katana and ASP.NET vNext: eliminating the pain of IIS",
+           "Speaker":"David Simner",
+           "ShortDescription":"I first encountered OWIN when I added SignalR to a legacy ASP.NET MVC app, and had to write a piece of OWIN middleware to get SignalR to play nicely with our legacy authentication.\r\n\r\nIt was a thoroughly impressive experience, so I built my next greenfield project on OWIN & Katana as a single-page app using static files & Web API, finally ditching IIS for good.  The glad tidings continue for Microsoft web developers, with ASP.NET vNext promising even more goodness on the horizon.\r\n\r\nThere’s a lot of changes coming for those of us working on the .NET web stack, so this talk will show you what things look like today:\r\n\r\n - What are OWIN & Katana, and why you should care\r\n - What middleware is, as well as why and how you write it\r\n - The advantages this brings for testing\r\n - How Helios lets you host on IIS (if you really *really really* want to)\r\n\r\nAs well as what's changing in ASP.NET vNext:\r\n\r\n - How Roslyn comes into play\r\n - The what and the why of the K runtime\r\n - Why you should care about the Core CLR\r\n - What’s shiny about ASP.NET MVC 6\r\n\r\nThere’s a lot to cover, so we’ll move fast. You'll come away knowing why and how you should start using this on your own projects.",
+           "FullDescription":"I first encountered OWIN when I added SignalR to a legacy ASP.NET MVC app, and had to write a piece of OWIN middleware to get SignalR to play nicely with our legacy authentication.\r\n\r\nIt was a thoroughly impressive experience, so I built my next greenfield project on OWIN & Katana as a single-page app using static files & Web API, finally ditching IIS for good.  The glad tidings continue for Microsoft web developers, with ASP.NET vNext promising even more goodness on the horizon.\r\n\r\nThere’s a lot of changes coming for those of us working on the .NET web stack, so this talk will show you what things look like today:\r\n\r\n - What are OWIN & Katana, and why you should care\r\n - What middleware is, as well as why and how you write it\r\n - The advantages this brings for testing\r\n - How Helios lets you host on IIS (if you really *really really* want to)\r\n\r\nAs well as what's changing in ASP.NET vNext:\r\n\r\n - How Roslyn comes into play\r\n - The what and the why of the K runtime\r\n - Why you should care about the Core CLR\r\n - What’s shiny about ASP.NET MVC 6\r\n\r\nThere’s a lot to cover, so we’ll move fast. You'll come away knowing why and how you should start using this on your own projects."
+       },
+       {  
+           "Id":2,
+           "DDDEventId":1,
+           "TrackId":2,
+           "TimeSlotId":3,
+           "Title":"GitHub Automation",
+           "Speaker":"Forbes Lindesay",
+           "ShortDescription":"GitHub has one of the best REST APIs you'll ever see. Pretty much any task in GitHub can be automated. Tired of updating code after a feature gets deprecated? Write a bot for that. Need to add the repository field to all your package.json files? Script it. You can even use GitHub as the backend for an entire application to take advantage of its built in collaboration features.  This talk will take you through how to write you own GitHub automation code in JavaScript and give you some ideas on how to use your new-found powers for good.",
+           "FullDescription":"GitHub has one of the best REST APIs you'll ever see. Pretty much any task in GitHub can be automated. Tired of updating code after a feature gets deprecated? Write a bot for that. Need to add the repository field to all your package.json files? Script it. You can even use GitHub as the backend for an entire application to take advantage of its built in collaboration features.  This talk will take you through how to write you own GitHub automation code in JavaScript and give you some ideas on how to use your new-found powers for good."
+       },
+       {  
+           "Id":3,
+           "DDDEventId":1,
+           "TrackId":3,
+           "TimeSlotId":3,
+           "Title":"An Actor's Life for Me – An introduction to the TPL Dataflow Library and asynchronous programming blocks",
+           "Speaker":"Liam Westley",
+           "ShortDescription":"Every version of the .NET Framework has brought improvements to asynchronous and concurrent programming. While .NET 4.0 brought the async/await model which is useful for improving UI responses and server applications, it can sometimes still be tricky to marshal multiple threads within longer processing pipelines.\r\n\r\nThe Dataflow Library consists of a Nuget package built on top of the Task Parallel Library (TPL). It harnesses the actor-based programming model to provide a set of dataflow blocks data structures that buffer and process data, which you can connect together to form custom pipelines with messages passed between the blocks.\r\n\r\nBy using the Dataflow Library you can concentrate on the messages and actions being performed, while the blocks marshal the messages, provide concurrent message processing and buffering as well as supporting cancellation and exception handling.",
+           "FullDescription":"Every version of the .NET Framework has brought improvements to asynchronous and concurrent programming. While .NET 4.0 brought the async/await model which is useful for improving UI responses and server applications, it can sometimes still be tricky to marshal multiple threads within longer processing pipelines.\r\n\r\nThe Dataflow Library consists of a Nuget package built on top of the Task Parallel Library (TPL). It harnesses the actor-based programming model to provide a set of dataflow blocks data structures that buffer and process data, which you can connect together to form custom pipelines with messages passed between the blocks.\r\n\r\nBy using the Dataflow Library you can concentrate on the messages and actions being performed, while the blocks marshal the messages, provide concurrent message processing and buffering as well as supporting cancellation and exception handling."
+       },
+       {  
+           "Id":4,
+           "DDDEventId":1,
+           "TrackId":4,
+           "TimeSlotId":3,
+           "Title":"A Unit Testing Swiss Army Knife",
+           "Speaker":"Adam Kosinski",
+           "ShortDescription":"Putting all of *#IsTddDeadOrNotQuiteYet* discussion aside, there are a lot of things to be said about more technical side of writing tests. Instead of big important questions like \"How\" or \"Why\", I would like to present you a couple of tricks, patterns and libraries that help in what is usually of secondary interest - readability, maintainability.\r\n\r\nThe leading motive for this talk will be approaching our tests like living documentation - and what we can possibly do to make it better.\r\n\r\nSo, have you ever wondered what is Bulider Pattern about? What is all the fuss in being \"fluent\"? Or maybe you wondered if you can effectively integration test you MVC app? I hope you will find useful learning this, and some more. \r\n",
+           "FullDescription":"Putting all of *#IsTddDeadOrNotQuiteYet* discussion aside, there are a lot of things to be said about more technical side of writing tests. Instead of big important questions like \"How\" or \"Why\", I would like to present you a couple of tricks, patterns and libraries that help in what is usually of secondary interest - readability, maintainability.\r\n\r\nThe leading motive for this talk will be approaching our tests like living documentation - and what we can possibly do to make it better.\r\n\r\nSo, have you ever wondered what is Bulider Pattern about? What is all the fuss in being \"fluent\"? Or maybe you wondered if you can effectively integration test you MVC app? I hope you will find useful learning this, and some more. \r\n"
+       },
+       {  
+           "Id":5,
+           "DDDEventId":1,
+           "TrackId":5,
+           "TimeSlotId":3,
+           "Title":"Taking your craft seriously with F#",
+           "Speaker":"Tomas Petricek",
+           "ShortDescription":"Many standard F# libraries and tools, including the compiler itself, are developed as open-source and have a large number of contributors. To successfully build such projects, you need to be serious about your craft. This includes comprehensive testing, using automated build tools, continuous integration, as well as creating great documentation and tutorials. In this talk, I'll talk about what I learned as an open-source F# contributor.\r\n\r\nAlong the way, we'll look a number of risk-free ways of introducing F# into your workflow:\r\n\r\n * How to use F# Interactive for explorative programming and writing code that works on the first try\r\n * Using FAKE - an F# build tool - to automate everything in your build process\r\n * Writing readable unit tests with F# and using FsCheck for property-based testing\r\n * Generating great documentation using F# Formatting tools\r\n\r\nIn summary, this talk is a walkthrough covering some of the software engineering aspects of programming that have been working extremely well for the F# open-source ecosystem. After the talk, you'll have a good idea how to use some of the techniques in your daily job - but you may as well become an F# contributor! \r\n",
+           "FullDescription":"Many standard F# libraries and tools, including the compiler itself, are developed as open-source and have a large number of contributors. To successfully build such projects, you need to be serious about your craft. This includes comprehensive testing, using automated build tools, continuous integration, as well as creating great documentation and tutorials. In this talk, I'll talk about what I learned as an open-source F# contributor.\r\n\r\nAlong the way, we'll look a number of risk-free ways of introducing F# into your workflow:\r\n\r\n * How to use F# Interactive for explorative programming and writing code that works on the first try\r\n * Using FAKE - an F# build tool - to automate everything in your build process\r\n * Writing readable unit tests with F# and using FsCheck for property-based testing\r\n * Generating great documentation using F# Formatting tools\r\n\r\nIn summary, this talk is a walkthrough covering some of the software engineering aspects of programming that have been working extremely well for the F# open-source ecosystem. After the talk, you'll have a good idea how to use some of the techniques in your daily job - but you may as well become an F# contributor! \r\n"
+       },
+       {  
+           "Id":6,
+           "DDDEventId":1,
+           "TrackId":1,
+           "TimeSlotId":5,
+           "Title":"Functional DDD",
+           "Speaker":"Alessandro Melchiori",
+           "ShortDescription":"Very often we approach, more or less unconsciously, DDD's principles only with object-oriented paradigm, without exploring if other \"style\" can live better with aggregates, value objects, commands and domain events. Well, yes: there is 'other' out there... \r\nIn this session we will see how a functional language as F# can lead to a more intuitive and compact implementation of our domains.",
+           "FullDescription":"Very often we approach, more or less unconsciously, DDD's principles only with object-oriented paradigm, without exploring if other \"style\" can live better with aggregates, value objects, commands and domain events. Well, yes: there is 'other' out there... \r\nIn this session we will see how a functional language as F# can lead to a more intuitive and compact implementation of our domains."
+       },
+       {  
+           "Id":7,
+           "DDDEventId":1,
+           "TrackId":2,
+           "TimeSlotId":5,
+           "Title":"Building Skynet: Machine learning for software developers",
+           "Speaker":"Anthony Brown",
+           "ShortDescription":"How does Netflix know that I'd like that new movie which just released? How does Google know which ads to serve to me? How do games like Halo and Titanfall put me in game lobbies to create even matches? All these questions are answered with machine learning algorithms. Machine learning can sometimes look difficult. This session aims to break down the barrier to entry for machine learning and show how powerful even the most simple algorithms can be. Expect plenty of sample code to show just how quick and easy these basic algorithms can be.",
+           "FullDescription":"How does Netflix know that I'd like that new movie which just released? How does Google know which ads to serve to me? How do games like Halo and Titanfall put me in game lobbies to create even matches? All these questions are answered with machine learning algorithms. Machine learning can sometimes look difficult. This session aims to break down the barrier to entry for machine learning and show how powerful even the most simple algorithms can be. Expect plenty of sample code to show just how quick and easy these basic algorithms can be."
+       },
+       {  
+           "Id":8,
+           "DDDEventId":1,
+           "TrackId":3,
+           "TimeSlotId":5,
+           "Title":"Embracing DevOps at JUST EAT, within a Microsoft platform",
+           "Speaker":"Peter Mounce",
+           "ShortDescription":"JUST EAT changed its culture towards embracing DevOps principles, and heavily leveraged AWS to achieve it.\r\n\r\nWe're a successful online takeaway ecommerce website running on a Microsoft-based platform.\r\n\r\nCome learn how we:\r\n\r\n - re-organised our teams and our platform to loosely couple them\r\n - re-organised our architecture to be more modular\r\n - made it possible for developers to operate their code in production directly, starting with shoot-it-in-the-head debugging\r\n - made it possible for developers to continuously ship changes\r\n - eliminated most differences between production and qa environments\r\n - became more resilient as a happy by-product",
+           "FullDescription":"JUST EAT changed its culture towards embracing DevOps principles, and heavily leveraged AWS to achieve it.\r\n\r\nWe're a successful online takeaway ecommerce website running on a Microsoft-based platform.\r\n\r\nCome learn how we:\r\n\r\n - re-organised our teams and our platform to loosely couple them\r\n - re-organised our architecture to be more modular\r\n - made it possible for developers to operate their code in production directly, starting with shoot-it-in-the-head debugging\r\n - made it possible for developers to continuously ship changes\r\n - eliminated most differences between production and qa environments\r\n - became more resilient as a happy by-product"
+       },
+       {  
+           "Id":9,
+           "DDDEventId":1,
+           "TrackId":4,
+           "TimeSlotId":5,
+           "Title":"Super charging your JavaScript development experience",
+           "Speaker":"Chris Canal",
+           "ShortDescription":"With the release of V8 and subsequently NodeJs, JavaScript has started to grow up.  In this session we will look at how you can super charge your JavaScript development lifecycle and deliver better written, cleaner and more coherent JavaScript with and without VisualStudio\r\n\r\nWe will look at the many awesome frameworks for infrastructural support when developing JavaScript applications like Yeoman, Gulp, grunt, Browserfy and a few other handy libraries",
+           "FullDescription":"With the release of V8 and subsequently NodeJs, JavaScript has started to grow up.  In this session we will look at how you can super charge your JavaScript development lifecycle and deliver better written, cleaner and more coherent JavaScript with and without VisualStudio\r\n\r\nWe will look at the many awesome frameworks for infrastructural support when developing JavaScript applications like Yeoman, Gulp, grunt, Browserfy and a few other handy libraries"
+       },
+       {  
+           "Id":10,
+           "DDDEventId":1,
+           "TrackId":5,
+           "TimeSlotId":5,
+           "Title":"Beyond responsive design - UI for the modern web application",
+           "Speaker":"Pete Smith",
+           "ShortDescription":"Applications written for the modern web are being consumed not just on desktop browsers, but also on a myriad of other devices... even watches and glasses. If you design your application with a pc screen in mind, at worst you're either cutting your userbase in half or setting yourself up for an expensive redesign.\r\n\r\nIn this talk I'll introduce you to some modern web design constructs, and the technologies that bring them to life. Learn how to create apps that work just as well on phone, mobile and desktop with no extra effort, and without restrictive layout frameworks. Who knows... you may even even see things that begin to rival native apps!",
+           "FullDescription":"Applications written for the modern web are being consumed not just on desktop browsers, but also on a myriad of other devices... even watches and glasses. If you design your application with a pc screen in mind, at worst you're either cutting your userbase in half or setting yourself up for an expensive redesign.\r\n\r\nIn this talk I'll introduce you to some modern web design constructs, and the technologies that bring them to life. Learn how to create apps that work just as well on phone, mobile and desktop with no extra effort, and without restrictive layout frameworks. Who knows... you may even even see things that begin to rival native apps!"
+       },
+       {  
+           "Id":11,
+           "DDDEventId":1,
+           "TrackId":1,
+           "TimeSlotId":7,
+           "Title":"So you want to be a Tech Lead? 10 things you need to do to succeed.",
+           "Speaker":"Joel Hammond-Turner",
+           "ShortDescription":"\"Tech Lead\" is an amorphous job title - is it all about the technology, or all about leadership? What should the balance really be?\r\n\r\nAnd it can also be a complex and thankless role too - particularly if you find yourself becoming the go-to guy (or gal) for everyone from the intern to the product manager.\r\n\r\nIn this talk I'll cover (at least) 10 things that I think are essential to success in both areas, including how to address technical debt, herd your PMs and make sure your development team has a steady flow of work (and beer, pizza or other \"motivationals\").\r\n",
+           "FullDescription":"\"Tech Lead\" is an amorphous job title - is it all about the technology, or all about leadership? What should the balance really be?\r\n\r\nAnd it can also be a complex and thankless role too - particularly if you find yourself becoming the go-to guy (or gal) for everyone from the intern to the product manager.\r\n\r\nIn this talk I'll cover (at least) 10 things that I think are essential to success in both areas, including how to address technical debt, herd your PMs and make sure your development team has a steady flow of work (and beer, pizza or other \"motivationals\").\r\n"
+       },
+       {  
+           "Id":12,
+           "DDDEventId":1,
+           "TrackId":2,
+           "TimeSlotId":7,
+           "Title":"Decoupling from ASP.NET - Hexagonal Architectures in .NET",
+           "Speaker":"Ian Cooper",
+           "ShortDescription":"The term 'hexagonal architecture' has come back and forth in popularity since Alistair Cockburn first mooted it, with the Rails community's recent soul searching over its importance or threat just the latest. So what is a hexagonal architecture, why might you want to use one, and why is the 'Rails just falls away' (https://www.youtube.com/watch?v=tg5RFeSfBM4) threat so discomforting to web framework builders. How can we make 'ASP.NET just fall away'.\r\n\r\nIn this presentation we will look at the Layered Architectural style - when we would want to use one (as opposed to the alternatives) and when it is appropriate how to implement one. We will look at how to implement the Ports & Adapters (Hexagonal's 'proper' name) style, explaining what the different layers are. \r\n\r\nWe will look at the value the command pattern for implementing our ports , explain why Netflix uses it in Hystrix for reliability. On the way we will discuss Retry, Timeout and Circuit Breaker and explain how we can do better than Hystrix with a Command Dispatcher and Command Processor.\r\n\r\nWe'll show code throughout, including a look at the Paramore. Brighter framework, an OSS version of the platform we use at Huddle to build this kind of architecture.\r\n\r\nAs a bonus we will round off showing you how easy it is go from sync to async with this approach.\r\n",
+           "FullDescription":"The term 'hexagonal architecture' has come back and forth in popularity since Alistair Cockburn first mooted it, with the Rails community's recent soul searching over its importance or threat just the latest. So what is a hexagonal architecture, why might you want to use one, and why is the 'Rails just falls away' (https://www.youtube.com/watch?v=tg5RFeSfBM4) threat so discomforting to web framework builders. How can we make 'ASP.NET just fall away'.\r\n\r\nIn this presentation we will look at the Layered Architectural style - when we would want to use one (as opposed to the alternatives) and when it is appropriate how to implement one. We will look at how to implement the Ports & Adapters (Hexagonal's 'proper' name) style, explaining what the different layers are. \r\n\r\nWe will look at the value the command pattern for implementing our ports , explain why Netflix uses it in Hystrix for reliability. On the way we will discuss Retry, Timeout and Circuit Breaker and explain how we can do better than Hystrix with a Command Dispatcher and Command Processor.\r\n\r\nWe'll show code throughout, including a look at the Paramore. Brighter framework, an OSS version of the platform we use at Huddle to build this kind of architecture.\r\n\r\nAs a bonus we will round off showing you how easy it is go from sync to async with this approach.\r\n"
+       },
+       {  
+           "Id":13,
+           "DDDEventId":1,
+           "TrackId":3,
+           "TimeSlotId":7,
+           "Title":"Performance is a Feature!",
+           "Speaker":"Matt Warren",
+           "ShortDescription":"Starting with the premise that *\"Performance is a Feature\"*, this session will look at how to measure, what to measure and how get the best performance from your .NET code. We will look at real-world examples from the Roslyn code-base, StackOverflow and my personal experience of trying (but ultimately failing) to break a world record.",
+           "FullDescription":"Starting with the premise that *\"Performance is a Feature\"*, this session will look at how to measure, what to measure and how get the best performance from your .NET code. We will look at real-world examples from the Roslyn code-base, StackOverflow and my personal experience of trying (but ultimately failing) to break a world record."
+       },
+       {  
+           "Id":14,
+           "DDDEventId":1,
+           "TrackId":4,
+           "TimeSlotId":7,
+           "Title":"All your types are belong to us!",
+           "Speaker":"Phillip Trelford",
+           "ShortDescription":"Big Data tasks typically require acquiring and analysing data from a wide variety of data sources, visualizing the data and applying a barrage of statistical algorithms. This talk will show how this can be accomplished in Visual Studio on Windows or Xamarin Studio on Mac and Linux using F#'s REPL and Type Providers. \r\nType Providers give typed access to a wide range of data sources from CSV, JSON and XML to SQL, OData and Web Services, instantly without a code generation step. The Type Provider mechanism can also be used to analyse data with direct access to statistical packages like R and MATLAB as well as all the existing .Net libraries.\r\nFinally visualizations can be generated using F#'s desktop charting libraries, or with ASP.Net and even JavaScript libraries like HighCharts.\r\nExpect a sprinkling of anecdotes drawn from experiences working on large machine learning systems at Microsoft, and plenty of live demos.",
+           "FullDescription":"Big Data tasks typically require acquiring and analysing data from a wide variety of data sources, visualizing the data and applying a barrage of statistical algorithms. This talk will show how this can be accomplished in Visual Studio on Windows or Xamarin Studio on Mac and Linux using F#'s REPL and Type Providers. \r\nType Providers give typed access to a wide range of data sources from CSV, JSON and XML to SQL, OData and Web Services, instantly without a code generation step. The Type Provider mechanism can also be used to analyse data with direct access to statistical packages like R and MATLAB as well as all the existing .Net libraries.\r\nFinally visualizations can be generated using F#'s desktop charting libraries, or with ASP.Net and even JavaScript libraries like HighCharts.\r\nExpect a sprinkling of anecdotes drawn from experiences working on large machine learning systems at Microsoft, and plenty of live demos."
+       },
+       {  
+           "Id":15,
+           "DDDEventId":1,
+           "TrackId":5,
+           "TimeSlotId":7,
+           "Title":"DDD: Disney Driven Development",
+           "Speaker":"Melinda Seckington",
+           "ShortDescription":"Disney parks are built using their Four Keys of The Kingdom: Safety, Courtesy, Show and Efficiency. This talk will show examples of how Disney have applied these four keys everywhere in their parks and how we can extend those principles to our work as web developers.",
+           "FullDescription":"Disney parks are built using their Four Keys of The Kingdom: Safety, Courtesy, Show and Efficiency. This talk will show examples of how Disney have applied these four keys everywhere in their parks and how we can extend those principles to our work as web developers."
+       },
+       {  
+           "Id":16,
+           "DDDEventId":1,
+           "TrackId":1,
+           "TimeSlotId":9,
+           "Title":"The vNext Big Thing",
+           "Speaker":"Mark Rendle",
+           "ShortDescription":"At TechEd this year, various Scotts and a David announced ASP.NET vNext, the biggest thing to happen to the Microsoft web developers story since ASP.NET 1.0.\r\n\r\nIt's a moving target, so I can't say exactly what the talk will include, but I can guarantee it will cover:\r\n\r\n- The Core CLR, the K Runtime, and the project.json file\r\n- How Roslyn fits into the story\r\n- What (and why) OWIN is, and how to write middleware for it\r\n- The merging of MVC and Web API into a single, streamlined, uber-framework\r\n- Why I'm never going to finish Simple.Web\r\n\r\nLook, it's all awesome. Just come and see.",
+           "FullDescription":"At TechEd this year, various Scotts and a David announced ASP.NET vNext, the biggest thing to happen to the Microsoft web developers story since ASP.NET 1.0.\r\n\r\nIt's a moving target, so I can't say exactly what the talk will include, but I can guarantee it will cover:\r\n\r\n- The Core CLR, the K Runtime, and the project.json file\r\n- How Roslyn fits into the story\r\n- What (and why) OWIN is, and how to write middleware for it\r\n- The merging of MVC and Web API into a single, streamlined, uber-framework\r\n- Why I'm never going to finish Simple.Web\r\n\r\nLook, it's all awesome. Just come and see."
+       },
+       {  
+           "Id":17,
+           "DDDEventId":1,
+           "TrackId":2,
+           "TimeSlotId":9,
+           "Title":"NServiceBus: introduction to a message based distributed architecture",
+           "Speaker":"Mauro Servienti",
+           "ShortDescription":"SOA and distributed had been buzzwords for a long time, a message based architecture that embrace the SOA principles is the real solution to a scalable and distributed environment where HA or/and temporal decoupling are a must.\r\nIn this session we will introduce messaging concepts and see how NServiceBus, a powerfull toolkit to rule all the aspects of a messaging transport, can dramatically simplify the development process.",
+           "FullDescription":"SOA and distributed had been buzzwords for a long time, a message based architecture that embrace the SOA principles is the real solution to a scalable and distributed environment where HA or/and temporal decoupling are a must.\r\nIn this session we will introduce messaging concepts and see how NServiceBus, a powerfull toolkit to rule all the aspects of a messaging transport, can dramatically simplify the development process."
+       },
+       {  
+           "Id":18,
+           "DDDEventId":1,
+           "TrackId":3,
+           "TimeSlotId":9,
+           "Title":"Keeping it responsive - cross-platform MVVM with ReactiveUI",
+           "Speaker":"Sam Hogarth",
+           "ShortDescription":"Building an awesome user interface is hard work. You've got the complexities of real life to deal with - handling user inputs, dealing with slow network connections and managing background workers. There's also this testing thing that people keep going on about!\r\n\r\nWe need a way of handling the real world, whilst behaving in a predictable and responsive manner. Enter ReactiveUI, a fusion of MVVM and the Reactive Extensions (Rx) for .NET applications.\r\n\r\nIn this session I'll introduce ReactiveUI, show you some tips and tricks, discuss the benefits and tradeoffs of the framework and show how it can be used as a solid foundation for building cross-platform .NET applications.\r\n\r\n",
+           "FullDescription":"Building an awesome user interface is hard work. You've got the complexities of real life to deal with - handling user inputs, dealing with slow network connections and managing background workers. There's also this testing thing that people keep going on about!\r\n\r\nWe need a way of handling the real world, whilst behaving in a predictable and responsive manner. Enter ReactiveUI, a fusion of MVVM and the Reactive Extensions (Rx) for .NET applications.\r\n\r\nIn this session I'll introduce ReactiveUI, show you some tips and tricks, discuss the benefits and tradeoffs of the framework and show how it can be used as a solid foundation for building cross-platform .NET applications.\r\n\r\n"
+       },
+       {  
+           "Id":19,
+           "DDDEventId":1,
+           "TrackId":4,
+           "TimeSlotId":9,
+           "Title":"A Brief Introduction to Making your own (Internet of Things) Thing.",
+           "Speaker":"Stephen Harrison",
+           "ShortDescription":"The Internet of Things is exploding and it's a great time to join in: more and more devices like the Arduino, Netduino and Gadgeteer are becoming available. The question is, how do I get started?\r\n\r\nWe will look at what is available in terms of popular hardware for building your Thing, and a demo of how to develop for the Arduino, followed by an introduction to the Gadgeteer and .Net Micro Framework, hopefully finishing up with a fairly simple but connected Gadgeteer based Thing (Wifi Allowing!).\r\n",
+           "FullDescription":"The Internet of Things is exploding and it's a great time to join in: more and more devices like the Arduino, Netduino and Gadgeteer are becoming available. The question is, how do I get started?\r\n\r\nWe will look at what is available in terms of popular hardware for building your Thing, and a demo of how to develop for the Arduino, followed by an introduction to the Gadgeteer and .Net Micro Framework, hopefully finishing up with a fairly simple but connected Gadgeteer based Thing (Wifi Allowing!).\r\n"
+       },
+       {  
+           "Id":20,
+           "DDDEventId":1,
+           "TrackId":5,
+           "TimeSlotId":9,
+           "Title":"Data Science for Fun and Profit",
+           "Speaker":"Gary Short",
+           "ShortDescription":"Make no mistake, data science can be hard, but it can also be fun. In this session I'll introduce you to Classic and Bayesian Statistics and Machine Learning, all through the medium of predicting horse racing results. We'll explore a number of techniques for making such predictions and we'll finish by combining them into a powerful \"mixed model\" prediction engine, that's sure to pick the next big winner. This session won't only improve your knowledge, it'll improve your bank balance too! Note: probably won't do the latter though. :-)",
+           "FullDescription":"Make no mistake, data science can be hard, but it can also be fun. In this session I'll introduce you to Classic and Bayesian Statistics and Machine Learning, all through the medium of predicting horse racing results. We'll explore a number of techniques for making such predictions and we'll finish by combining them into a powerful \"mixed model\" prediction engine, that's sure to pick the next big winner. This session won't only improve your knowledge, it'll improve your bank balance too! Note: probably won't do the latter though. :-)"
+       },
+       {  
+           "Id":21,
+           "DDDEventId":1,
+           "TrackId":1,
+           "TimeSlotId":11,
+           "Title":"Architecture - why so serious?",
+           "Speaker":"Barbara Fusinska",
+           "ShortDescription":"What comes to developer's mind when he hears the phrase 'software architecture'? Is it clean design or rather heavy and unusable overhead? Nowadays there are many approaches to follow while building the software, but they often sound to pompous and lead to overcomplicating things. Programmers refuse to consider them, when all they need is making some simple functionalities work. They hear the word architecture and they get uptight in seconds. And that's not how it's supposed to be. Good practices should help, not introduce unnecessary problems and disturbance.\r\n\r\nWhat if thinking about architecture doesn't make the software too heavy and introduces actual value? What if some of its concepts could be used easily, even in non complex projects, simplifying the process of creation at the same time?\r\n\r\nThe talk is to illustrate how architecture is not about ivory towers, but actual coding, and on what those coding architects should do. It will center on showing some habits developed through years of building different kinds of software systems. Using them can help reducing work, while focusing on what's most important - getting the job done that brings concrete value to the client. It will be demonstrated by real (but simple in the same time) code and fully functional web application. One that can be used as an outline for further usage, as patterns to apply. Presented examples will highlight power of more abstract approach, but in the same time will consider hands on code.",
+           "FullDescription":"What comes to developer's mind when he hears the phrase 'software architecture'? Is it clean design or rather heavy and unusable overhead? Nowadays there are many approaches to follow while building the software, but they often sound to pompous and lead to overcomplicating things. Programmers refuse to consider them, when all they need is making some simple functionalities work. They hear the word architecture and they get uptight in seconds. And that's not how it's supposed to be. Good practices should help, not introduce unnecessary problems and disturbance.\r\n\r\nWhat if thinking about architecture doesn't make the software too heavy and introduces actual value? What if some of its concepts could be used easily, even in non complex projects, simplifying the process of creation at the same time?\r\n\r\nThe talk is to illustrate how architecture is not about ivory towers, but actual coding, and on what those coding architects should do. It will center on showing some habits developed through years of building different kinds of software systems. Using them can help reducing work, while focusing on what's most important - getting the job done that brings concrete value to the client. It will be demonstrated by real (but simple in the same time) code and fully functional web application. One that can be used as an outline for further usage, as patterns to apply. Presented examples will highlight power of more abstract approach, but in the same time will consider hands on code."
+       },
+       {  
+           "Id":22,
+           "DDDEventId":1,
+           "TrackId":2,
+           "TimeSlotId":11,
+           "Title":"What Developers Need To Know About Visual Design ",
+           "Speaker":"Ben Hall",
+           "ShortDescription":"The world has become a very design sensitive meaning it’s now even more critical that developers build products that look amazing. Sadly frameworks like twitter’s bootstrap can only take us so far and even with designers on the team developers need to understand the key principals of good design to make effective decisions.\r\n\r\nIn this session Ben will explore the five key topics around design that can make or break an application and website. The key topics are Layout and the golden ratio, Typography, Imaginary, Colours and User Feedback. With these topics attendees will come away with a deeper understanding about why certain elements look good while others don’t and what developers really should know about design. It will explore the cognitive science and research to move beyond personal options about design to data and research driven insights.\r\n",
+           "FullDescription":"The world has become a very design sensitive meaning it’s now even more critical that developers build products that look amazing. Sadly frameworks like twitter’s bootstrap can only take us so far and even with designers on the team developers need to understand the key principals of good design to make effective decisions.\r\n\r\nIn this session Ben will explore the five key topics around design that can make or break an application and website. The key topics are Layout and the golden ratio, Typography, Imaginary, Colours and User Feedback. With these topics attendees will come away with a deeper understanding about why certain elements look good while others don’t and what developers really should know about design. It will explore the cognitive science and research to move beyond personal options about design to data and research driven insights.\r\n"
+       },
+       {  
+           "Id":23,
+           "DDDEventId":1,
+           "TrackId":3,
+           "TimeSlotId":11,
+           "Title":"Using F# for Line of Business Applications",
+           "Speaker":"Ian Russell",
+           "ShortDescription":"C# is a great language for developing Line of Business applications but F# is even better! If you want to write code that expresses your requirements clearly, ensures correctness and supports rapid, and fun, development then guess what, F# does all that and more!\r\n\r\nNo prior experience of F# is necessary for this session but be warned, once you've seen what F# can do, you won't want to go back to C#!",
+           "FullDescription":"C# is a great language for developing Line of Business applications but F# is even better! If you want to write code that expresses your requirements clearly, ensures correctness and supports rapid, and fun, development then guess what, F# does all that and more!\r\n\r\nNo prior experience of F# is necessary for this session but be warned, once you've seen what F# can do, you won't want to go back to C#!"
+       },
+       {  
+           "Id":24,
+           "DDDEventId":1,
+           "TrackId":4,
+           "TimeSlotId":11,
+           "Title":"Scream if you want to go faster: speed up .NET and SQL Server web apps",
+           "Speaker":"Bart Read",
+           "ShortDescription":"We all know that websites need to be fast. But how do you juice up creaking web apps that have been around for a while without deploying the thermonuclear option (i.e., the costly and much-maligned ground-up rewrite)?\r\n\r\nUnfortunately this can still prove tricky, especially when the issues lie in the database layer. Help is at hand though: I’ll show you the techniques that will help you hunt down performance problems in your database, and relate them back to your .NET code. But that's only half the story: we'll also talk about the strategies you can use to fix them from the relatively simple, to the much more involved.\r\n\r\nYou should leave with an arsenal of optimisation tricks for every occasion!",
+           "FullDescription":"We all know that websites need to be fast. But how do you juice up creaking web apps that have been around for a while without deploying the thermonuclear option (i.e., the costly and much-maligned ground-up rewrite)?\r\n\r\nUnfortunately this can still prove tricky, especially when the issues lie in the database layer. Help is at hand though: I’ll show you the techniques that will help you hunt down performance problems in your database, and relate them back to your .NET code. But that's only half the story: we'll also talk about the strategies you can use to fix them from the relatively simple, to the much more involved.\r\n\r\nYou should leave with an arsenal of optimisation tricks for every occasion!"
+       },
+       {  
+           "Id":25,
+           "DDDEventId":1,
+           "TrackId":5,
+           "TimeSlotId":11,
+           "Title":"Build Great Software for the Enterprise and Love it",
+           "Speaker":"Kendall Miller",
+           "ShortDescription":"You want to write great code - taking the time to create an application that is cleanly written, easy to test, performs well, and delights users.  Your company wants it done yesterday.  **How do you get the time and budget you need to build it right instead of just pounding out the next feature**?\r\n\r\nIn this talk, we'll cover how to:\r\n\r\n 1. Never skip coded tests again.\r\n 2. Communicate security risks effectively so your business isn't the next Target.\r\n 3. Pay down technical debt while delivering the features your users are waiting for.\r\n\r\nSound incredible? Come to the talk to find out how you can go home happy with the work you've done each day, even in an enterprise.",
+           "FullDescription":"You want to write great code - taking the time to create an application that is cleanly written, easy to test, performs well, and delights users.  Your company wants it done yesterday.  **How do you get the time and budget you need to build it right instead of just pounding out the next feature**?\r\n\r\nIn this talk, we'll cover how to:\r\n\r\n 1. Never skip coded tests again.\r\n 2. Communicate security risks effectively so your business isn't the next Target.\r\n 3. Pay down technical debt while delivering the features your users are waiting for.\r\n\r\nSound incredible? Come to the talk to find out how you can go home happy with the work you've done each day, even in an enterprise."
+       }
+    ]
+}

@@ -11,7 +11,8 @@ body {
   margin: 0;
 }
 a {
-  color: #666666;
+  color: #005800;
+  font-weight: 350;
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -25,14 +26,13 @@ h2,
 h3 {
   font-family: "OpenSans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
   font-size: 1.125em;
-  line-height: 2.625em;
   margin: 0em 0 0.375em 0;
   padding: 0;
   color: #666666;
   display: block;
 }
 a:hover {
-  color: #999999;
+  color: #31a431;
 }
 section.wrapper > header {
   background: #005800;
@@ -197,6 +197,9 @@ article > aside > nav > div > div > ul > li > div > ul > li > a > i.fa {
   width: 1.25rem;
   max-width: 1.25rem;
 }
+article > aside > nav > div > div > ul > li > div > ul > li > a:hover {
+  color: #999999;
+}
 article > aside > nav > div > div > ul > li > div > ul > li.active > a {
   color: #ffffff;
 }
@@ -256,6 +259,10 @@ article > section > section.content .presentation > header > h2 > span {
   font-size: 1.125rem;
   text-indent: 0;
 }
+article nav.toolbar > header {
+  padding: 0 0.1em 0 1em;
+  line-height: 3em;
+}
 article nav.toolbar > ul {
   list-style-type: none;
   padding: 0 1em 0 1em;
@@ -272,10 +279,25 @@ article nav.toolbar > ul::after {
   border-bottom: 1px solid #b2b2b2;
 }
 article nav.toolbar > ul > li {
-  padding: 0 1em 0 0;
-  line-height: 2.9375em;
+  padding: 0;
+  line-height: 2.25em;
   text-indent: 0;
   margin: 0;
+  min-height: 3em;
+  overflow: hidden;
+}
+article nav.toolbar > ul > li > .highlight {
+  display: none;
+  position: relative;
+  top: 2.70em;
+  height: 1px;
+  border-bottom: 5px solid #227122;
+}
+article nav.toolbar > ul > li.active > .highlight {
+  display: block;
+}
+article nav.toolbar > ul > li.active > a {
+  color: #666666;
 }
 article nav.toolbar > ul > li > a {
   font-weight: 400;
@@ -285,12 +307,13 @@ article nav.toolbar > ul > li > a {
   cursor: pointer;
   text-transform: capitalize;
   white-space: nowrap;
+  padding: 0 0.5em 0 0.5em;
 }
 article nav.toolbar > ul > li > a > i {
   font-weight: 300;
   padding-right: 0.28571429em;
 }
 article nav.toolbar > ul > li > a:hover {
-  color: #999999;
+  color: #b3b3b3;
 }
 /*# sourceMappingURL=theme.css.map */

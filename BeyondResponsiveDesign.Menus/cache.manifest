@@ -28,3 +28,13 @@ scripts/interactions.js
 scripts/jquery-2.1.1.min.js
 scripts/jquery.detect_swipe.js
 Index.html
+content/accommodation.html
+content/agenda.html
+content/cfp.html
+content/contact.html
+content/home.html
+content/presentation.html
+content/sessions.html
+content/speakers.html
+content/sponsors.html
+content/venue.html

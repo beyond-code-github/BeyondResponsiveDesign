@@ -140,9 +140,16 @@ article > section {
     z-index: 1;
 
     > section.content {
-        .originFixed(@top: @toolbar-height);
         .scrollcontainer;
         .vscroll;
+
+        &.notoolbar {
+            .originFixed;
+        }
+
+        &:not(.notoolbar) {
+            .originFixed(@top: @toolbar-height);
+        }
     }
 
     > section.content > div {
@@ -156,12 +163,19 @@ article nav.toolbar {
     position: relative;
     min-height: @toolbar-height;
 
-    > ul {
-        position: relative;
+    > header {
+        float: left;
         min-height: @toolbar-height;
+        height: @toolbar-height;
+    }
+
+    > ul {
+        min-height: @toolbar-height;
+        height: @toolbar-height;
 
         > li {
-            display: inline-block;
+            display: block;
+            float: left;
         }
     }
 }

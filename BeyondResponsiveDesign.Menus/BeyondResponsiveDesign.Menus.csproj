@@ -72,6 +72,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\cfp.html" />
+    <Content Include="content\venue.html" />
+    <Content Include="content\accommodation.html" />
+    <Content Include="content\contact.html" />
+    <Content Include="content\sponsors.html" />
+    <Content Include="content\sessions.html" />
+    <Content Include="content\speakers.html" />
+    <Content Include="content\presentation.html" />
+    <Content Include="content\agenda.html" />
+    <Content Include="content\home.html" />
     <Content Include="images\favicon.ico" />
     <Content Include="styles\fonts\opensans_bolditalic_macroman\OpenSans-BoldItalic-demo.html" />
     <Content Include="styles\fonts\opensans_bolditalic_macroman\OpenSans-BoldItalic-webfont.svg" />
@@ -154,7 +164,8 @@
     <Content Include="styles\fonts\FontAwesome.otf" />
     <Content Include="scripts\fastclick.js" />
     <Content Include="scripts\interactions.js" />
-    <Content Include="cache.manifest" />
+    <None Include="cache.manifest" />
+    <None Include="content\agenda.json" />
     <None Include="scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="scripts\jquery-2.1.1.js" />
     <Content Include="scripts\jquery-2.1.1.min.js" />

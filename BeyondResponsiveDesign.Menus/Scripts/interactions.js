@@ -2,6 +2,8 @@
 
     interactions.init = function () {
         $.detectSwipe.preventDefault = false;
+        interactions.navigate("home");
+        
         $('body').on('touchmove', function (e) {
             var searchTerms = '.vscroll, .vscroll-scroll, .hscroll',
                 $target = $(e.target),
@@ -22,42 +24,12 @@
             interactions.HidePopups(e);
             interactions.ToggleSideBar(e);
         });
-
-        interactions.activateTabOne = function () {
-            $("#contentOne").removeClass("offLeft");
-            $("#contentOne").addClass("active");
-            $("#contentTwo").addClass("offRight");
-            $("#contentTwo").removeClass("active");
-        }
-
-        interactions.activateTabTwo = function () {
-            $("#contentOne").addClass("offLeft");
-            $("#contentOne").removeClass("active");
-            $("#contentTwo").removeClass("offRight");
-            $("#contentTwo").addClass("active");
-        }
-
-        $(document.body).on('click', 'article>section>nav>ul>li.toolbar1', function (e) {
-            $(this).trigger('blur');
-            e.preventDefault();
-            e.stopPropagation();
-
-            interactions.activateTabOne();
-        });
-
-        $(document.body).on('click', 'article>section>nav>ul>li.toolbar2', function (e) {
-            $(this).trigger('blur');
-            e.preventDefault();
-            e.stopPropagation();
-
-            interactions.activateTabTwo();
-        });
-
+        
         $("article").on('swiperight', function (e) {
-            if ($("#contentOne").hasClass("active")) {
+            if (!interactions.contentIsTabbed() || interactions.leftmostTabIsOpen()) {
                 interactions.ShowSideBar(e);
             } else {
-                interactions.activateTabOne();
+                interactions.slideTabsLeft();
             }
         });
 
@@ -65,7 +37,7 @@
             if ($('body').hasClass("sidebar")) {
                 interactions.HideSideBar(e);
             } else {
-                interactions.activateTabTwo();
+                interactions.slideTabsRight();
             }
         });
     };
@@ -92,5 +64,69 @@
     interactions.HidePopups = function (e) {
 
     };
+
+    interactions.navigate = function (location) {
+        $.get("content/" + location + ".html").done(function (html) {
+            var target = $("section.target");
+            target.empty();
+            target.html(html);
+
+            $("article > aside > nav > div > div > ul  li").removeClass("active");
+            var menuitem = $("article > aside > nav > div > div > ul li#menu-" + location);
+            menuitem.addClass("active");
+
+            var parentDiv = menuitem.parents("div").first();
+            if (parentDiv.hasClass("wrapper")) {
+                var childItem = menuitem.children("li").first();
+                if (childItem) {
+                    childItem.addClass("active");
+                }
+            } else {
+                parentDiv.parent().addClass("active");
+            }
+        });
+    }
+
+    interactions.contentIsTabbed = function() {
+        return $("article > section > nav > ul > li.active").length > 0;
+    }
+
+    interactions.leftmostTabIsOpen = function () {
+        var tab = $("article > section > nav > ul > li.active");
+        return tab.length > 0 && tab.prevAll("li").length == 0;
+    }
+
+    interactions.slideTabsLeft = function () {
+        var currentTabLink = $("article > section > nav > ul > li.active");
+        var nextTabLink = currentTabLink.prev("li");
+        interactions.slideToTab(nextTabLink.attr("id").replace("tab-",""));
+    }
+
+    interactions.slideTabsRight = function () {
+        var currentTabLink = $("article > section > nav > ul > li.active");
+        var nextTabLink = currentTabLink.next("li");
+        interactions.slideToTab(nextTabLink.attr("id").replace("tab-",""));
+    }
+
+    var shiftElements = function(element, siblingSelector) {
+        element.siblings().removeClass("active");
+        element.prevAll(siblingSelector).removeClass("offRight");
+        element.prevAll(siblingSelector).addClass("offLeft");
+
+        element.nextAll(siblingSelector).removeClass("offLeft");
+        element.nextAll(siblingSelector).addClass("offRight");
+
+        element.addClass("active");
+        element.removeClass("offLeft");
+        element.removeClass("offRight");
+    }
+
+    interactions.slideToTab = function(tab) {
+        var tabLink = $("article > section > nav > ul > li#tab-" + tab);
+        shiftElements(tabLink, "li");
+
+        var tabContent = $("article > section > section.content > div#" + tab);
+        shiftElements(tabContent, "div");
+    }
 
 })(window.interactions = window.interactions || {});

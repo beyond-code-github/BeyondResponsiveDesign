@@ -1,15 +1,41 @@
 ﻿@sidebar-width: 16.5em;
-@animation-speed: 0.3s;
+@animation-speed-normal: 0.2s;
+@animation-speed-fast: 0.1s;
 
-.animate {
-    -webkit-transition: all @animation-speed ease-in-out;
-    -moz-transition: all @animation-speed ease-in-out;
-    -o-transition: all @animation-speed ease-in-out;
-    transition: all @animation-speed ease-in-out;
+.animate(@speed: @animation-speed-normal) {
+    -webkit-transition: all @speed ease-in-out;
+    -moz-transition: all @speed ease-in-out;
+    -o-transition: all @speed ease-in-out;
+    transition: all @speed ease-in-out;
+}
+
+.animateFast {
+   .animate(@animation-speed-fast);
+}
+
+article > aside > nav > div > div > ul > li:not(.active) > div {
+    overflow: hidden;
+    height: 0;
+
+    > ul {
+        -webkit-transform: translate3d(0,-100%,0);
+        -ms-transform: translate3d(0,-100%,0);
+        -moz-transform: translate3d(0,-100%,0);
+        -o-transform: translate3d(0,-100%,0);
+        transform: translate3d(0,-100%,0);
+    }
+}
+
+article > aside > nav > div > div > ul > li.active > div > ul {
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    .animate;
 }
 
 article > section > section.content {
-
     &.slideTabContainer {
         height: auto;
         -webkit-overflow-scrolling: auto;
@@ -41,6 +67,39 @@ article > section > section.content {
             -o-transform: translate3d(-100%,0,0);
             transform: translate3d(-100%,0,0);
         }
+    }
+}
+
+article > section > nav.toolbar > ul > li {
+    > .highlight {
+        display: block;
+    }
+
+    &.offLeft > .highlight {
+        -webkit-transform: translate3d(100%,0,0);
+        -ms-transform: translate3d(100%,0,0);
+        -moz-transform: translate3d(100%,0,0);
+        -o-transform: translate3d(100%,0,0);
+        transform: translate3d(100%,0,0);
+        .animateFast
+    }
+
+    &.offRight > .highlight {
+        -webkit-transform: translate3d(-100%,0,0);
+        -ms-transform: translate3d(-100%,0,0);
+        -moz-transform: translate3d(-100%,0,0);
+        -o-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0);
+        .animateFast
+    }
+
+    &.active > .highlight {
+        -webkit-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        .animateFast
     }
 }
 
