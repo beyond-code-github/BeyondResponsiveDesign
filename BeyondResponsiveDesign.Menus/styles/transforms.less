@@ -14,11 +14,11 @@
 }
 
 div.responsiveimage > img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
-article > aside > nav > div > div > ul > li:not(.active) > div {
+body > nav > div > div > ul > li:not(.active) > div {
     overflow: hidden;
     height: 0;
 
@@ -31,7 +31,7 @@ article > aside > nav > div > div > ul > li:not(.active) > div {
     }
 }
 
-article > aside > nav > div > div > ul > li.active > div > ul {
+body > nav > div > div > ul > li.active > div > ul {
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     -moz-transform: translate3d(0,0,0);
@@ -40,18 +40,16 @@ article > aside > nav > div > div > ul > li.active > div > ul {
     .animate;
 }
 
-article > section > section.content {
-    &.slideTabContainer {
-        height: auto;
-        -webkit-overflow-scrolling: auto;
-    }
+body > main > article > div.slideTabContainer {
+    height: auto;
+    -webkit-overflow-scrolling: auto;
 
-    > div {
+    > section {
         .animate;
 
         &.slideTab {
             position: absolute;
-            top: 0;
+            top: 3em;
             left: 0;
             right: 0;
             bottom: 0;
@@ -109,7 +107,8 @@ article > section > nav.toolbar > ul > li {
 }
 
 @media only screen and (min-width: 801px) {
-    body:not(.guest) > section.wrapper > article {
+    body > nav,
+    body > main > article {
         .animate;
     }
 }
@@ -119,25 +118,32 @@ article > section > nav.toolbar > ul > li {
         max-width: 14em;
     }
 
-    body > section.wrapper {
-        > header > nav > ul > li.menuToggle {
+    body {
+        > header > ul > li.menuToggle {
             display: block;
             left: -1.2em;
             .animate;
         }
 
-        > article {
+        > nav {
             left: -@sidebar-width;
+            margin-left: -1px;
+            .animate;
+        }
+
+        > main > article {
+            left: 0;
             margin-left: -1px;
             .animate;
         }
     }
 
-    body.sidebar > section.wrapper > header > nav > ul > li.menuToggle {
+    body.sidebar > header > ul > li.menuToggle {
         left: -1.5em;
     }
 
-    body.sidebar > section.wrapper > article {
+    body.sidebar > nav,
+    body.sidebar > main > article {
         -webkit-transform: translateX(@sidebar-width);
         -ms-transform: translateX(@sidebar-width);
         -moz-transform: translateX(@sidebar-width);
@@ -145,7 +151,8 @@ article > section > nav.toolbar > ul > li {
         transform: translateX(@sidebar-width);
     }
 
-    body:not(.sidebar) > section.wrapper > article {
+    body:not(.sidebar) > nav,
+    body:not(.sidebar) > main > article {
         -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
         -moz-transform: translateX(0);

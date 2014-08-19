@@ -19,10 +19,6 @@ html {
 body {
     .originFixed;
     overflow: hidden;
-
-    > section.wrapper {
-        .originFixed;
-    }
 }
 
 .scrollcontainer {
@@ -57,13 +53,7 @@ body {
     }
 }
 
-article {
-    .originFixed;
-    z-index: 2;
-    overflow: hidden;
-}
-
-section.wrapper > header {
+body > header {
     .originFixed;
     z-index: 4;
     height: @header-height;
@@ -77,88 +67,83 @@ section.wrapper > header {
         width: 100%;
     }
 
-    > nav {
-        position: relative;
-        width: 100%;
+    > ul {
+        height: @header-height;
 
-        > ul {
+        > li {
+            line-height: @header-height;
             height: @header-height;
+            display: inline-block;
 
-            > li {
-                line-height: @header-height;
-                height: @header-height;
-
-                &.menuToggle {
-                    display: none;
-                    position: absolute;
-                    z-index: 2;
-                    min-width: 5em;
-                }
-
-                > a {
-                    line-height: @header-height;
-                }
+            &.menuToggle {
+                display: none;
+                position: absolute;
+                z-index: 2;
+                min-width: 5em;
             }
 
-            > li.logo > a {
-                position: relative;
-                top: 0;
-                left: 0;
-                display: block;
-                height: @header-height;
-                z-index: 1;
+            > a {
+                line-height: @header-height;
+            }
+        }
 
-                > img {
-                    border: 0 none;
-                    height: 2rem;
-                    max-height: 2rem;
-                    max-width: 15rem;
-                    padding: 0.5rem 0 0 0.3rem;
-                }
+        > li.logo > a {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: block;
+            height: @header-height;
+            z-index: 1;
+
+            > img {
+                border: 0 none;
+                height: 2rem;
+                max-height: 2rem;
+                max-width: 15rem;
+                padding: 0.5rem 0 0 0.3rem;
             }
         }
     }
 }
 
-article > aside {
+body > nav {
     .originFixed(@top: @header-height);
     width: @sidebar-width;
     max-width: @sidebar-width;
     z-index: 2;
     background-color: white;
+}
 
-    & > nav {
-        .originFixed;
-        width: @sidebar-width;
-        max-width: @sidebar-width;
+body > main {
+    .originFixed(@top: @header-height);
+
+    > article {
+        .originFixed(@left: @sidebar-width);
+        .scrollcontainer;
     }
 }
 
-article > section {
-    .originFixed(@top: @header-height, @left: @sidebar-width);
-    z-index: 1;
+body > main > aside.propertySheet {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    bottom: 0;
+    min-width: 480px;
+    z-index: 100001;
+
+    /*-webkit-transform: translate3d(100%,0,0);
+    -moz-transform: translate3d(100%,0,0);
+    -ms-transform: translate3d(100%,0,0);
+    -o-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);*/
 
     > section.content {
-        .scrollcontainer;
-        .vscroll;
-
-        &.notoolbar {
-            .originFixed;
-        }
-
-        &:not(.notoolbar) {
-            .originFixed(@top: @toolbar-height);
-        }
-    }
-
-    > section.content > div {
-        display: block;
-        visibility: visible;
-        opacity: 1;
+        .originFixed
     }
 }
 
-article nav.toolbar {
+body > main > article > nav.toolbar {
     position: relative;
     min-height: @toolbar-height;
 

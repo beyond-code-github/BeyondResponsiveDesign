@@ -9,12 +9,12 @@
     <link rel="apple-touch-icon" sizes="128x128" href="images/icon-128.png">
     <link rel="apple-touch-icon-precomposed" sizes="196x196" href="images/icon-196.png">
     <link rel="apple-touch-icon-precomposed" sizes="128x128" href="images/icon-128.png">
-    
+
     <link href="styles/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="styles/styles.css" rel="stylesheet" type="text/css" />
     <link href="styles/theme.css" rel="stylesheet" type="text/css" />
     <link href="styles/transforms.css" rel="stylesheet" type="text/css" />
-    
+
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,minimal-ui">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,115 +33,108 @@
     </script>
 </head>
 <body>
-    <section class="wrapper">
-        <header>
-            <nav>
+    <header>
+        <ul>
+            <li class="menuToggle">
+                <a href="javascript:void(0)">
+                    <i class="fa-bars fa fa-lg"></i>
+                </a>
+            </li>
+            <li class="logo">
+                <a href="javascript:void(0)">
+                    <img src="images/logo-notext-green.png" alt="dddsw logo" />
+                </a>
+            </li>
+            <li>
+                <h2 id="paneTitle">Home</h2>
+            </li>
+        </ul>
+    </header>
+    <nav class="scrollcontainer vscroll">
+        <div class="scrollcontainer vscroll">
+            <div class="wrapper">
                 <ul>
-                    <li class="menuToggle">
-                        <a href="javascript:void(0)">
-                            <i class="fa-bars fa fa-lg"></i>
+                    <li class="active" id="menu-home">
+                        <a href="javascript:interactions.navigate('home')" onclick="this.blur();" title="Home">
+                            <h2>
+                                <i class="fa fa-lg fa-home"></i>
+                                <span>Home</span>
+                            </h2>
                         </a>
                     </li>
-                    <li class="logo">
-                        <a href="javascript:void(0)">
-                            <img src="images/logo-notext-green.png" alt="dddsw logo" />
+                    <li id="menu-sessions">
+                        <a href="javascript:interactions.navigate('agenda')" onclick="this.blur();" title="Sessions">
+                            <h2>
+                                <i class="fa fa-lg fa-list"></i>
+                                <span>Sessions</span>
+                            </h2>
                         </a>
-                    </li>
-                    <li>
-                        <h2 id="paneTitle">Home</h2>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <article id="workspace">
-            <aside>
-                <nav class="scrollcontainer vscroll">
-                    <div class="scrollcontainer vscroll">
-                        <div class="wrapper">
+                        <div>
                             <ul>
-                                <li class="active" id="menu-home">
-                                    <a href="javascript:interactions.navigate('home')" onclick="this.blur();" title="Home">
-                                        <h2>
-                                            <i class="fa fa-lg fa-home"></i>
-                                            <span>Home</span>
-                                        </h2>
+                                <li id="menu-agenda">
+                                    <a href="javascript:interactions.navigate('agenda')" onclick=" this.blur();" title="Agenda">
+                                        <i class="fa fa-calendar"></i><span>Agenda</span>
                                     </a>
                                 </li>
-                                <li id="menu-sessions">
-                                    <a href="javascript:interactions.navigate('agenda')" onclick="this.blur();" title="Sessions">
-                                        <h2>
-                                            <i class="fa fa-lg fa-list"></i>
-                                            <span>Sessions</span>
-                                        </h2>
+                                <li id="menu-cfp">
+                                    <a href="javascript:interactions.navigate('cfp')" onclick=" this.blur();" title="Submissions">
+                                        <i class="fa fa-bullhorn"></i><span>Submissions</span>
                                     </a>
-                                    <div>
-                                        <ul>
-                                            <li id="menu-agenda">
-                                                <a href="javascript:interactions.navigate('agenda')" onclick=" this.blur();" title="Agenda">
-                                                    <i class="fa fa-calendar"></i><span>Agenda</span>
-                                                </a>
-                                            </li>
-                                            <li id="menu-cfp">
-                                                <a href="javascript:interactions.navigate('cfp')" onclick=" this.blur();" title="Submissions">
-                                                    <i class="fa fa-bullhorn"></i><span>Submissions</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li id="menu-speakers">
-                                    <a href="javascript:interactions.navigate('speakers')" onclick="this.blur();" title="Speakers">
-                                        <h2>
-                                            <i class="fa fa-lg fa-group"></i>
-                                            <span>Speakers</span>
-                                        </h2>
-                                    </a>
-                                </li>
-                                <li id="menu-sponsors">
-                                    <a href="javascript:interactions.navigate('sponsors')" onclick="this.blur();" title="Our Sponsors">
-                                        <h2>
-                                            <i class="fa fa-lg fa-thumbs-o-up"></i>
-                                            <span>Our Sponsors</span>
-                                        </h2>
-                                    </a>
-                                </li>
-                                <li id="menu-usefulinfo">
-                                    <a href="javascript:interactions.navigate('accommodation')" onclick="this.blur();" title="Useful Information">
-                                        <h2>
-                                            <i class="fa fa-lg fa-info-circle"></i>
-                                            <span>Information</span>
-                                        </h2>
-                                    </a>
-                                    <div>
-                                        <ul>
-                                            <li id="menu-accommodation">
-                                                <a href="javascript:interactions.navigate('accommodation')" onclick=" this.blur();" title="Accommodation">
-                                                    <i class="fa fa-suitcase"></i>
-                                                    <span>Accommodation</span>
-                                                </a>
-                                            </li>
-                                            <li id="menu-venue">
-                                                <a href="javascript:interactions.navigate('venue')" onclick=" this.blur();" title="Venue">
-                                                    <i class="fa fa-building-o"></i>
-                                                    <span>Venue</span>
-                                                </a>
-                                            </li>
-                                            <li id="menu-contact">
-                                                <a href="javascript:interactions.navigate('contact')" onclick="this.blur();" title="Contact">
-                                                    <i class="fa fa-envelope"></i>
-                                                    <span>Contact</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                </nav>
-            </aside>
-            <section class="target"></section>
-        </article>
-    </section>
+                    </li>
+                    <li id="menu-speakers">
+                        <a href="javascript:interactions.navigate('speakers')" onclick="this.blur();" title="Speakers">
+                            <h2>
+                                <i class="fa fa-lg fa-group"></i>
+                                <span>Speakers</span>
+                            </h2>
+                        </a>
+                    </li>
+                    <li id="menu-sponsors">
+                        <a href="javascript:interactions.navigate('sponsors')" onclick="this.blur();" title="Our Sponsors">
+                            <h2>
+                                <i class="fa fa-lg fa-thumbs-o-up"></i>
+                                <span>Our Sponsors</span>
+                            </h2>
+                        </a>
+                    </li>
+                    <li id="menu-usefulinfo">
+                        <a href="javascript:interactions.navigate('accommodation')" onclick="this.blur();" title="Useful Information">
+                            <h2>
+                                <i class="fa fa-lg fa-info-circle"></i>
+                                <span>Information</span>
+                            </h2>
+                        </a>
+                        <div>
+                            <ul>
+                                <li id="menu-accommodation">
+                                    <a href="javascript:interactions.navigate('accommodation')" onclick=" this.blur();" title="Accommodation">
+                                        <i class="fa fa-suitcase"></i>
+                                        <span>Accommodation</span>
+                                    </a>
+                                </li>
+                                <li id="menu-venue">
+                                    <a href="javascript:interactions.navigate('venue')" onclick=" this.blur();" title="Venue">
+                                        <i class="fa fa-building-o"></i>
+                                        <span>Venue</span>
+                                    </a>
+                                </li>
+                                <li id="menu-contact">
+                                    <a href="javascript:interactions.navigate('contact')" onclick="this.blur();" title="Contact">
+                                        <i class="fa fa-envelope"></i>
+                                        <span>Contact</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>  
+    </main>
 </body>
 </html>
