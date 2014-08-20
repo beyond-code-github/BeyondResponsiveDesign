@@ -77,11 +77,12 @@ body > header > ul > li.menuToggle {
   z-index: 2;
   min-width: 5em;
 }
-body > header > ul > li.menuToggle.menu > a > i.fa-arrow-left {
+body > header > ul > li.navigator {
   display: none;
-}
-body > header > ul > li.menuToggle.back > a > i.fa-bars {
-  display: none;
+  position: absolute;
+  z-index: 2;
+  min-width: 5em;
+  left: -0.5em;
 }
 body > header > ul > li > a {
   line-height: 3em;

@@ -81,20 +81,20 @@ body > header {
             line-height: @header-height;
             height: @header-height;
             display: inline-block;
-
+                        
             &.menuToggle {
                 display: none;
                 position: absolute;
                 z-index: 2;
                 min-width: 5em;
+            }
 
-                &.menu > a > i.fa-arrow-left {
-                    display: none;
-                }
-
-                &.back > a > i.fa-bars {
-                    display: none;
-                }
+            &.navigator {
+                display: none;
+                position: absolute;
+                z-index: 2;
+                min-width: 5em;
+                left: -0.5em;
             }
 
             > a {

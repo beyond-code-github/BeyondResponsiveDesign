@@ -22,6 +22,21 @@ div.responsiveimage > img {
     .animate;
 }
 
+body.propertySheet > header > ul > li {
+    &.navigator {
+        display: block;
+    }
+    &.menuToggle {
+        display: none;
+    }
+}
+
+body:not(.propertySheet) > header > ul > li {
+    &.navigator {
+        display: none;
+    }
+}
+
 body > nav > div > div > ul > li:not(.active) > div {
     overflow: hidden;
     height: 0;

@@ -57,6 +57,13 @@
             interactions.toggleSideBar(e);
         });
 
+        $(document.body).on('click', 'header>ul>li.navigator', function (e) {
+            $(this).trigger('blur');
+            e.preventDefault();
+            e.stopPropagation();
+            interactions.hidePopups(e);
+        });
+
         $("main").on('click', ".modalbackground", function (e) {
             interactions.hidePopups(e);
         });
@@ -131,6 +138,7 @@
     }
 
     interactions.openPropertySheet = function (location, title) {
+        $("body").addClass("propertySheet");
 
         titleStack.push(title);
         $("#paneTitle").text(title);
@@ -154,6 +162,8 @@
 
     interactions.closePropertySheet = function () {
         if ($("body > main > aside.propertySheet").hasClass("active")) {
+            $("body").removeClass("propertySheet");
+
             titleStack.pop();
             $("#paneTitle").text(titleStack[0]);
 

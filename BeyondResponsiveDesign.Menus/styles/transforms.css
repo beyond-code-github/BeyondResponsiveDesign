@@ -14,6 +14,15 @@ div.responsiveimage > img {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
+body.propertySheet > header > ul > li.navigator {
+  display: block;
+}
+body.propertySheet > header > ul > li.menuToggle {
+  display: none;
+}
+body:not(.propertySheet) > header > ul > li.navigator {
+  display: none;
+}
 body > nav > div > div > ul > li:not(.active) > div {
   overflow: hidden;
   height: 0;
