@@ -24,9 +24,9 @@
             </li>
         </ul>
     </nav>
-    <div class="scrollcontainer vscroll slideTabContainer">
+    <div class="slideTabContainer">
         <!-- ko foreach: { data: Tracks, as: 'track' } -->
-        <section data-bind="attr: {id : track.Identifier}" class="slideTab vscroll offRight">
+        <section data-bind="attr: {id : track.Identifier}" class="slideTab scrollcontainer vscroll offRight">
             <header>
                 <h2>
                     <i class="fa fa-lg fa-calendar"></i>

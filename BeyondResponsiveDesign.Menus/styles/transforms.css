@@ -61,10 +61,10 @@ body > main > article > div.slideTabContainer > section.offLeft {
   -o-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
-article > section > nav.toolbar > ul > li > .highlight {
+body > main > article > nav.toolbar > ul > li > .highlight {
   display: block;
 }
-article > section > nav.toolbar > ul > li.offLeft > .highlight {
+body > main > article > nav.toolbar > ul > li.offLeft > .highlight {
   -webkit-transform: translate3d(100%, 0, 0);
   -ms-transform: translate3d(100%, 0, 0);
   -moz-transform: translate3d(100%, 0, 0);
@@ -75,7 +75,7 @@ article > section > nav.toolbar > ul > li.offLeft > .highlight {
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-article > section > nav.toolbar > ul > li.offRight > .highlight {
+body > main > article > nav.toolbar > ul > li.offRight > .highlight {
   -webkit-transform: translate3d(-100%, 0, 0);
   -ms-transform: translate3d(-100%, 0, 0);
   -moz-transform: translate3d(-100%, 0, 0);
@@ -86,7 +86,7 @@ article > section > nav.toolbar > ul > li.offRight > .highlight {
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-article > section > nav.toolbar > ul > li.active > .highlight {
+body > main > article > nav.toolbar > ul > li.active > .highlight {
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
