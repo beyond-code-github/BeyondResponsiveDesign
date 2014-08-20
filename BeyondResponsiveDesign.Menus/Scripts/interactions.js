@@ -3,7 +3,7 @@
     interactions.init = function () {
         $.detectSwipe.preventDefault = false;
         interactions.navigate("home");
-        
+
         // Disable scroll for the document, we'll handle it ourselves
         $(document).on('touchmove', function (e) {
             e.preventDefault();
@@ -40,7 +40,7 @@
                 event.preventDefault();
             }
         });
-        
+
         window.onresize = function () {
             $(document.body).width(window.innerWidth).height(window.innerHeight);
         }
@@ -53,13 +53,17 @@
             $(this).trigger('blur');
             e.preventDefault();
             e.stopPropagation();
-            interactions.HidePopups(e);
-            interactions.ToggleSideBar(e);
+            interactions.hidePopups(e);
+            interactions.toggleSideBar(e);
         });
-        
+
+        $("main").on('click', ".modalbackground", function (e) {
+            interactions.hidePopups(e);
+        });
+
         $("main").on('swiperight', function (e) {
             if (!interactions.contentIsTabbed() || interactions.leftmostTabIsOpen()) {
-                interactions.ShowSideBar(e);
+                interactions.showSideBar(e);
             } else {
                 interactions.slideTabsLeft();
             }
@@ -74,15 +78,15 @@
         });
     };
 
-    interactions.ToggleSideBar = function (e) {
+    interactions.toggleSideBar = function (e) {
         if ($('body').hasClass('sidebar')) {
             interactions.HideSideBar(e);
         } else {
-            interactions.ShowSideBar(e);
+            interactions.showSideBar(e);
         }
     };
 
-    interactions.ShowSideBar = function (e) {
+    interactions.showSideBar = function (e) {
         $('body').addClass('sidebar');
         $(window).trigger('resize');
     };
@@ -93,10 +97,11 @@
         return false;
     };
 
-    interactions.HidePopups = function (e) {
-
+    interactions.hidePopups = function (e) {
+        interactions.closePropertySheet();
     };
 
+    var titleStack = [];
     interactions.navigate = function (location) {
         $.get("content/" + location + ".html").done(function (html) {
             var target = $("main");
@@ -108,6 +113,7 @@
             menuitem.addClass("active");
 
             var title = menuitem.find("a span").first().text();
+            titleStack = [title];
             $("#paneTitle").text(title);
 
             var parentDiv = menuitem.parents("div").first();
@@ -124,7 +130,39 @@
         });
     }
 
-    interactions.contentIsTabbed = function() {
+    interactions.openPropertySheet = function (location, title) {
+
+        titleStack.push(title);
+        $("#paneTitle").text(title);
+
+        var modalBackground = $('<div class="modalbackground"></div>');
+        modalBackground.removeAttr('style');
+        modalBackground.prependTo('main');
+
+        $("body > main > aside.propertySheet").empty().removeClass("offRight").addClass("active")
+            .on('swiperight', function(e) {
+                interactions.closePropertySheet();
+                e.stopPropagation();
+            });
+
+        return $.get("content/" + location + ".html").done(function (html) {
+            var target = $("main > aside");
+            target.empty();
+            target.html(html);
+        });
+    }
+
+    interactions.closePropertySheet = function () {
+        if ($("body > main > aside.propertySheet").hasClass("active")) {
+            titleStack.pop();
+            $("#paneTitle").text(titleStack[0]);
+
+            $("body > main > .modalbackground").remove();
+            $("body > main > aside.propertySheet").off('swiperight').removeClass("active").addClass("offRight");
+        }
+    }
+
+    interactions.contentIsTabbed = function () {
         return $("article > nav > ul > li.active").length > 0;
     }
 
@@ -136,29 +174,23 @@
     interactions.slideTabsLeft = function () {
         var currentTabLink = $("article > nav > ul > li.active");
         var nextTabLink = currentTabLink.prev("li");
-        interactions.slideToTab(nextTabLink.attr("id").replace("tab-",""));
+        interactions.slideToTab(nextTabLink.attr("id").replace("tab-", ""));
     }
 
     interactions.slideTabsRight = function () {
         var currentTabLink = $("article > nav > ul > li.active");
         var nextTabLink = currentTabLink.next("li");
-        interactions.slideToTab(nextTabLink.attr("id").replace("tab-",""));
+        interactions.slideToTab(nextTabLink.attr("id").replace("tab-", ""));
     }
 
-    var shiftElements = function(element, siblingSelector) {
+    var shiftElements = function (element, siblingSelector) {
         element.siblings().removeClass("active");
-        element.prevAll(siblingSelector).removeClass("offRight");
-        element.prevAll(siblingSelector).addClass("offLeft");
-
-        element.nextAll(siblingSelector).removeClass("offLeft");
-        element.nextAll(siblingSelector).addClass("offRight");
-
-        element.addClass("active");
-        element.removeClass("offLeft");
-        element.removeClass("offRight");
+        element.prevAll(siblingSelector).removeClass("offRight").addClass("offLeft");
+        element.nextAll(siblingSelector).removeClass("offLeft").addClass("offRight");
+        element.addClass("active").removeClass("offLeft").removeClass("offRight");
     }
 
-    interactions.slideToTab = function(tab) {
+    interactions.slideToTab = function (tab) {
         var tabLink = $("article > nav > ul > li#tab-" + tab);
         shiftElements(tabLink, "li");
 

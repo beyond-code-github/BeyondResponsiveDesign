@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="content\cfp.html" />
+    <Content Include="content\speakerdetail.html" />
     <Content Include="content\venue.html" />
     <Content Include="content\accommodation.html" />
     <Content Include="content\contact.html" />

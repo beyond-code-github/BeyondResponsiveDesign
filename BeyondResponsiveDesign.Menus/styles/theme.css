@@ -276,10 +276,10 @@ body > nav > div > div > ul > li.active > a > h2 > i[data-icon="add"] {
 body > main {
   background: #ffffff;
 }
-body > main > article section.presentation > div {
+body > main section.presentation > div {
   padding: .75rem .75rem 0 .75rem;
 }
-body > main > article section > header > h2 {
+body > main section > header > h2 {
   background: #fff;
   display: block;
   width: 100%;
@@ -292,14 +292,14 @@ body > main > article section > header > h2 {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
-body > main > article section > header > h2 > i.fa {
+body > main section > header > h2 > i.fa {
   position: relative;
   top: 0.0625rem;
   left: .5625rem;
   font-weight: 300;
   font-size: 1.5rem;
 }
-body > main > article section > header > h2 > span {
+body > main section > header > h2 > span {
   padding: 0 3.75rem 0 1rem;
   font-weight: 400;
   font-size: 1.125rem;

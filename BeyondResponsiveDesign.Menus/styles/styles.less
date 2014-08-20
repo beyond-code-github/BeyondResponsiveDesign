@@ -53,6 +53,13 @@ body {
     }
 }
 
+.modalbackground {
+    .originFixed;
+    background-color: #000000;
+    opacity: 0.4;
+    z-index: 100000;
+}
+
 body > header {
     .originFixed;
     z-index: 4;
@@ -80,6 +87,14 @@ body > header {
                 position: absolute;
                 z-index: 2;
                 min-width: 5em;
+
+                &.menu > a > i.fa-arrow-left {
+                    display: none;
+                }
+
+                &.back > a > i.fa-bars {
+                    display: none;
+                }
             }
 
             > a {
@@ -132,14 +147,13 @@ body > main > aside.propertySheet {
     min-width: 480px;
     z-index: 100001;
 
-    /*-webkit-transform: translate3d(100%,0,0);
-    -moz-transform: translate3d(100%,0,0);
-    -ms-transform: translate3d(100%,0,0);
-    -o-transform: translate3d(100%,0,0);
-    transform: translate3d(100%,0,0);*/
+    &.wide {
+        width: 75%;
+    }
 
-    > section.content {
-        .originFixed
+    > div {
+        .originFixed;
+        background-color: white;
     }
 }
 

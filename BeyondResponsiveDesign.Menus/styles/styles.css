@@ -36,6 +36,16 @@ body {
   display: inline-block;
   min-width: 100%;
 }
+.modalbackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.4;
+  z-index: 100000;
+}
 body > header {
   position: absolute;
   top: 0;
@@ -66,6 +76,12 @@ body > header > ul > li.menuToggle {
   position: absolute;
   z-index: 2;
   min-width: 5em;
+}
+body > header > ul > li.menuToggle.menu > a > i.fa-arrow-left {
+  display: none;
+}
+body > header > ul > li.menuToggle.back > a > i.fa-bars {
+  display: none;
 }
 body > header > ul > li > a {
   line-height: 3em;
@@ -125,18 +141,17 @@ body > main > aside.propertySheet {
   bottom: 0;
   min-width: 480px;
   z-index: 100001;
-  /*-webkit-transform: translate3d(100%,0,0);
-    -moz-transform: translate3d(100%,0,0);
-    -ms-transform: translate3d(100%,0,0);
-    -o-transform: translate3d(100%,0,0);
-    transform: translate3d(100%,0,0);*/
 }
-body > main > aside.propertySheet > section.content {
+body > main > aside.propertySheet.wide {
+  width: 75%;
+}
+body > main > aside.propertySheet > div {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  background-color: white;
 }
 body > main > article > nav.toolbar {
   position: relative;

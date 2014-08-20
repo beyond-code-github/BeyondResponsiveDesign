@@ -18,6 +18,10 @@ div.responsiveimage > img {
     height: auto;
 }
 
+.modalbackground {
+    .animate;
+}
+
 body > nav > div > div > ul > li:not(.active) > div {
     overflow: hidden;
     height: 0;
@@ -106,6 +110,19 @@ body > main > article > nav.toolbar > ul > li {
     }
 }
 
+body > main > aside.propertySheet {
+    .animate;
+
+    &.offRight {
+        -webkit-transform: translate3d(100%,0,0);
+        -moz-transform: translate3d(100%,0,0);
+        -ms-transform: translate3d(100%,0,0);
+        -o-transform: translate3d(100%,0,0);
+        transform: translate3d(100%,0,0);
+    }
+}
+
+
 @media only screen and (min-width: 801px) {
     body > nav,
     body > main > article {
@@ -166,5 +183,13 @@ body > main > article > nav.toolbar > ul > li {
         &.bio {
             display: none;
         }
+    }
+
+    body > main > aside.propertySheet {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        left: 0;
+        border-left: 0 none;
     }
 }

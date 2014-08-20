@@ -8,6 +8,12 @@ div.responsiveimage > img {
   max-width: 100%;
   height: auto;
 }
+.modalbackground {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
 body > nav > div > div > ul > li:not(.active) > div {
   overflow: hidden;
   height: 0;
@@ -97,6 +103,19 @@ body > main > article > nav.toolbar > ul > li.active > .highlight {
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
+body > main > aside.propertySheet {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+body > main > aside.propertySheet.offRight {
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
 @media only screen and (min-width: 801px) {
   body > nav,
   body > main > article {
@@ -157,6 +176,13 @@ body > main > article > nav.toolbar > ul > li.active > .highlight {
 @media only screen and (max-width: 480px) {
   table > tbody > tr > td.bio {
     display: none;
+  }
+  body > main > aside.propertySheet {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    left: 0;
+    border-left: 0 none;
   }
 }
 /*# sourceMappingURL=transforms.css.map */
