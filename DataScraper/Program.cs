@@ -24,6 +24,8 @@
         public int Id { get; set; }
 
         public string Title { get; set; }
+
+        public string Abstract { get; set; }
     }
 
     public class Speaker
@@ -81,11 +83,24 @@
                                  let icon = linkElement.Descendants("i").First().Attributes["class"].Value
                                  let url = linkElement.Descendants("a").First().Attributes["href"].Value
                                  select new Link { Icon = icon, Url = url }).ToList();
-                    var sessions = (from sessionLinkElement in sessionLinkElements
-                                    let sessionId =
-                                        int.Parse(sessionLinkElement.Attributes["href"].Value.Split('/').Last())
-                                    let title = sessionLinkElement.InnerText
-                                    select new Session { Id = sessionId, Title = title }).ToList();
+
+                    var sessions = new List<Session>();
+                    foreach (var sessionLinkElement in sessionLinkElements)
+                    {
+                        var sessionHref = sessionLinkElement.Attributes["href"].Value;
+                        var sessionId = int.Parse(sessionHref.Split('/').Last());
+                        var title = sessionLinkElement.InnerText;
+
+                        var sessionPage = new HtmlDocument();
+                        sessionPage.LoadHtml(await htmlClient.GetStringAsync(sessionHref));
+
+                        var abstractElement =
+                            sessionPage.DocumentNode.Descendants("div")
+                                .First(o => o.Attributes.Contains("class") && o.Attributes["class"].Value == "abstract");
+
+                        var @abstract = abstractElement.InnerHtml;
+                        sessions.Add(new Session { Id = sessionId, Title = title, Abstract = @abstract});
+                    }
 
                     speakers.Enqueue(
                         new Speaker { Id = id, Name = name, Links = links, Bio = bio, Sessions = sessions });
