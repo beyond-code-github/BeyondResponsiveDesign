@@ -182,6 +182,31 @@ body > main > aside.propertySheet.offRight {
     transform: translateX(0);
   }
 }
+@media only screen and (max-width: 600px) {
+  div.popup {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    z-index: 100003;
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  div.popup.active {
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
 @media only screen and (max-width: 480px) {
   table > tbody > tr > td.bio {
     display: none;

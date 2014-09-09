@@ -18,7 +18,7 @@
 
 @header-color: #005800;
 @header-height: 3em;
-@header-color-light: #ffffff;
+@header-color-light: #227122;
 @header-text-color: #ffffff;
 @header-active-text-color: @base-color;
 
@@ -473,6 +473,35 @@ body > main > article > nav.toolbar {
                     color: @toolbar-text-highlight-color;
                 }
             }
+        }
+    }
+}
+
+div.popup {
+    background: @base-background;
+    z-index: 9999999;
+    opacity: 0;
+    font-weight: @regular;
+    backface-visibility: hidden;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+
+    > ul > li {
+
+        &:not(:first-child) {
+            border-top: 1px dotted #f2f2f2;
+        }
+
+        > a {
+            font-size: 1.125rem;
+            display: block;
+            text-decoration: none;
+            color: @body-text-color;
+            padding: 0 0.75rem 0 0.75rem;
+            line-height: 2.75rem;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
         }
     }
 }

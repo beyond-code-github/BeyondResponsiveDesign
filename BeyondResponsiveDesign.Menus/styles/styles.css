@@ -36,7 +36,8 @@ body {
   display: inline-block;
   min-width: 100%;
 }
-.modalbackground {
+.modalbackground,
+.popupbackground {
   position: absolute;
   top: 0;
   left: 0;
@@ -45,6 +46,9 @@ body {
   background-color: #000000;
   opacity: 0.4;
   z-index: 100000;
+}
+.popupbackground {
+  top: 3em;
 }
 body > header {
   position: absolute;
@@ -101,6 +105,9 @@ body > header > ul > li.logo > a > img {
   max-height: 2rem;
   max-width: 15rem;
   padding: 0.5rem 0 0 0.3rem;
+}
+body > header > ul.headerIcons {
+  float: right;
 }
 body > nav {
   position: absolute;
@@ -170,5 +177,41 @@ body > main > article > nav.toolbar > ul {
 body > main > article > nav.toolbar > ul > li {
   display: block;
   float: left;
+}
+div.popup {
+  position: absolute;
+  margin: -1px 0 0 0;
+  text-indent: 0;
+  padding: 0;
+  visibility: hidden;
+  display: none;
+  max-width: 37.5rem;
+  min-width: 12.5rem;
+}
+div.popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+div.popup ul {
+  list-style-type: none;
+  text-indent: 0;
+  padding: 0;
+  margin: 0;
+}
+div.popup ul > li {
+  width: 100%;
+  text-indent: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  display: block;
+  cursor: default;
+  border: 0 none;
+  float: none;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 /*# sourceMappingURL=styles.css.map */

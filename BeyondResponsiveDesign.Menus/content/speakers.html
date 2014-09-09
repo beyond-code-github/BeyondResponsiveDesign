@@ -18,10 +18,13 @@
         $.get("content/speakers.json").done(function (data) {
             ko.applyBindings({
                 speakers: data,
-                click: function (speaker) {
+                click: function (speaker, e) {
                     window.interactions.openPropertySheet("speakerdetail", speaker.Name).done(function() {
                         ko.applyBindings(speaker, $("main > aside.propertySheet > div")[0]);
                     });
+
+                    e.stopPropagation();
+                    e.preventDefault();
                 }
             }, $("main > article")[0]);
         });

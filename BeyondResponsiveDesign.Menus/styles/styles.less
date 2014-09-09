@@ -53,11 +53,15 @@ body {
     }
 }
 
-.modalbackground {
+.modalbackground, .popupbackground {
     .originFixed;
     background-color: #000000;
     opacity: 0.4;
     z-index: 100000;
+}
+
+.popupbackground {
+    top: @header-height;
 }
 
 body > header {
@@ -81,7 +85,7 @@ body > header {
             line-height: @header-height;
             height: @header-height;
             display: inline-block;
-                        
+
             &.menuToggle {
                 display: none;
                 position: absolute;
@@ -117,6 +121,10 @@ body > header {
                 max-width: 15rem;
                 padding: 0.5rem 0 0 0.3rem;
             }
+        }
+
+        &.headerIcons {
+            float: right;
         }
     }
 }
@@ -174,6 +182,46 @@ body > main > article > nav.toolbar {
         > li {
             display: block;
             float: left;
+        }
+    }
+}
+
+div.popup {
+    position: absolute;
+    margin: -1px 0 0 0;
+    text-indent: 0;
+    padding: 0;
+    visibility: hidden;
+    display: none;
+    max-width: 37.5rem;
+    min-width: 12.5rem;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    ul {
+        list-style-type: none;
+        text-indent: 0;
+        padding: 0;
+        margin: 0;
+
+        > li {
+            width: 100%;
+            text-indent: 0;
+            margin: 0;
+            padding: 0;
+            vertical-align: middle;
+            display: block;
+            cursor: default;
+            border: 0 none;
+            float: none;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;           
         }
     }
 }

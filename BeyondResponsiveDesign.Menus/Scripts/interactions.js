@@ -4,9 +4,22 @@
         $.detectSwipe.preventDefault = false;
         interactions.navigate("home");
 
+        $(function () { window.onresize(); });
+        window.onresize = function () {
+            $(document.body).width(window.innerWidth).height(window.innerHeight);
+        }
+
+        $(window).resize(function (e) {
+            interactions.hidePopups(e);
+        });
+
         // Disable scroll for the document, we'll handle it ourselves
         $(document).on('touchmove', function (e) {
             e.preventDefault();
+        });
+
+        $(document).click(function (e) {
+            interactions.hidePopups(e);
         });
 
         // Check if we should allow scrolling up or down
@@ -40,15 +53,7 @@
                 event.preventDefault();
             }
         });
-
-        window.onresize = function () {
-            $(document.body).width(window.innerWidth).height(window.innerHeight);
-        }
-
-        $(function () {
-            window.onresize();
-        });
-
+        
         $(document.body).on('click', 'header>ul>li.menuToggle', function (e) {
             $(this).trigger('blur');
             e.preventDefault();
@@ -60,6 +65,27 @@
         $(document.body).on('click', 'header>ul>li.navigator', function (e) {
             $(this).trigger('blur');
             e.preventDefault();
+            e.stopPropagation();
+            interactions.hidePopups(e);
+        });
+
+        $(document.body).on('click', 'ul>li.navpopup', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (!$(this).find('.popup').hasClass('active')) {
+                interactions.hidePopups(e);
+                interactions.showPopup($(this).find('.popup'), this, true);
+            } else {
+                interactions.hidePopups(e);
+            }
+        });
+
+        $(document.body).on('click', '.popup', function (e) {
+            e.stopPropagation();
+        });
+
+        $(document.body).on('click', '.popup ul>li>a', function (e) {
             e.stopPropagation();
             interactions.hidePopups(e);
         });
@@ -103,9 +129,71 @@
         $(window).trigger('resize');
         return false;
     };
+    
+    interactions.showPopup = function (popup, obj) {
+        if (!$(popup).hasClass('active')) {
+
+            $(popup).removeAttr('style');
+
+            var $clone = $(popup).clone(true);
+            $clone.addClass('clone');
+
+            var isFixed = (window.getComputedStyle($(popup).get(0), null).getPropertyValue("position") === 'fixed');
+
+            var w = $(obj).outerWidth();
+            var pw = $(popup).outerWidth();
+            if (pw < w) {
+                $(popup).outerWidth(w);
+                pw = w;
+            }
+
+            var m = $(popup).outerWidth(true) - $(popup).outerWidth(false);
+            var posX = Math.round((w - pw - m) / 2);
+
+            var rightViewPortOffset = parseInt($(window).width()) - (parseInt($(obj).offset().left) + parseInt(posX) + parseInt(pw) + parseInt(m));
+            if (rightViewPortOffset < 0) {
+                posX = (posX + rightViewPortOffset);
+            }
+
+            if (!isFixed) {
+                $clone.css({ 'left': +($(obj).offset().left + posX - 10) + 'px' });
+                $clone.css({ 'top': +($(obj).offset().top + $(obj).height() + 1) + 'px' });
+            }
+
+            if (isFixed) {
+                $clone.css({ 'max-height': $(popup).outerHeight() + 'px' });
+                $clone.find('div.vscroll').css({ 'max-height': Math.round($(window).height() / 2) + 'px' });
+                var modalBackground = $('<div class="popupbackground"></div>');
+                if ($('div.popupbackground').length == 0) {
+                    $('body').prepend(modalBackground);
+                    modalBackground.on('touchstart touchmove swipe click', function(e) {
+                        interactions.HidePopups(e);
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+                }
+            }
+            
+            $clone.prependTo('body');
+            $clone.css('display', 'block');
+            $clone.css('visibility', 'visible');
+
+            setTimeout(function () {
+                $(obj).addClass('active');
+                $(popup).addClass('active');
+                $clone.addClass('active');
+            }, 0);
+        }
+    };
 
     interactions.hidePopups = function (e) {
         interactions.closePropertySheet();
+
+        $('.popup').removeClass('active');
+        $('.navpopup').removeClass('active');
+
+        $(".clone").remove();
+        $('div.popupbackground').remove();
     };
 
     var titleStack = [];

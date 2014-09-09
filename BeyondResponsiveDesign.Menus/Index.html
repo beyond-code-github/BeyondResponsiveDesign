@@ -2,6 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" manifest="cache.manifest">
 <head>
     <title>Beyond responsive design - UI for the modern web application</title>
+
+    <!-------------------------------------------------------------------------
+        Icons for save to home screen on mobile
+    --------------------------------------------------------------------------->
     <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="icon" sizes="196x196" href="images/icon-196.png">
     <link rel="icon" sizes="128x128" href="images/icon-128.png">
@@ -10,55 +14,98 @@
     <link rel="apple-touch-icon-precomposed" sizes="196x196" href="images/icon-196.png">
     <link rel="apple-touch-icon-precomposed" sizes="128x128" href="images/icon-128.png">
 
-    <link href="styles/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
-    <link href="styles/theme.css" rel="stylesheet" type="text/css" />
-    <link href="styles/transforms.css" rel="stylesheet" type="text/css" />
-
+    <!-------------------------------------------------------------------------
+        Meta tags to prevent pinch zooming and save to home screen
+    --------------------------------------------------------------------------->
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,minimal-ui">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
+    <!-------------------------------------------------------------------------
+        Stylesheets
+    --------------------------------------------------------------------------->
+    <link href="styles/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="styles/theme.css" rel="stylesheet" type="text/css" />
+    <link href="styles/transforms.css" rel="stylesheet" type="text/css" />
+
+    <!-------------------------------------------------------------------------
+        Javascript
+    --------------------------------------------------------------------------->
     <script src="scripts/fastclick.js"></script>
     <script src="scripts/jquery-2.1.1.min.js"></script>
     <script src="scripts/jquery.detect_swipe.js"></script>
     <script src="scripts/knockout-3.1.0.js"></script>
     <script src="scripts/interactions.js"></script>
+
     <script type="text/javascript">
         $(function () {
             FastClick.attach(document.body);
             interactions.init();
         });
     </script>
+
 </head>
 <body>
+
+    <!-------------------------------------------------------------------------
+        Header bar
+    --------------------------------------------------------------------------->
     <header>
         <ul>
+
             <li class="menuToggle">
                 <a href="javascript:void(0)">
                     <i class="fa-bars fa fa-lg"></i>
                 </a>
             </li>
+
             <li class="navigator">
                 <a href="javascript:void(0)">
                     <i class="fa-angle-left fa fa-lg"></i>
                 </a>
             </li>
+
             <li class="logo">
                 <a href="javascript:void(0)">
                     <img src="images/logo-notext-green.png" alt="dddsw logo" />
                 </a>
             </li>
+
             <li>
                 <h2 id="paneTitle">Home</h2>
             </li>
+
+        </ul>
+
+        <!-- Right aligned icons -->
+        <ul class="headerIcons">
+
+            <li id="settingsButton" class="navpopup">
+                <a href="javascript:void(0)">
+                    <i class="fa-ellipsis-v fa fa-lg"></i>
+                </a>
+                <div class="popup">
+                    <ul>
+                        <li><a href="javascript:void(0)">My Profile</a></li>
+                        <li><a href="javascript:void(0)">Settings</a></li>
+                        <li><a href="javascript:void(0)">About</a></li>
+                    </ul>
+                </div>
+            </li>
+
         </ul>
     </header>
+
+    <!-------------------------------------------------------------------------
+        Navigation menu begins here
+    --------------------------------------------------------------------------->
     <nav class="scrollcontainer vscroll">
         <div class="scrollcontainer vscroll">
             <div class="wrapper">
                 <ul>
+
                     <li class="active" id="menu-home">
                         <a href="javascript:interactions.navigate('home', true)" onclick="this.blur();" title="Home">
                             <h2>
@@ -67,6 +114,7 @@
                             </h2>
                         </a>
                     </li>
+
                     <li id="menu-sessions">
                         <a href="javascript:interactions.navigate('agenda')" onclick="this.blur();" title="Sessions">
                             <h2>
@@ -74,21 +122,27 @@
                                 <span>Sessions</span>
                             </h2>
                         </a>
+
+                        <!-- Submenu -->
                         <div>
                             <ul>
+
                                 <li id="menu-agenda">
                                     <a href="javascript:interactions.navigate('agenda', true)" onclick=" this.blur();" title="Agenda">
                                         <i class="fa fa-calendar"></i><span>Agenda</span>
                                     </a>
                                 </li>
+
                                 <li id="menu-cfp">
                                     <a href="javascript:interactions.navigate('cfp', true)" onclick=" this.blur();" title="Submissions">
                                         <i class="fa fa-bullhorn"></i><span>Submissions</span>
                                     </a>
                                 </li>
+
                             </ul>
                         </div>
                     </li>
+
                     <li id="menu-speakers">
                         <a href="javascript:interactions.navigate('speakers', true)" onclick="this.blur();" title="Speakers">
                             <h2>
@@ -97,6 +151,7 @@
                             </h2>
                         </a>
                     </li>
+
                     <li id="menu-sponsors">
                         <a href="javascript:interactions.navigate('sponsors', true)" onclick="this.blur();" title="Our Sponsors">
                             <h2>
@@ -105,6 +160,7 @@
                             </h2>
                         </a>
                     </li>
+
                     <li id="menu-usefulinfo">
                         <a href="javascript:interactions.navigate('accommodation')" onclick="this.blur();" title="Useful Information">
                             <h2>
@@ -112,34 +168,46 @@
                                 <span>Information</span>
                             </h2>
                         </a>
+
+                        <!-- Submenu -->
                         <div>
                             <ul>
+
                                 <li id="menu-accommodation">
                                     <a href="javascript:interactions.navigate('accommodation', true)" onclick=" this.blur();" title="Accommodation">
                                         <i class="fa fa-suitcase"></i>
                                         <span>Accommodation</span>
                                     </a>
                                 </li>
+
                                 <li id="menu-venue">
                                     <a href="javascript:interactions.navigate('venue', true)" onclick=" this.blur();" title="Venue">
                                         <i class="fa fa-building-o"></i>
                                         <span>Venue</span>
                                     </a>
                                 </li>
+
                                 <li id="menu-contact">
                                     <a href="javascript:interactions.navigate('contact', true)" onclick="this.blur();" title="Contact">
                                         <i class="fa fa-envelope"></i>
                                         <span>Contact</span>
                                     </a>
                                 </li>
+
                             </ul>
                         </div>
                     </li>
+
                 </ul>
             </div>
         </div>
     </nav>
-    <main>  
+
+    <!-------------------------------------------------------------------------
+        Content will be rendered here
+    --------------------------------------------------------------------------->
+    <main>
     </main>
+
 </body>
 </html>

@@ -26,6 +26,7 @@ body.propertySheet > header > ul > li {
     &.navigator {
         display: block;
     }
+
     &.menuToggle {
         display: none;
     }
@@ -190,6 +191,32 @@ body > main > aside.propertySheet {
         -moz-transform: translateX(0);
         -o-transform: translateX(0);
         transform: translateX(0);
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    div.popup {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        z-index: 100003;
+        -moz-transform: translate3d(0,100%,0);
+        -ms-transform: translate3d(0,100%,0);
+        -o-transform: translate3d(0,100%,0);
+        -webkit-transform: translate3d(0,100%,0);
+        transform: translate3d(0,100%,0);
+        .animate;
+
+        &.active {
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
     }
 }
 

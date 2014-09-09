@@ -143,7 +143,7 @@ body > header > ul > li > a:hover {
 body > header > ul > li.active {
   color: #607d8b;
   cursor: pointer;
-  background: #ffffff;
+  background: #227122;
 }
 body > nav {
   background-color: #f2f2f2;
@@ -368,5 +368,28 @@ body > main > article > nav.toolbar > ul > li > a > i {
 }
 body > main > article > nav.toolbar > ul > li > a:hover {
   color: #b3b3b3;
+}
+div.popup {
+  background: #ffffff;
+  z-index: 9999999;
+  opacity: 0;
+  font-weight: 300;
+  backface-visibility: hidden;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+div.popup > ul > li:not(:first-child) {
+  border-top: 1px dotted #f2f2f2;
+}
+div.popup > ul > li > a {
+  font-size: 1.125rem;
+  display: block;
+  text-decoration: none;
+  color: #666666;
+  padding: 0 0.75rem 0 0.75rem;
+  line-height: 2.75rem;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 /*# sourceMappingURL=theme.css.map */
