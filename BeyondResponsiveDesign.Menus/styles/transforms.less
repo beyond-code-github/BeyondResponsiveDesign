@@ -18,10 +18,6 @@ div.responsiveimage > img {
     height: auto;
 }
 
-.modalbackground {
-    .animate;
-}
-
 body.propertySheet > header > ul > li {
     &.navigator {
         display: block;
@@ -69,6 +65,7 @@ body > main > article > div.slideTabContainer {
 
         &.slideTab {
             position: absolute;
+            display: block;
             top: 3em;
             left: 0;
             right: 0;
@@ -128,6 +125,7 @@ body > main > article > nav.toolbar > ul > li {
 
 body > main > aside.propertySheet {
     .animate;
+    display: block;
 
     &.offRight {
         -webkit-transform: translate3d(100%,0,0);
@@ -138,11 +136,13 @@ body > main > aside.propertySheet {
     }
 }
 
-
 @media only screen and (min-width: 801px) {
     body > nav,
     body > main > article {
         .animate;
+    }
+    body > main > aside.propertySheet.wide {
+        width: 50%;
     }
 }
 
@@ -194,9 +194,7 @@ body > main > aside.propertySheet {
     }
 }
 
-
 @media only screen and (max-width: 600px) {
-
     div.popup {
         position: fixed;
         bottom: 0;

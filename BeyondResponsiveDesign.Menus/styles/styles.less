@@ -64,6 +64,24 @@ body {
     top: @header-height;
 }
 
+div.popup {
+    z-index: 9999999;
+    background: white;
+    position: absolute;
+    visibility: hidden;
+    display: none;
+    max-width: 37.5rem;
+    min-width: 12.5rem;
+
+    &.active {
+        visibility: visible;
+    }
+
+    > ul > li {
+        float: none;
+    }
+}
+
 body > header {
     .originFixed;
     z-index: 4;
@@ -79,6 +97,7 @@ body > header {
     }
 
     > ul {
+        float: left;
         height: @header-height;
 
         > li {
@@ -122,10 +141,6 @@ body > header {
                 padding: 0.5rem 0 0 0.3rem;
             }
         }
-
-        &.headerIcons {
-            float: right;
-        }
     }
 }
 
@@ -143,7 +158,16 @@ body > main {
     > article {
         .originFixed(@left: @sidebar-width);
         .scrollcontainer;
+
+        > .slideTabContainer > .slideTab {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
     }
+
 }
 
 body > main > aside.propertySheet {
@@ -154,6 +178,11 @@ body > main > aside.propertySheet {
     bottom: 0;
     min-width: 480px;
     z-index: 100001;
+    display: none;
+
+    &.active {
+        display: block;
+    }
 
     &.wide {
         width: 75%;
@@ -182,46 +211,6 @@ body > main > article > nav.toolbar {
         > li {
             display: block;
             float: left;
-        }
-    }
-}
-
-div.popup {
-    position: absolute;
-    margin: -1px 0 0 0;
-    text-indent: 0;
-    padding: 0;
-    visibility: hidden;
-    display: none;
-    max-width: 37.5rem;
-    min-width: 12.5rem;
-
-    &.active {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    ul {
-        list-style-type: none;
-        text-indent: 0;
-        padding: 0;
-        margin: 0;
-
-        > li {
-            width: 100%;
-            text-indent: 0;
-            margin: 0;
-            padding: 0;
-            vertical-align: middle;
-            display: block;
-            cursor: default;
-            border: 0 none;
-            float: none;
-            overflow: hidden;
-            -ms-text-overflow: ellipsis;
-            -o-text-overflow: ellipsis;
-            text-overflow: ellipsis;
-            white-space: nowrap;           
         }
     }
 }

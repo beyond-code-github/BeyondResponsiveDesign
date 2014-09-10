@@ -122,6 +122,57 @@ table {
     }
 }
 
+div.popup {
+    background: @base-background;
+    font-weight: @regular;
+    backface-visibility: hidden;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    margin: -1px 0 0 0;
+    text-indent: 0;
+    padding: 0;
+
+    > ul {
+        list-style-type: none;
+        text-indent: 0;
+        padding: 0;
+        margin: 0;
+
+        > li {
+            width: 100%;
+            text-indent: 0;
+            margin: 0;
+            padding: 0;
+            vertical-align: middle;
+            display: block;
+            cursor: default;
+            border: 0 none;
+            float: none;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;  
+            
+            &:not(:first-child) {
+                border-top: 1px dotted #f2f2f2;
+            }
+
+            > a {
+                font-size: 1.125rem;
+                display: block;
+                text-decoration: none;
+                color: @body-text-color;
+                padding: 0 0.75rem 0 0.75rem;
+                line-height: 2.75rem;
+                -ms-text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
+
 body > header {
     background: @header-color;
     box-shadow: rgba(0,0,0,0.4) 0 1px 0.25rem;
@@ -143,6 +194,10 @@ body > header {
         padding: 0;
         list-style-type: none;
         white-space: nowrap;
+        
+        &.headerIcons {
+            float: right;
+        }
 
         > li {
             position: relative;
@@ -400,7 +455,7 @@ body > main {
 body > main > aside.propertySheet {
     -webkit-box-shadow: -1px 0 0.25rem rgba(0, 0, 0, 0.4);
     box-shadow: -1px 0 0.25rem rgba(0, 0, 0, 0.4);
-
+    
     > section.content {
         background: @base-background;
     }
@@ -473,35 +528,6 @@ body > main > article > nav.toolbar {
                     color: @toolbar-text-highlight-color;
                 }
             }
-        }
-    }
-}
-
-div.popup {
-    background: @base-background;
-    z-index: 9999999;
-    opacity: 0;
-    font-weight: @regular;
-    backface-visibility: hidden;
-    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-
-    > ul > li {
-
-        &:not(:first-child) {
-            border-top: 1px dotted #f2f2f2;
-        }
-
-        > a {
-            font-size: 1.125rem;
-            display: block;
-            text-decoration: none;
-            color: @body-text-color;
-            padding: 0 0.75rem 0 0.75rem;
-            line-height: 2.75rem;
-            -ms-text-overflow: ellipsis;
-            -o-text-overflow: ellipsis;
-            text-overflow: ellipsis;
         }
     }
 }

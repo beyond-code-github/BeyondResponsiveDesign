@@ -11,15 +11,14 @@
         </table>
     </section>
 </article>
-<aside class="propertySheet wide offRight">
-</aside>
+<aside class="propertySheet wide offRight"></aside>
 <script type="text/javascript">
     $(function () {
         $.get("content/speakers.json").done(function (data) {
             ko.applyBindings({
                 speakers: data,
                 click: function (speaker, e) {
-                    window.interactions.openPropertySheet("speakerdetail", speaker.Name).done(function() {
+                    window.interactions.openPropertySheet("speakerdetail", speaker.Name).done(function () {
                         ko.applyBindings(speaker, $("main > aside.propertySheet > div")[0]);
                     });
 
@@ -30,3 +29,8 @@
         });
     });
 </script>
+<style type="text/css">
+    body > main > article > section > table > tbody > tr > td.bio {
+        max-width: 35em;
+    }
+</style>

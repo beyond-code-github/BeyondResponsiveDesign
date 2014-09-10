@@ -50,6 +50,21 @@ body {
 .popupbackground {
   top: 3em;
 }
+div.popup {
+  z-index: 9999999;
+  background: white;
+  position: absolute;
+  visibility: hidden;
+  display: none;
+  max-width: 37.5rem;
+  min-width: 12.5rem;
+}
+div.popup.active {
+  visibility: visible;
+}
+div.popup > ul > li {
+  float: none;
+}
 body > header {
   position: absolute;
   top: 0;
@@ -68,6 +83,7 @@ body > header > h1 {
   width: 100%;
 }
 body > header > ul {
+  float: left;
   height: 3em;
 }
 body > header > ul > li {
@@ -106,9 +122,6 @@ body > header > ul > li.logo > a > img {
   max-width: 15rem;
   padding: 0.5rem 0 0 0.3rem;
 }
-body > header > ul.headerIcons {
-  float: right;
-}
 body > nav {
   position: absolute;
   top: 3em;
@@ -141,6 +154,12 @@ body > main > article > .scrollcontainer {
 body > main > article > .scrollcontainer > .wrapper {
   xmin-height: 100%;
 }
+body > main > article > .slideTabContainer > .slideTab {
+  display: none;
+}
+body > main > article > .slideTabContainer > .slideTab.active {
+  display: block;
+}
 body > main > aside.propertySheet {
   position: absolute;
   top: 0;
@@ -149,6 +168,10 @@ body > main > aside.propertySheet {
   bottom: 0;
   min-width: 480px;
   z-index: 100001;
+  display: none;
+}
+body > main > aside.propertySheet.active {
+  display: block;
 }
 body > main > aside.propertySheet.wide {
   width: 75%;
@@ -177,41 +200,5 @@ body > main > article > nav.toolbar > ul {
 body > main > article > nav.toolbar > ul > li {
   display: block;
   float: left;
-}
-div.popup {
-  position: absolute;
-  margin: -1px 0 0 0;
-  text-indent: 0;
-  padding: 0;
-  visibility: hidden;
-  display: none;
-  max-width: 37.5rem;
-  min-width: 12.5rem;
-}
-div.popup.active {
-  opacity: 1;
-  visibility: visible;
-}
-div.popup ul {
-  list-style-type: none;
-  text-indent: 0;
-  padding: 0;
-  margin: 0;
-}
-div.popup ul > li {
-  width: 100%;
-  text-indent: 0;
-  margin: 0;
-  padding: 0;
-  vertical-align: middle;
-  display: block;
-  cursor: default;
-  border: 0 none;
-  float: none;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 /*# sourceMappingURL=styles.css.map */
