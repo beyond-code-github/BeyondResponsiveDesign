@@ -1,57 +1,31 @@
 ﻿(function (interactions) {
 
-    interactions.init = function () {
-        $.detectSwipe.preventDefault = false;
-        interactions.navigate("home");
+    /***************************************************************************
+        Initialise our interactions
 
+    ***************************************************************************/
+    interactions.init = function () {
+
+        $.detectSwipe.preventDefault = false;
         $(function () { window.onresize(); });
         window.onresize = function () {
             $(document.body).width(window.innerWidth).height(window.innerHeight);
         }
+        touchScrollFix();
 
+        // Default navigation
+        interactions.navigate("home");
+
+        /***************************************************************************
+            Click handlers
+
+        ***************************************************************************/
         $(window).resize(function (e) {
             interactions.hidePopups(e);
         });
-
-        // Disable scroll for the document, we'll handle it ourselves
-        $(document).on('touchmove', function (e) {
-            e.preventDefault();
-        });
-
+        
         $(document).click(function (e) {
             interactions.hidePopups(e);
-        });
-
-        // Check if we should allow scrolling up or down
-        $(document.body).on("touchstart", ".vscroll", function (e) {
-            // If the element is scrollable (content overflows), then...
-            if (this.scrollHeight !== this.clientHeight) {
-                // If we're at the top, scroll down one pixel to allow scrolling up
-                if (this.scrollTop === 0) {
-                    this.scrollTop = 1;
-                }
-                // If we're at the bottom, scroll up one pixel to allow scrolling down
-                if (this.scrollTop === this.scrollHeight - this.clientHeight) {
-                    this.scrollTop = this.scrollHeight - this.clientHeight - 1;
-                }
-            }
-            // Check if we can scroll
-            this.allowUp = this.scrollTop > 0;
-            this.allowDown = this.scrollTop < (this.scrollHeight - this.clientHeight);
-            this.lastY = e.originalEvent.pageY;
-        });
-
-        $(document.body).on('touchmove', ".vscroll", function (e) {
-            var event = e.originalEvent;
-            var up = event.pageY > this.lastY;
-            var down = !up;
-            this.lastY = event.pageY;
-
-            if ((up && this.allowUp) || (down && this.allowDown)) {
-                event.stopPropagation();
-            } else {
-                event.preventDefault();
-            }
         });
         
         $(document.body).on('click', 'header>ul>li.menuToggle', function (e) {
@@ -67,6 +41,7 @@
             e.preventDefault();
             e.stopPropagation();
             interactions.hidePopups(e);
+            interactions.closePropertySheet(e);
         });
 
         $(document.body).on('click', 'ul>li.navpopup', function (e) {
@@ -81,6 +56,11 @@
             }
         });
 
+        $(document.body).on('click', 'aside.propertySheet', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
         $(document.body).on('click', '.popup', function (e) {
             e.stopPropagation();
         });
@@ -91,9 +71,14 @@
         });
 
         $("main").on('click', ".modalbackground", function (e) {
+            interactions.closePropertySheet();
             interactions.hidePopups(e);
         });
 
+        /***************************************************************************
+            Swipe handlers
+
+        ***************************************************************************/
         $("main").on('swiperight', function (e) {
             if (!interactions.contentIsTabbed() || interactions.leftmostTabIsOpen()) {
                 interactions.showSideBar(e);
@@ -111,6 +96,10 @@
         });
     };
 
+    /***************************************************************************
+        Sidebar and popup interactions
+
+    ***************************************************************************/
     interactions.toggleSideBar = function (e) {
         if ($('body').hasClass('sidebar')) {
             interactions.hideSideBar(e);
@@ -187,15 +176,52 @@
     };
 
     interactions.hidePopups = function (e) {
-        interactions.closePropertySheet();
-
         $('.popup').removeClass('active');
         $('.navpopup').removeClass('active');
 
         $(".clone").remove();
         $('div.popupbackground').remove();
     };
+    
+    interactions.openPropertySheet = function (location, title) {
+        $("body").addClass("propertySheet");
 
+        titleStack.push(title);
+        $("#paneTitle").text(title);
+
+        var modalBackground = $('<div class="modalbackground"></div>');
+        modalBackground.removeAttr('style');
+        modalBackground.prependTo('main');
+
+        $("body > main > aside.propertySheet").empty().removeClass("offRight").addClass("active")
+            .on('swiperight', function (e) {
+                interactions.closePropertySheet();
+                e.stopPropagation();
+            });
+
+        return $.get("content/" + location + ".html").done(function (html) {
+            var target = $("main > aside");
+            target.empty();
+            target.html(html);
+        });
+    }
+
+    interactions.closePropertySheet = function () {
+        if ($("body > main > aside.propertySheet").hasClass("active")) {
+            $("body").removeClass("propertySheet");
+
+            titleStack.pop();
+            $("#paneTitle").text(titleStack[0]);
+
+            $("body > main > .modalbackground").remove();
+            $("body > main > aside.propertySheet").off('swiperight').removeClass("active").addClass("offRight");
+        }
+    }
+
+    /***************************************************************************
+        Navigation and tabs
+
+    ***************************************************************************/
     var titleStack = [];
     interactions.navigate = function (location, hideAfter) {
         $.get("content/" + location + ".html").done(function (html) {
@@ -229,41 +255,6 @@
         });
     }
 
-    interactions.openPropertySheet = function (location, title) {
-        $("body").addClass("propertySheet");
-
-        titleStack.push(title);
-        $("#paneTitle").text(title);
-
-        var modalBackground = $('<div class="modalbackground"></div>');
-        modalBackground.removeAttr('style');
-        modalBackground.prependTo('main');
-
-        $("body > main > aside.propertySheet").empty().removeClass("offRight").addClass("active")
-            .on('swiperight', function(e) {
-                interactions.closePropertySheet();
-                e.stopPropagation();
-            });
-
-        return $.get("content/" + location + ".html").done(function (html) {
-            var target = $("main > aside");
-            target.empty();
-            target.html(html);
-        });
-    }
-
-    interactions.closePropertySheet = function () {
-        if ($("body > main > aside.propertySheet").hasClass("active")) {
-            $("body").removeClass("propertySheet");
-
-            titleStack.pop();
-            $("#paneTitle").text(titleStack[0]);
-
-            $("body > main > .modalbackground").remove();
-            $("body > main > aside.propertySheet").off('swiperight').removeClass("active").addClass("offRight");
-        }
-    }
-
     interactions.contentIsTabbed = function () {
         return $("article > nav > ul > li.active").length > 0;
     }
@@ -285,19 +276,19 @@
         interactions.slideToTab(nextTabLink.attr("id").replace("tab-", ""));
     }
 
-    var shiftElements = function (element, siblingSelector) {
-        element.siblings().removeClass("active");
-        element.prevAll(siblingSelector).removeClass("offRight").addClass("offLeft");
-        element.nextAll(siblingSelector).removeClass("offLeft").addClass("offRight");
-        element.addClass("active").removeClass("offLeft").removeClass("offRight");
-    }
-
     interactions.slideToTab = function (tab) {
         var tabLink = $("article > nav > ul > li#tab-" + tab);
         shiftElements(tabLink, "li");
 
         var tabContent = $("article > div.slideTabContainer > section#" + tab);
         shiftElements(tabContent, "section");
+    }
+
+    var shiftElements = function (element, siblingSelector) {
+        element.siblings().removeClass("active");
+        element.prevAll(siblingSelector).removeClass("offRight").addClass("offLeft");
+        element.nextAll(siblingSelector).removeClass("offLeft").addClass("offRight");
+        element.addClass("active").removeClass("offLeft").removeClass("offRight");
     }
 
 })(window.interactions = window.interactions || {});

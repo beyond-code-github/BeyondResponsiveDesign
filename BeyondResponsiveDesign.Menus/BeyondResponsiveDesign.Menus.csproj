@@ -122,6 +122,7 @@
     <Content Include="images\venue.jpg" />
     <Content Include="scripts\knockout-3.1.0.debug.js" />
     <Content Include="scripts\knockout-3.1.0.js" />
+    <Content Include="scripts\touchscrollfix.js" />
     <Content Include="styles\fonts\opensans_bolditalic_macroman\OpenSans-BoldItalic-demo.html" />
     <Content Include="styles\fonts\opensans_bolditalic_macroman\OpenSans-BoldItalic-webfont.svg" />
     <Content Include="styles\fonts\opensans_bolditalic_macroman\specimen_files\easytabs.js" />

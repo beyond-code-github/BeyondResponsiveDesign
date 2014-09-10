@@ -64,6 +64,7 @@ scripts/interactions.js
 scripts/jquery-2.1.1.min.js
 scripts/jquery.detect_swipe.js
 scripts/knockout-3.1.0.js
+scripts/touchscrollfix.js
 Index.html
 content/accommodation.html
 content/agenda.json
@@ -75,5 +76,6 @@ content/presentation.html
 content/sessions.html
 content/speakers.json
 content/speakers.html
+content/speakerdetail.html
 content/sponsors.html
 content/venue.html
