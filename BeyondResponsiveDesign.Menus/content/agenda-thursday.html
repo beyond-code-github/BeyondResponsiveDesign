@@ -56,7 +56,7 @@
         viewModel.sessionInfo = sessionInfo;
         viewModel.prettifyTime = prettifyTime;
         viewModel.click = function (session, e) {
-            window.interactions.openPropertySheet("sessionDetail", session.Speaker).done(function () {
+            window.interactions.openPropertySheet("sessiondetail", session.Speaker).done(function () {
                 ko.applyBindings(session, $("main > aside.propertySheet > div")[0]);
             });
 
