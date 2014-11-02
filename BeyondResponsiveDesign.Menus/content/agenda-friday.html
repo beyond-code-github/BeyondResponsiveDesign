@@ -19,17 +19,17 @@
             </header>
             <table class="agenda">
                 <tbody data-bind="foreach: { data: $root.TimeSlots, as: 'timeSlot' }">
-                    <tr class="session">
+                    <!--  ko with: $root.sessionInfo(track.Id, timeSlot.Id) -->
+                    <tr class="session" data-bind="click: $root.click">
                         <td><span data-bind="text: $root.prettifyTime(timeSlot.From, timeSlot.To)"></span></td>
-                        <td data-bind="with: $root.sessionInfo(track.Id, timeSlot.Id)">
-                            <div data-bind="click: $root.click">
-                                <div>
-                                    <a data-bind="text: Title"></a>
-                                </div>
-                                <span data-bind="text: Speaker"></span>
+                        <td>
+                            <div>
+                                <a data-bind="text: Title"></a>
                             </div>
+                            <span data-bind="text: Speaker"></span>
                         </td>
                     </tr>
+                    <!-- /ko -->
                 </tbody>
             </table>
         </section>
@@ -92,3 +92,12 @@
 </script>
 
 <aside class="propertySheet wide offRight"></aside>
+<style>
+    tr.session > td:first-child {
+        -moz-min-width: 3.5em;
+        -ms-min-width: 3.5em;
+        -o-min-width: 3.5em;
+        -webkit-min-width: 3.5em;
+        min-width: 3.5em;
+    }
+</style>

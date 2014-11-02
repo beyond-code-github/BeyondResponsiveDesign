@@ -18,7 +18,7 @@ body {
   margin: 0;
 }
 a {
-  color: #005800;
+  color: #cc2d32;
   font-weight: 350;
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -38,8 +38,8 @@ h3 {
   color: #cc2d32;
   display: block;
 }
-a:hover {
-  color: #cc2d32;
+body > main a:hover {
+  font-weight: 600;
 }
 table {
   width: 100%;

@@ -16,7 +16,8 @@
 @body-text-light-color: lighten(@body-text-color, 20%);
 @body-highlight-color: lighten(@body-text-color, 30%);
 
-@header-color: #005800;
+@header-color: #CC2D32;
+@link-color: #CC2D32;
 @header-height: 3em;
 @header-color-light: #000000;
 @header-text-color: #FAEA2B;
@@ -58,7 +59,7 @@ body {
 }
 
 a {
-    color: @header-color;
+    color: @link-color;
     font-weight: @medium;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -79,8 +80,8 @@ h1, h2, h3 {
     display: block;
 }
 
-a:hover {
-    color: @sidebar-child-accent-background-color;
+body > main a:hover {
+    font-weight: @heavy;
 }
 
 table {
