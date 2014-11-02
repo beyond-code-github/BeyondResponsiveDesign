@@ -154,7 +154,7 @@ body > header > ul {
   white-space: nowrap;
 }
 body > header > ul.diagonal-black {
-  background: url("../images/diagonal background.png");
+  background: url("../images/diagonalbackground.png");
   background-repeat: no-repeat;
   background-size: 100% auto;
   height: 100%;
@@ -343,7 +343,7 @@ body > main section.presentation > div {
   padding: .75rem .75rem 0 .75rem;
 }
 body > main section > header > h2 {
-  background-image: url("../images/header underline.png");
+  background-image: url("../images/headerunderline.png");
   background-position: left bottom;
   background-repeat: no-repeat;
   padding: 0 0 0.7em 0.1em;
