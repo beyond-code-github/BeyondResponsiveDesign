@@ -115,6 +115,10 @@ body > header > ul > li.logo > a {
   height: 3em;
   z-index: 1;
 }
+body > header > ul > li.logo > a > i {
+  padding-left: 0.25em;
+  padding-top: 0.275em;
+}
 body > header > ul > li.logo > a > img {
   border: 0 none;
   height: 2rem;
@@ -187,6 +191,8 @@ body > main > aside.propertySheet > div {
 body > main > article > nav.toolbar {
   position: relative;
   min-height: 3em;
+  height: 3em;
+  overflow: hidden;
 }
 body > main > article > nav.toolbar > header {
   float: left;
@@ -196,9 +202,15 @@ body > main > article > nav.toolbar > header {
 body > main > article > nav.toolbar > ul {
   min-height: 3em;
   height: 3em;
+  white-space: nowrap;
 }
 body > main > article > nav.toolbar > ul > li {
-  display: block;
-  float: left;
+  display: inline-block;
+}
+body > main > article > nav.toolbar > ul > li > a > span {
+  vertical-align: top;
+}
+body > main > article > nav.toolbar > ul > li > a > img.room-image {
+  width: 2.5em;
 }
 /*# sourceMappingURL=styles.css.map */

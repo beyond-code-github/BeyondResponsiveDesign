@@ -54,8 +54,7 @@
         Header bar
     --------------------------------------------------------------------------->
     <header>
-        <ul>
-
+        <ul class="diagonal-black">
             <li class="menuToggle">
                 <a href="javascript:void(0)">
                     <i class="fa-bars fa fa-lg"></i>
@@ -70,7 +69,7 @@
 
             <li class="logo">
                 <a href="javascript:void(0)">
-                    <img src="images/logo-notext-green.png" alt="dddsw logo" />
+                    <i class="fa fa-2x fa-star-o">&nbsp;</i>
                 </a>
             </li>
 
@@ -89,7 +88,7 @@
                 </a>
                 <div class="popup">
                     <ul>
-                        <li><a href="javascript:void(0)">My Profile</a></li>
+                        <li><a href="javascript:void(0)">My Sessions</a></li>
                         <li><a href="javascript:void(0)">Settings</a></li>
                         <li><a href="javascript:void(0)">About</a></li>
                     </ul>
@@ -105,7 +104,7 @@
     <nav class="scrollcontainer vscroll">
         <div class="scrollcontainer vscroll">
             <div class="wrapper">
-                <ul>
+                <ul class="diagonal-black">
 
                     <li class="active" id="menu-home">
                         <a href="javascript:interactions.navigate('home', true)" onclick="this.blur();" title="Home">
@@ -117,7 +116,7 @@
                     </li>
 
                     <li id="menu-sessions">
-                        <a href="javascript:interactions.navigate('agenda')" onclick="this.blur();" title="Sessions">
+                        <a href="javascript:interactions.navigate('agenda-wednesday')" onclick="this.blur();" title="Sessions">
                             <h2>
                                 <i class="fa fa-lg fa-list"></i>
                                 <span>Sessions</span>
@@ -128,15 +127,19 @@
                         <div>
                             <ul>
 
-                                <li id="menu-agenda">
-                                    <a href="javascript:interactions.navigate('agenda', true)" onclick=" this.blur();" title="Agenda">
-                                        <i class="fa fa-calendar"></i><span>Agenda</span>
+                                <li id="menu-agenda-wednesday">
+                                    <a href="javascript:interactions.navigate('agenda-wednesday', true)" onclick=" this.blur();" title="Wednesday">
+                                        <i class="fa fa-calendar"></i><span>Wednesday</span>
                                     </a>
                                 </li>
-
-                                <li id="menu-cfp">
-                                    <a href="javascript:interactions.navigate('cfp', true)" onclick=" this.blur();" title="Submissions">
-                                        <i class="fa fa-bullhorn"></i><span>Submissions</span>
+                                <li id="menu-agenda-thursday">
+                                    <a href="javascript:interactions.navigate('agenda-thursday', true)" onclick=" this.blur();" title="Thursday">
+                                        <i class="fa fa-calendar"></i><span>Thursday</span>
+                                    </a>
+                                </li>
+                                <li id="menu-agenda-friday">
+                                    <a href="javascript:interactions.navigate('agenda-friday', true)" onclick=" this.blur();" title="Friday">
+                                        <i class="fa fa-calendar"></i><span>Friday</span>
                                     </a>
                                 </li>
 
@@ -153,17 +156,17 @@
                         </a>
                     </li>
 
-                    <li id="menu-sponsors">
-                        <a href="javascript:interactions.navigate('sponsors', true)" onclick="this.blur();" title="Our Sponsors">
+                    <li id="menu-partners">
+                        <a href="javascript:interactions.navigate('partners', true)" onclick="this.blur();" title="Our Partners">
                             <h2>
                                 <i class="fa fa-lg fa-thumbs-o-up"></i>
-                                <span>Our Sponsors</span>
+                                <span>Our Partners</span>
                             </h2>
                         </a>
                     </li>
 
                     <li id="menu-usefulinfo">
-                        <a href="javascript:interactions.navigate('accommodation')" onclick="this.blur();" title="Useful Information">
+                        <a href="javascript:interactions.navigate('about')" onclick="this.blur();" title="Useful Information">
                             <h2>
                                 <i class="fa fa-lg fa-info-circle"></i>
                                 <span>Information</span>
@@ -174,17 +177,17 @@
                         <div>
                             <ul>
 
-                                <li id="menu-accommodation">
-                                    <a href="javascript:interactions.navigate('accommodation', true)" onclick=" this.blur();" title="Accommodation">
+                                <li id="menu-about">
+                                    <a href="javascript:interactions.navigate('about', true)" onclick=" this.blur();" title="About Oredev">
                                         <i class="fa fa-suitcase"></i>
-                                        <span>Accommodation</span>
+                                        <span>About Oredev</span>
                                     </a>
                                 </li>
 
-                                <li id="menu-venue">
-                                    <a href="javascript:interactions.navigate('venue', true)" onclick=" this.blur();" title="Venue">
+                                <li id="menu-partnership">
+                                    <a href="javascript:interactions.navigate('partnership', true)" onclick=" this.blur();" title="Partnership">
                                         <i class="fa fa-building-o"></i>
-                                        <span>Venue</span>
+                                        <span>Partnership</span>
                                     </a>
                                 </li>
 

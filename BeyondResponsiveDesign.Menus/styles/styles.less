@@ -133,6 +133,11 @@ body > header {
             height: @header-height;
             z-index: 1;
 
+            > i {
+                padding-left: 0.25em;
+                padding-top: 0.275em;
+            }
+
             > img {
                 border: 0 none;
                 height: 2rem;
@@ -167,7 +172,6 @@ body > main {
             }
         }
     }
-
 }
 
 body > main > aside.propertySheet {
@@ -197,6 +201,8 @@ body > main > aside.propertySheet {
 body > main > article > nav.toolbar {
     position: relative;
     min-height: @toolbar-height;
+    height: @toolbar-height;
+    overflow: hidden;
 
     > header {
         float: left;
@@ -207,10 +213,20 @@ body > main > article > nav.toolbar {
     > ul {
         min-height: @toolbar-height;
         height: @toolbar-height;
+        white-space: nowrap;
 
         > li {
-            display: block;
-            float: left;
+            display: inline-block;
+
+            > a {
+                > span {
+                    vertical-align: top;
+                }
+
+                > img.room-image {
+                    width: 2.5em;
+                }
+            }
         }
     }
 }

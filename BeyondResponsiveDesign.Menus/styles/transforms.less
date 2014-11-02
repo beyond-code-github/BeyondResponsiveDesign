@@ -141,6 +141,7 @@ body > main > aside.propertySheet {
     body > main > article {
         .animate;
     }
+
     body > main > aside.propertySheet.wide {
         width: 50%;
     }
@@ -169,6 +170,11 @@ body > main > aside.propertySheet {
             margin-left: -1px;
             .animate;
         }
+    }
+
+    body > header > .header-text {
+        background-position: center;
+        width: 100%;
     }
 
     body.sidebar > header > ul > li.menuToggle {
@@ -219,6 +225,10 @@ body > main > aside.propertySheet {
 }
 
 @media only screen and (max-width: 480px) {
+    body > header > .header-text {
+        display: none;
+    }
+
     table > tbody > tr > td {
         &.bio {
             display: none;

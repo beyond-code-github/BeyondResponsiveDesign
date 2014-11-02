@@ -1,0 +1,472 @@
+[  
+   {  
+      "Id":"the-most-human-human",
+      "Title":"The most Human Human",
+      "Abstract":"For the first time in history, we are routinely mistaking computer interactions for human ones. This is a remarkable testament to human ingenuity, but what does it say about us? Over the last several years, software mimicking human conversation has finally come within reach of the Turing test, a threshold beyond which – or so it's argued – a machine can be said to be thinking.<br><br>Poet, philosopher, and computer scientist Brian Christian set out to become one of the Turing test's \"human confederates,\" competing not only against machines but against his fellow humans to persuade the judges that he was, in fact, human. Preparing to compete for the coveted, if bizarre, \"Most Human Human\" award sent him on a wide-ranging investigation into science, philosophy, literature and the arts, to learn what he could about just what it is that makes us human, anyway. As we enter a time where it's ever more difficult to tell the difference between genuine human connection and its many imitations, computers – far from being a threat to our humanity – provide a better means than ever before of understanding what it is.",
+      "Level":"Basic",
+      "TimeSlotId":"09.00",
+      "Speaker":"Brian Christian",
+      "SpeakerId":"brian-christian",
+      "Room":"Marvin"
+   },
+   {  
+      "Id":"advanced-animation-in-android",
+      "Title":"Advanced animation in Android",
+      "Abstract":"",
+      "Level":"Intermediate",
+      "TimeSlotId":"10.20",
+      "Speaker":"Kevin Grant",
+      "SpeakerId":"kevin-grant",
+      "Room":"HAL9000"
+   },
+   {  
+      "Id":"the-story-of-simris-how-we-wanted-to-fuel-the-world-and-ended-up-saving-the-oceans",
+      "Title":"The story of Simris: How we wanted to fuel the world and ended up saving the oceans",
+      "Abstract":"Global warming. Oceans suffocating from eutrophication. The urgent need for renewable energy. Our generation is facing some of the hardest challenges in the history of mankind. Modern technology is one part of the solution. The other one is billions of years old: algae. Algae have become the green darlings of thought leaders such as Obama and Branson, but also global corporations such as Exxon or Unilever. This session is about what it’s like to build an exciting new industry from scratch. ",
+      "Level":"Basic",
+      "TimeSlotId":"10.20",
+      "Speaker":"Fredrika Gullfot",
+      "SpeakerId":"fredrika-gullfot",
+      "Room":"Johnny Five"
+   },
+   {  
+      "Id":"you-really-should-organise-that-codebase-no-really",
+      "Title":"You really should organise that codebase. No, really!",
+      "Abstract":"You own a company that doubles in size every year, you let it just grow without structure, the people keep coming and doing, and everyone talks to everyone and soon nobody gets anything much done... It’s ok, just a dream - you wouldn’t really try build something so complex without any organisation. Right?! Wrong! We have all seen teams sail smoothly on 500 classes, to later struggle and sink in 5,000 classes. This talk explains why this happens, and what you can do about it when it does.",
+      "Level":"Advanced",
+      "TimeSlotId":"10.20",
+      "Speaker":"Chris Chedgey",
+      "SpeakerId":"chris-chedgey",
+      "Room":"KITT"
+   },
+   {  
+      "Id":"integrating-skilled-testing-with-agile-development",
+      "Title":"Integrating Skilled Testing with Agile Development",
+      "Abstract":"Skilled software testing has not fit well into the culture of Agile development. Agile was not created by testers, or with testers, or with deep testing in mind. As a result, people who study and practice the testing discipline have done so largely outside of Agile culture. To help fix this, Michael Bolton and I have created a new version of the \"Agile Testing Quadrants\" that helps us explain a better way for testing and development to coexist.",
+      "Level":"Intermediate",
+      "TimeSlotId":"10.20",
+      "Speaker":"James Bach",
+      "SpeakerId":"james-bach",
+      "Room":"Marvin"
+   },
+   {  
+      "Id":"make-applications-responsive-and-easier-to-scale-with-light-weight-messaging",
+      "Title":"Make applications responsive and easier to scale with light weight messaging",
+      "Abstract":"Application developers of today frequently try new apps and concepts that exist outside of their companies’ core business systems. They pick technologies best-suited for their unique circumstances and favor quick access to tools. When it comes to application delivery, you can’t ignore the importance of messaging runtime. Attend this webcast to find out how IBM MQ Light and IBM MQ Light for Bluemix— the new lightweight messaging solution that can make applications more responsive and easier to scale— provide a simple messaging API that developers can install, configure, and use to write applications in just a few minutes. Learn more from the creators of this tool on how it will help all developers accelerate application delivery and contribute to the evolution of MQ messaging. ",
+      "Level":"Intermediate",
+      "TimeSlotId":"10.20",
+      "Speaker":"Paul Smith",
+      "SpeakerId":"paul-smith",
+      "Room":"R2D2"
+   },
+   {  
+      "Id":"behind-the-smiling-face-of-a-sales-droid",
+      "Title":"Behind the smiling face of a sales droid",
+      "Abstract":"Online retail is increasing every year. The salesperson is replaced by a sales droid - a set of adaptive algorithms with the purpose to predict interest and inspire the visitor to buy more. In this talk we show you the reality behind some of the biggest online retailers in the Nordics, and reveal the algorithms behind the polished storefronts. We also debunk a few beliefs that hold back the academic research community.",
+      "Level":"Intermediate",
+      "TimeSlotId":"10.20",
+      "Speaker":"Thomas Raneland",
+      "SpeakerId":"thomas-raneland",
+      "Room":"Roomba"
+   },
+   {  
+      "Id":"introduction-to-docker-containerization-is-the-new-virtualization",
+      "Title":"Introduction to Docker: Containerization is the new Virtualization",
+      "Abstract":"Docker is an open source container virtualization framework that was released in March 2013. It makes it easy to create lightweight, portable, and self-sufficient containers. Containers which you can use to test applications, build and run services or even to build your own platform-as-a-service. Learn why Docker matters, how to get started with it and see some cool examples of Docker in action.",
+      "Level":"Intermediate",
+      "TimeSlotId":"10.20",
+      "Speaker":"James Turnbull",
+      "SpeakerId":"james-turnbull",
+      "Room":"T-800"
+   },
+   {  
+      "Id":"how-to-create-an-test-automation-framework-architecture-with-selenium",
+      "Title":"How To Create An Test Automation Framework Architecture With Selenium",
+      "Abstract":"Learning how to use a tool like Selenium to create automated tests is not enough to be successful with an automation effort. You also need to know how to build an automation framework that can support creating tests that are not so fragile that they constantly break. This is the real key to success in any automation effort. ",
+      "Level":"Basic",
+      "TimeSlotId":"10.20",
+      "Speaker":"John Sonmez",
+      "SpeakerId":"john-sonmez",
+      "Room":"Wall-E"
+   },
+   {  
+      "Id":"testing-in-continuous-deployment",
+      "Title":"Testing in Continuous Deployment",
+      "Abstract":"What kind of testing do we need to have in a CD pipeline? What does it take to push a commit all the way to deployment? Fully automated. Several times a day.<br>Model-based testing has played a key factor at Spotify as a part of the automated end-user acceptance testing. Kristian will talk about how Spotify built the Continuous Deployment pipeline for its web player, and changed the way manual testing was performed. Also, the tools involved which mostly are open source (Gerrit, Selenium, GraphWalker) will be discussed. ",
+      "Level":"Intermediate",
+      "TimeSlotId":"11.20",
+      "Speaker":"Kristian Karl",
+      "SpeakerId":"kristian-karl",
+      "Room":"HAL9000"
+   },
+   {  
+      "Id":"homebrewing-beer",
+      "Title":"Homebrewing beer",
+      "Abstract":"A day-long event showing how to brew beer at home (or in this case at a developers conference). The beer that will be brewed is a double india pale ale with huge amounts of american hops. The presentation will provide theoretical and practical information to get you ready to start brewing yourself.",
+      "Level":"Basic",
+      "TimeSlotId":"11.20",
+      "Speaker":"Hannes Gruber",
+      "SpeakerId":"hannes-gruber",
+      "Room":"Johnny Five"
+   },
+   {  
+      "Id":"frp-in-javascript-with-bacon-js",
+      "Title":"FRP in JavaScript with Bacon.js",
+      "Abstract":"",
+      "Level":"Intermediate",
+      "TimeSlotId":"11.20",
+      "Speaker":"Juha Paananen",
+      "SpeakerId":"juha-paananen",
+      "Room":"KITT"
+   },
+   {  
+      "Id":"enabling-continuous-delivery-with-database-practices",
+      "Title":"Enabling Continuous Delivery with Database Practices",
+      "Abstract":"To get full benefits of Continuous Delivery, all aspects of the software development need to be delivered and at the same time be able to handle multiple versions. Pramod will focus on techniques to enable continuous delivery of changes to database without downtime. Techniques such as Database Refactoring, Database Migrations, Automated Deployment, Continuous Integration with databases and Version Controlling Databases techniques that allow to manage changes in the database.<br>",
+      "Level":"Intermediate",
+      "TimeSlotId":"11.20",
+      "Speaker":"Pramod Sadalage",
+      "SpeakerId":"pramod-sadalage",
+      "Room":"Marvin"
+   },
+   {  
+      "Id":"the-lost-art-of-assembly-programming-unraveling-a-childhood-mystery",
+      "Title":"The Lost Art of Assembly Programming: Unraveling a Childhood Mystery",
+      "Abstract":"Many of us started out using computers that were much less sophisticated than what we have today, but the systems of yesteryear still have lessons to teach today's developers. This session will dig into the strange world of 6502 assembly language, with particular focus on the Atari 2600 videogame system from 1977. Common idioms will be explained, and most of the rules of software development that you live by will be turned upside-down.",
+      "Level":"Intermediate",
+      "TimeSlotId":"11.20",
+      "Speaker":"Jack Nutting",
+      "SpeakerId":"jack-nutting",
+      "Room":"R2D2"
+   },
+   {  
+      "Id":"good-design-is-a-language",
+      "Title":"Good Design Is a Language",
+      "Abstract":"Much as programming languages teach behavior to a machine and aid in expressing a particular outcome, can design be approached with simple, flexible, and teachable best practices of language? For both computer language well as natural language, this session will look at ways of thinking about design experiences through consistent and cohesive “language”.",
+      "Level":"Basic",
+      "TimeSlotId":"11.20",
+      "Speaker":"Sean Wolcott",
+      "SpeakerId":"sean-wolcott",
+      "Room":"Roomba"
+   },
+   {  
+      "Id":"internet-of-things-an-entertaining-and-mostly-correct-reflection-on-where-we-are-and-how-we-got-here-",
+      "Title":"Internet of Things: An entertaining and mostly correct reflection on where we are, and how we got here.",
+      "Abstract":"A number of disruptive ideas have over the last few years emerged to create what can only be described as a perfect storm for enabling the concept of 'Internet of Things', or the 'Programmable World'. In this inspirational session we will explore the developments that led us to where we are today. We will have a look at the software and hardware technologies that are available to us, how they work, and most importantly, how you can program the things around you to do do what you want!",
+      "Level":"Basic",
+      "TimeSlotId":"11.20",
+      "Speaker":"Patrik Fredriksson",
+      "SpeakerId":"patrik-fredriksson",
+      "Room":"T-800"
+   },
+   {  
+      "Id":"creating-great-systems-with-the-help-of-olympic-athletes-agile-and-pretotypes",
+      "Title":"Creating great systems with the help of Olympic athletes, agile and pretotypes",
+      "Abstract":"The talk will combine knowledge from coaching, requirements gathering and system architecture and show a lean and agile approach to system specification where requirements and architecture goes together and where the artifacts described during this process can be directly correlated to code artifacts making it possible to reason about the code from a system perspective. Since The DCI paradigm is what makes this possible, this talk will also be an in depth introduction to DCI.",
+      "Level":"Intermediate",
+      "TimeSlotId":"11.20",
+      "Speaker":"Rune Funch Søltoft",
+      "SpeakerId":"rune-funch-soltoft",
+      "Room":"Wall-E"
+   },
+   {  
+      "Id":"coding-culture",
+      "Title":"Coding Culture",
+      "Abstract":"One day we woke up and realized that our days are filled with all kind of stuff unrelated to code, that our goals are driven by product owners, and that our code design is dictated by architects.<br>A great coding culture gives that power back to the developer, bringing autonomous teams together, helping programmer to innovate, and raising the awareness to create better code.<br>I will talk about how to foster a strong engineering-focused culture & give examples from our experience at Atlassian.",
+      "Level":"Basic",
+      "TimeSlotId":"12.20",
+      "Speaker":"Sven Peters",
+      "SpeakerId":"sven-peters",
+      "Room":"HAL9000"
+   },
+   {  
+      "Id":"building-fast-data-applications-with-project-reactor",
+      "Title":"Building Fast Data Applications with Project Reactor",
+      "Abstract":"This session will introduce the Reactor fast data framework. Reactor is a library for building low-latency, high-throughput reactive applications on the JVM. The core concepts and abstractions will be introduced through plentiful code samples and live coding.",
+      "Level":"Intermediate",
+      "TimeSlotId":"12.20",
+      "Speaker":"Jon Brisbin",
+      "SpeakerId":"jon-brisbin",
+      "Room":"KITT"
+   },
+   {  
+      "Id":"bitcoin",
+      "Title":"Bitcoin",
+      "Abstract":"Coming soon",
+      "Level":"Basic",
+      "TimeSlotId":"12.20",
+      "Speaker":"Jeff Garzik",
+      "SpeakerId":"jeff-garzik",
+      "Room":"Marvin"
+   },
+   {  
+      "Id":"what-do-you-mean-agile-tester",
+      "Title":"What do you mean \"Agile Tester\"?",
+      "Abstract":"What makes an Agile tester 'Agile'? Is there really that much difference between agile and non-agile software testing? This session takes a look at the experiences of a tester embedded into an Agile team and examines the skills an Agile tester should have in their arsenal.",
+      "Level":"Intermediate",
+      "TimeSlotId":"12.20",
+      "Speaker":"Ben Kelly",
+      "SpeakerId":"ben-kelly",
+      "Room":"R2D2"
+   },
+   {  
+      "Id":"using-the-right-tools-to-get-back-into-the-drivers-seat-of-your-jvm",
+      "Title":"Using the right tools to get back into the driver's seat of your JVM",
+      "Abstract":"Let's get a handle on what your JVM is doing using system tools as well as JDK tools like  jps, jstack, Mission Control and Flight Recoder. Using real world examples we try to understand common development mistakes and performance problems.",
+      "Level":"Intermediate",
+      "TimeSlotId":"12.20",
+      "Speaker":"Hardy Ferentschik",
+      "SpeakerId":"hardy-ferentschik",
+      "Room":"Roomba"
+   },
+   {  
+      "Id":"open-source-protocols-and-architectures-to-fix-the-internet-of-things",
+      "Title":"Open source protocols and architectures to fix the Internet of Things",
+      "Abstract":"Everyday things are becoming smarter. The problem? The things are becoming smarter, but they’re also becoming selfish and you’ve ended up as a mechanical turk inside your own software. How can we fix the Internet of Things? The things have to become not just smarter, but more co-operative, and the Internet of things needs to become anticipatory rather than reactive.",
+      "Level":"Intermediate",
+      "TimeSlotId":"12.20",
+      "Speaker":"Alasdair Allan",
+      "SpeakerId":"alasdair-allan",
+      "Room":"T-800"
+   },
+   {  
+      "Id":"api--the-hidden-ui",
+      "Title":"API - The hidden UI",
+      "Abstract":"Developers are also users. Instead of interacting with buttons and other graphical elements we use APIs. Just as a GUI can be more or less usable, so can an API. What makes an API more or less usable? Fredrik Mörk takes a fairly non-technical look at some useful thought patterns that can help you design a better API.",
+      "Level":"Basic",
+      "TimeSlotId":"12.20",
+      "Speaker":"Fredrik Mörk",
+      "SpeakerId":"fredrik-mork",
+      "Room":"Wall-E"
+   },
+   {  
+      "Id":"developing-web-applications-with-clojure",
+      "Title":"Developing Web Applications with Clojure",
+      "Abstract":"In this session you’ll get a whirlwind tour of what it is like developing web applications in Clojure. <br><br>Topics include:<br>- Setting up a webserver with Pedestal<br>- Routing requests to controller handlers<br>- Rendering templates and views<br>- Persisting information to a database (Datomic)<br>- General editing and project organization tips<br>",
+      "Level":"Intermediate",
+      "TimeSlotId":"13.20",
+      "Speaker":"Ryan Neufeld",
+      "SpeakerId":"ryan-neufeld",
+      "Room":"HAL9000"
+   },
+   {  
+      "Id":"do-you-want-to-be-a-superhero",
+      "Title":"Do YOU want to be a superhero?",
+      "Abstract":"Software developers are the magicians of this age. With the information and technology available to us today, we can do pretty much anything we put our minds to. <br>What mark will you leave behind in this world? <br><br>In this short lightning talk you will find out how to use your powers for the greater good!",
+      "Level":"Basic",
+      "TimeSlotId":"13.20",
+      "Speaker":"Ola Karlsson",
+      "SpeakerId":"ola-karlsson",
+      "Room":"Johnny Five"
+   },
+   {  
+      "Id":"testing-to-improve-app-store-ratings-for-mobile-apps",
+      "Title":"Testing to improve app store ratings for mobile apps",
+      "Abstract":"You would love this. Pradeep and his colleagues have helped customers worldwide improve app store rating for their apps. He will be showing real work done. He would love to explain how his team understood existing user reviews, how they interact with users, understanding user emotions and equally important, how they test and report.  ",
+      "Level":"Intermediate",
+      "TimeSlotId":"13.20",
+      "Speaker":"Pradeep Soundararajan",
+      "SpeakerId":"pradeep-soundararajan",
+      "Room":"KITT"
+   },
+   {  
+      "Id":"microservices-lessons-from-3-companies",
+      "Title":"MicroServices: Lessons from 3 Companies",
+      "Abstract":"MicroService Architecture adroitly exploits cloud environments. In this session, we will address the lessons learned in 3 companies (so far). The lessons cover overcoming the programmer bias to build \"big\" services; asynchronous vs. synchronous service flows; successful languages, environments, and frameworks; and impact on development processes. Also addressed is the necessary shift from acceptance test to active system monitoring of business KPI's.",
+      "Level":"Intermediate",
+      "TimeSlotId":"13.20",
+      "Speaker":"Fred George",
+      "SpeakerId":"fred-george",
+      "Room":"Marvin"
+   },
+   {  
+      "Id":"it-doesnt-work-that-way-in-enterprise",
+      "Title":"\"It doesn't work that way in enterprise\"",
+      "Abstract":"One man's story about the trials and tribulations of being an 'enterprise' developer. If you think you've experienced corporate dogma and constraint - the extent of it in this tale will put everything in perspective! I'll also give you proof that despite what anyone says, things can get better.",
+      "Level":"Intermediate",
+      "TimeSlotId":"13.20",
+      "Speaker":"Peter Smith",
+      "SpeakerId":"peter-smith",
+      "Room":"R2D2"
+   },
+   {  
+      "Id":"do-it-yourself-usability-design-for-developers",
+      "Title":"Do-it-yourself Usability Design for Developers",
+      "Abstract":"Good user experience (UX) is essential in modern software. It is a must-have in consumer oriented applications and even in business applications good user experience becomes increasingly important.<br><br>Unfortunately only few teams are equipped with a UX expert and it is up to the developers to incorporate good usability. This talk covers the basics of UX design. We will take a look at several concrete and simple techniques that will enable you to increase the usability of your product tremendously.",
+      "Level":"Intermediate",
+      "TimeSlotId":"13.20",
+      "Speaker":"Michael Heinrichs",
+      "SpeakerId":"michael-heinrichs",
+      "Room":"Roomba"
+   },
+   {  
+      "Id":"spring4-java-ee-7-or-both",
+      "Title":"Spring4, Java EE 7 or Both?",
+      "Abstract":"Problems choosing between Java EE and Spring? Or do you want to use both in combination? Then this session is something for you.",
+      "Level":"Intermediate",
+      "TimeSlotId":"13.20",
+      "Speaker":"Ivar Grimstad",
+      "SpeakerId":"ivar-grimstad",
+      "Room":"T-800"
+   },
+   {  
+      "Id":"reactive-streaming-restful-applications-with-akka-http",
+      "Title":"Reactive Streaming RESTful Applications with Akka HTTP",
+      "Abstract":"In this session you will learn how to leverage the features introduced in akka-http and akka-stream to write  fully back pressured streaming REST services. We will show you how to use  the client and server APIs to add resilient and reactive REST services to your architecture, as well as give you an overview of what RESTful programming with akka-http and actors look like.<br><br>Akka is a toolkit for writing reactive, fault tolerant, distributed and scalable applications in Java or Scala.",
+      "Level":"Intermediate",
+      "TimeSlotId":"13.20",
+      "Speaker":"Björn Antonsson",
+      "SpeakerId":"bjorn-antonsson",
+      "Room":"Wall-E"
+   },
+   {  
+      "Id":"make-it-so-sexy-",
+      "Title":"Make It So (Sexy)",
+      "Abstract":"A review of sex-related interfaces in sci-fi Christopher Noessel discusses matchmaking interfaces, augmented coupling, mediated coupling, and yes, even sex with technology. Along the way he shares practical lessons derived from the examples.",
+      "Level":"Intermediate",
+      "TimeSlotId":"14.20",
+      "Speaker":"Chris Noessel",
+      "SpeakerId":"chris-noessel",
+      "Room":"HAL9000"
+   },
+   {  
+      "Id":"nuget-3-0--transitioning-from-odata-to-json-ld",
+      "Title":"NuGet 3.0 – Transitioning from OData to JSON-LD",
+      "Abstract":"The NuGet team has spent most of 2014 working on NuGet 3.0.  You’ll get a tour of NuGet 3.0, its features, and the direction we’re headed.  But then we’ll get to the fun stuff we can all learn from: the challenges we’ve faced, and how we’re overcoming them.  You’ll hear chilling tales about how interfaces, LINQ, and general-purpose server APIs have caused us so much grief.  But you’ll also see how we broke a cycle of endless design and started making progress when it seemed like none could be made, allowing us to transition from OData to JSON-LD.",
+      "Level":"Basic",
+      "TimeSlotId":"14.20",
+      "Speaker":"Jeff Handley",
+      "SpeakerId":"jeff-handley",
+      "Room":"KITT"
+   },
+   {  
+      "Id":"building-a-monitoring-infrastructure-with-puppet",
+      "Title":"Building a Monitoring Infrastructure with Puppet",
+      "Abstract":"Continuous Delivery has taught us to move fast and deliver incremental value into our production environment. To make sure that we are not degrading the user experience, we should make sure that any issues are monitored or alerted. Monitoring can be painful and tedious. There are some fantastic tools out there (nagios, icinga etc.) but these feel like operational tools.<br><br>During this session, Paul will show you that a developer can use Puppet (an infrastructure management tool) and automate their system checks. This will include how to centrally log errors and how to throw these errors to specific alerting systems based on their criticality. Monitoring should be simple and easy to maintain. I hope that by the end of this talk, Paul will have demonstrated that<br>",
+      "Level":"Advanced",
+      "TimeSlotId":"14.20",
+      "Speaker":"Paul Stack",
+      "SpeakerId":"paul-stack",
+      "Room":"Marvin"
+   },
+   {  
+      "Id":"liqui--a-software-architecture-for-quantum-computing",
+      "Title":"LIQUi|>: A Software Architecture for Quantum Computing",
+      "Abstract":"Languages, compilers, and computer-aided design tools will be essential for scalable quantum computing, which promises an exponential leap in our ability to execute complex tasks. LIQUi|> is a software architecture for quantum computing. It contains an embedded, domain-specific language designed for programming quantum algorithms. It is also fully modular and independent of a specific quantum architecture. LIQUi|> enables easy programming, compilation, and simulation of quantum algorithms and circuits.",
+      "Level":"Intermediate",
+      "TimeSlotId":"14.20",
+      "Speaker":"Krysta Svore",
+      "SpeakerId":"krysta-svore",
+      "Room":"R2D2"
+   },
+   {  
+      "Id":"queueing-network-tasks-when-offline",
+      "Title":"Queueing Network Tasks When Offline",
+      "Abstract":"In an upcoming release of Flipboard for iOS a feature will be introduced that queues network requests under poor connectivity and retries them automatically at a later time. Learn about how this was integrated into an existing network stack, the pitfalls of implementation, what policies were applied, and what the resulting API looks like.",
+      "Level":"Intermediate",
+      "TimeSlotId":"14.20",
+      "Speaker":"Tim Johnsen",
+      "SpeakerId":"tim-johnsen",
+      "Room":"Roomba"
+   },
+   {  
+      "Id":"rapid-iot-ui-with-javafx-and-scenebuilder",
+      "Title":"Rapid IoT UI with JavaFX and SceneBuilder",
+      "Abstract":"This sessions shows how to use SceneBuilder and JavaFX to rapidly prototype, evolve, and deploy exciting embedded UIs for the Internet of Things. We will explore using SceneBuilder’s integration with your favorite IDE to enable quick and seamless UI development and deployment to OSGi-based embedded systems, no wires, no muss, no fuss, just beautiful UI and developing with pleasure!",
+      "Level":"Intermediate",
+      "TimeSlotId":"14.20",
+      "Speaker":"Richard Bair",
+      "SpeakerId":"richard-bair",
+      "Room":"T-800"
+   },
+   {  
+      "Id":"dont-chase-innovation-chase-forgotten-people",
+      "Title":"Don't Chase Innovation—Chase Forgotten People",
+      "Abstract":"As an industry, we spend a lot of time chasing innovation, only to end up chasing our tails. Innovation can't be a goal. It has to be a result of achieving your goal. How, then, to set the right goal? I'll share two personal case studies—designing an Internet-of-Grandmas and building rapidly deployed houses for refugees—demonstrating that focusing on accessibility can lead you down and keep you on the right path to true innovation, as well as good design and even, *gasp*, profit.",
+      "Level":"Basic",
+      "TimeSlotId":"14.20",
+      "Speaker":"Thomas Q Brady",
+      "SpeakerId":"thomas-q-brady",
+      "Room":"Wall-E"
+   },
+   {  
+      "Id":"bring-out-your-dead",
+      "Title":"Bring out your dead",
+      "Abstract":"This is your ticket to go on a journey with us how we persuaded a client to let us renovate an officially failed project while keeping most of the legacy code. <br><br>I will talk about analyzing and measuring an architecture using ATAM. I will share insights on reverse engineering JSF portlets to AngularJS + REST, a proprietary DMS to a CMIS connected cloud service and how to operate this solution. <br><br>Finally you will grasp why it's more fun to start on a brown field.",
+      "Level":"Basic",
+      "TimeSlotId":"15.40",
+      "Speaker":"Oliver Pehnke",
+      "SpeakerId":"oliver-pehnke",
+      "Room":"HAL9000"
+   },
+   {  
+      "Id":"web-usability-on-a-budget",
+      "Title":"Web Usability on a Budget",
+      "Abstract":"No budget to hire a number of usability experts? Crafting a great user experience is easier than you think! In this session, you'll learn some easy tricks to make your sites more approachable, discover ways to help develop an emotional connection between your apps and your users, and see some tools that can assist you with planning and designing your next masterpiece of usability.",
+      "Level":"Basic",
+      "TimeSlotId":"15.40",
+      "Speaker":"Tim G. Thomas",
+      "SpeakerId":"tim-g-thomas",
+      "Room":"KITT"
+   },
+   {  
+      "Id":"the-architecture-of-stack-overflow",
+      "Title":"The Architecture of Stack Overflow",
+      "Abstract":"What is the physical architecture of Stack Overflow? How many servers are there? What is their purpose and what are their specs?<br><br>What The logical architecture of the software. How do we scale up? What are the main building blocks of our software?<br><br>The tooling system. What supports our extreme optimization philosophy?<br><br>The development team. What are our core values? What footprint do we want to leave as developers?",
+      "Level":"Intermediate",
+      "TimeSlotId":"15.40",
+      "Speaker":"Marco Cecconi",
+      "SpeakerId":"marco-cecconi",
+      "Room":"Marvin"
+   },
+   {  
+      "Id":"quantum-computing-wip-",
+      "Title":"Quantum Computing (WIP)",
+      "Abstract":"",
+      "Level":"Intermediate",
+      "TimeSlotId":"15.40",
+      "Speaker":"Charlie Marcus",
+      "SpeakerId":"charlie-marcus",
+      "Room":"R2D2"
+   },
+   {  
+      "Id":"ravendb-wow-features--the-things-that-you-didnt-know-that-your-database-can-do-for-you",
+      "Title":"RavenDB: Wow! features - the things that you didn't know that your database can do for you",
+      "Abstract":"In this talk we'll focus on looking at the distinct features RavenDB has, that can take your application to the next level. We'll discuss the Changes API, Transformers, 2nd stage map/reduce and much more.",
+      "Level":"Intermediate",
+      "TimeSlotId":"15.40",
+      "Speaker":"Oren Eini / Ayende Rahien",
+      "SpeakerId":"oren-eini--ayende-rahien",
+      "Room":"Roomba"
+   },
+   {  
+      "Id":"virtual-reality-overview-with-oculus-rift",
+      "Title":"Virtual reality overview with oculus rift",
+      "Abstract":"Oculus Rift has been a hot topic since their Kickstarter campaign in 2012. This summer the second version of the development kit was released, and it is expected to be released as a commercial version early 2015. Parallell to this a number of large brands, such as Samsung, Sony and Zeiss, are bringing their own VR solutions to the market.<br><br>In this talk we will give a introduction to what Oculus Rift is and how it works. We will also talk about the current state and future opportunities that comes with the rebirth of virtual reallity.",
+      "Level":"Basic",
+      "TimeSlotId":"15.40",
+      "Speaker":"Mattias Ask",
+      "SpeakerId":"mattias-ask",
+      "Room":"T-800"
+   },
+   {  
+      "Id":"rust-programming-language",
+      "Title":"Rust programming language",
+      "Abstract":"Rust is a new programming language for building systems that are both reliable and efficient. It combines the performance model of C++ with memory safety and security guarantees of high level languages.<br><br>In this talk I will introduce the powerful modern programming constructs that Rust offers, its expressive static type system, concurrency model and metaprogramming features. I will showcase some of the first open source projects written in Rust and give a tour of its rapidly growing ecosystem.",
+      "Level":"Intermediate",
+      "TimeSlotId":"15.40",
+      "Speaker":"Jakub Wieczorek",
+      "SpeakerId":"jakub-wieczorek",
+      "Room":"Wall-E"
+   },
+   {  
+      "Id":"turning-the-design-clock-back",
+      "Title":"Turning The Design Clock Back",
+      "Abstract":"Object-oriented design principles haven't had the effect we hoped for. The SOLID principles are excellent design guidelines, but experience shows that programmers find them difficult to follow. What do we do about this? Surprisingly, the Structured Design literature of forty years ago contains compelling solutions to many current design problems. They're simple and easy to understand, but were lost in the noise as OO rose to popularity. We'll reinterpret these simple design ideas in a modern context, finding that many of our most promising new design ideas resemble them. Rapid web application development, the area of professional programming in most dire need of design improvements, will serve as an example.",
+      "Level":"Basic",
+      "TimeSlotId":"16.40",
+      "Speaker":"Gary Bernhardt",
+      "SpeakerId":"gary-bernhardt",
+      "Room":"Marvin"
+   }
+]

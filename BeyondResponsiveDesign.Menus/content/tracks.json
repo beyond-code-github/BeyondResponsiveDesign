@@ -1,0 +1,91 @@
+{
+    "Tracks": [
+        {
+            "Id": "HAL9000",
+            "Identifier": "HAL9000",
+            "Name": "HAL"
+        },
+        {
+            "Id": "Johnny Five",
+            "Identifier": "JohnnyFive",
+            "Name": "J-Five"
+        },
+        {
+            "Id": "KITT",
+            "Identifier": "KITT",
+            "Name": "Kitt"
+        },
+        {
+            "Id": "Marvin",
+            "Identifier": "Marvin",
+            "Name": "Marvin"
+        },
+        {
+            "Id": "R2D2",
+            "Identifier": "R2D2",
+            "Name": "R2D2"
+        },
+        {
+            "Id": "Roomba",
+            "Identifier": "Roomba",
+            "Name": "Roomba"
+        },
+        {
+            "Id": "T-800",
+            "Identifier": "T-800",
+            "Name": "T-800"
+        },
+        {
+            "Id": "Wall-E",
+            "Identifier": "Wall-E",
+            "Name": "Wall-E"
+        }
+    ],
+    "TimeSlots": [
+        {
+            "Id": "9.00",
+            "From": "9:00",
+            "To": "10:00"
+        },
+        {
+            "Id": "10.20",
+            "From": "10:20",
+            "To": "11:00"
+        },
+        {
+            "Id": "11.20",
+            "From": "11:20",
+            "To": "12:00"
+        },
+        {
+            "Id": "12.20",
+            "From": "12:20",
+            "To": "13:00"
+        },
+        {
+            "Id": "13.20",
+            "From": "13:20",
+            "To": "14:00"
+        },
+        {
+            "Id": "14.20",
+            "From": "14:20",
+            "To": "15:00"
+        },
+        {
+            "Id": "15.40",
+            "From": "15:40",
+            "To": "16:20"
+        },
+        {
+            "Id": "16.40",
+            "From": "16:40",
+            "To": "17:20"
+        },
+        {
+            "Id": "17.40",
+            "From": "17:40",
+            "To": "18:40"
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+﻿<article>
+    <nav class="toolbar">
+        <ul data-bind="foreach: { data: Tracks, as: 'track' }">
+            <li data-bind="attr: { id: 'tab-' + track.Identifier }">
+                <div class="highlight">&nbsp;</div>
+                <a data-bind="attr: { href: 'javascript:interactions.slideToTab(\'' + track.Identifier + '\')' }">
+                    <span data-bind="text: track.Name"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="slideTabContainer">
+        <!-- ko foreach: { data: Tracks, as: 'track' } -->
+        <section data-bind="attr: {id : track.Identifier}" class="slideTab scrollcontainer vscroll offRight">
+            <header>
+                <h2>
+                    <span data-bind="text: track.Name"></span>
+                </h2>
+            </header>
+            <table class="agenda">
+                <tbody data-bind="foreach: { data: $root.TimeSlots, as: 'timeSlot' }">
+                    <tr class="session">
+                        <td><span data-bind="text: $root.prettifyTime(timeSlot.From, timeSlot.To)"></span></td>
+                        <td data-bind="with: $root.sessionInfo(track.Id, timeSlot.Id)">
+                            <div data-bind="click: $root.click">
+                                <div>
+                                    <a data-bind="text: Title"></a>
+                                </div>
+                                <span data-bind="text: Speaker"></span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- /ko -->
+    </div>
+</article>
+<script type="text/javascript">
+    var agendaLoaded = function (tracks, sessions) {
+        var data = tracks;
+        data.Sessions = sessions;
+
+        var sessionInfo = function (trackId, timeSlotId) {
+            if (timeSlotId != "9.00" || trackId == "Marvin") {
+                return ko.utils.arrayFirst(data.Sessions, function (session) {
+                    return session.Room == trackId && session.TimeSlotId == timeSlotId;
+                }) || { Title: "", Speaker: "" };
+            }
+            return { Title: "", Speaker: "" };
+        }
+
+        var viewModel = {};
+        viewModel.Tracks = data.Tracks;
+        viewModel.TimeSlots = data.TimeSlots;
+        viewModel.sessionInfo = sessionInfo;
+        viewModel.prettifyTime = prettifyTime;
+        viewModel.click = function (session, e) {
+            window.interactions.openPropertySheet("sessionDetail", session.Speaker).done(function () {
+                ko.applyBindings(session, $("main > aside.propertySheet > div")[0]);
+            });
+
+            e.stopPropagation();
+            e.preventDefault();
+        }
+
+        ko.applyBindings(viewModel, $("article")[0]);
+        interactions.slideToTab('HAL9000');
+    }
+
+    var prettifyTime = function (from, to) {
+        return from + " - " + to;
+    }
+
+    function pad(pad, str, padLeft) {
+        if (str == undefined) return pad;
+        if (padLeft) {
+            return (pad + str).slice(-pad.length);
+        } else {
+            return (str + pad).substring(0, pad.length);
+        }
+    }
+
+    $(function () {
+        $.get("content/agenda-Day-5.json").done(function (data) {
+            return $.get("content/tracks.json").done(function (tracks) {
+                agendaLoaded(tracks, data);
+            });
+        });
+    });
+
+</script>
+
+<aside class="propertySheet wide offRight"></aside>

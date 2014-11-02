@@ -161,6 +161,10 @@ body > main > aside.propertySheet.offRight {
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
+  body > header > .header-text {
+    background-position: center;
+    width: 100%;
+  }
   body.sidebar > header > ul > li.menuToggle {
     left: -1.5em;
   }
@@ -207,6 +211,9 @@ body > main > aside.propertySheet.offRight {
   }
 }
 @media only screen and (max-width: 480px) {
+  body > header > .header-text {
+    display: none;
+  }
   table > tbody > tr > td.bio {
     display: none;
   }
