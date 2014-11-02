@@ -156,9 +156,9 @@ body > header > ul {
 body > header > ul.diagonal-black {
   background: url("../images/diagonal background.png");
   background-repeat: no-repeat;
-  background-size: 60% auto;
+  background-size: 100% auto;
   height: 100%;
-  width: 30.5em;
+  width: 18em;
 }
 body > header > ul.headerIcons {
   float: right;
