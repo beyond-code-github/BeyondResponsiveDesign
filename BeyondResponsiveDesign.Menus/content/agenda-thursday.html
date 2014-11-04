@@ -1,96 +1,1847 @@
 ﻿<article>
     <nav class="toolbar">
-        <ul data-bind="foreach: { data: Tracks, as: 'track' }">
-            <li data-bind="attr: { id: 'tab-' + track.Identifier }">
+        <ul>
+            <li id="tab-HAL9000" class="active">
                 <div class="highlight">&nbsp;</div>
-                <a data-bind="attr: { href: 'javascript:interactions.slideToTab(\'' + track.Identifier + '\')' }">
-                    <span data-bind="text: track.Name"></span>
+                <a href="javascript:interactions.slideToTab('HAL9000')">
+                    <span>HAL</span>
+                </a>
+            </li>
+
+            <li id="tab-JohnnyFive" class="offRight">
+                <div class="highlight">&nbsp;</div>
+                <a href="javascript:interactions.slideToTab('JohnnyFive')">
+                    <span>J-Five</span>
+                </a>
+            </li>
+
+            <li id="tab-KITT" class="offRight">
+                <div class="highlight">&nbsp;</div>
+                <a href="javascript:interactions.slideToTab('KITT')">
+                    <span>Kitt</span>
+                </a>
+            </li>
+
+            <li id="tab-Marvin" class="offRight">
+                <div class="highlight">&nbsp;</div>
+                <a href="javascript:interactions.slideToTab('Marvin')">
+                    <span>Marvin</span>
+                </a>
+            </li>
+
+            <li id="tab-R2D2" class="offRight">
+                <div class="highlight">&nbsp;</div>
+                <a href="javascript:interactions.slideToTab('R2D2')">
+                    <span>R2D2</span>
+                </a>
+            </li>
+
+            <li id="tab-Roomba" class="offRight">
+                <div class="highlight">&nbsp;</div>
+                <a href="javascript:interactions.slideToTab('Roomba')">
+                    <span>Roomba</span>
+                </a>
+            </li>
+
+            <li id="tab-T-800" class="offRight">
+                <div class="highlight">&nbsp;</div>
+                <a href="javascript:interactions.slideToTab('T-800')">
+                    <span>T-800</span>
+                </a>
+            </li>
+
+            <li id="tab-Wall-E" class="offRight">
+                <div class="highlight">&nbsp;</div>
+                <a href="javascript:interactions.slideToTab('Wall-E')">
+                    <span>Wall-E</span>
                 </a>
             </li>
         </ul>
     </nav>
     <div class="slideTabContainer">
-        <!-- ko foreach: { data: Tracks, as: 'track' } -->
-        <section data-bind="attr: {id : track.Identifier}" class="slideTab scrollcontainer vscroll offRight">
+        <section class="slideTab scrollcontainer vscroll active" id="HAL9000">
             <header>
                 <h2>
-                    <span data-bind="text: track.Name"></span>
+                    <span>HAL</span>
                 </h2>
             </header>
             <table class="agenda">
-                <tbody data-bind="foreach: { data: $root.TimeSlots, as: 'timeSlot' }">
-                    <!--  ko with: $root.sessionInfo(track.Id, timeSlot.Id) -->
-                    <tr class="session" data-bind="click: $root.click">
-                        <td><span data-bind="text: $root.prettifyTime(timeSlot.From, timeSlot.To)"></span></td>
+                <tbody>
+                    <tr class="session">
+                        <td><span>9:00 - 10:00</span></td>
                         <td>
                             <div>
-                                <a data-bind="text: Title"></a>
+                                <a></a>
                             </div>
-                            <span data-bind="text: Speaker"></span>
+                            <span class="speakerName"></span>
                         </td>
                     </tr>
-                    <!-- /ko -->
+                    <tr class="session">
+                        <td><span>10:20 - 11:00</span></td>
+                        <td>
+                            <div>
+                                <a>Continuous Discovery, The Power of Pure Agile</a>
+                            </div>
+                            <span class="speakerName">Woody Zuill</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/woody-zuill.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Continuous Discovery, The Power of Pure Agile</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Continuous Discovery: The future is for us to discover, one moment at a time.<br><br>The strength of Agile lies in the simplicity and clarity of the Values and Principles expressed in the&nbsp; Agile Manifesto.  I'll share with you how I apply and use "Pure Agile" in my daily work, and encourage Continuous Learning, Continuous Growth, and Continuous Discovery in the teams and companies I work with.&nbsp; Let's explore together and discover&nbsp;the path to future we want to create.<br> <br>&nbsp;<br><br><br><br></div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>11:20 - 12:00</span></td>
+                        <td>
+                            <div>
+                                <a>Real World Lessons on the Anti-Patterns of Node.js Applications</a>
+                            </div>
+                            <span class="speakerName">Ben Hall</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/ben-hall.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Real World Lessons on the Anti-Patterns of Node.js Applications</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">The rapid adoption of Node.js has resulted in a significant amount of patterns and approaches from the community, some which work and others that have completely failed. This session will highlight the anti-patterns of Node.js, such as Callback Hell, how to write better applications and the lessons Ben has learned while building Node.js applications.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>12:20 - 13:00</span></td>
+                        <td>
+                            <div>
+                                <a>Evolving the NuGet.org Architecture</a>
+                            </div>
+                            <span class="speakerName">Jeff Handley</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/jeff-handley.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Evolving the NuGet.org Architecture</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">After 3 years of usage growth though, NuGet.org needs to be more reliable, scalable, and maintainable, with the goal of 99.999% availability of package downloads.  To achieve this, we’re evolving the architecture away from a monolithic website/service into several independent services, connected purely through HTTP.  Come learn how we’re starting to use Command Query Responsibility Segregation (CQRS), JSON-LD/Linked Data, and event sourcing.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>13:20 - 14:00</span></td>
+                        <td>
+                            <div>
+                                <a>NoSQL: An introduction to polyglot persistence</a>
+                            </div>
+                            <span class="speakerName">Pramod Sadalage</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/pramod-sadalage.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>NoSQL: An introduction to polyglot persistence</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">The world of data is changing and becoming yet more important as data has become a significant competitive advantage. We are collecting increasing amounts of data, but wanting to process it in decreasing time. This demands new techniques in data storage, enabling the raise of NoSQL technologies.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>14:20 - 15:00</span></td>
+                        <td>
+                            <div>
+                                <a>IoT Magic Show</a>
+                            </div>
+                            <span class="speakerName">Stephen Chin</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/stephen-chin.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>IoT Magic Show</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">What do magicians and programmers have in common?  They are good at juggling, have very nimble fingertips, often make things vanish, and have lovely assistants!  Ok, so maybe not all of those describe your average hacker (unless your pair programmer partner happens to be Penny), but we are going to try to put on the most spectacular magic show that has ever been seen on the stage at a tech conference! [geeks only]</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>15:40 - 16:20</span></td>
+                        <td>
+                            <div>
+                                <a>Building Web Apps for the Cloud</a>
+                            </div>
+                            <span class="speakerName">Mark Rendle</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/mark-rendle.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Building Web Apps for the Cloud</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">A look at the issues and opportunities presented when designing, architecting and building web applications for public cloud platforms such as Microsoft Azure or Amazon Web Services.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>16:40 - 17:20</span></td>
+                        <td>
+                            <div>
+                                <a>Building the Halo 4 Services with Orleans</a>
+                            </div>
+                            <span class="speakerName">Caitie McCaffrey</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/caitie-mccaffrey.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Building the Halo 4 Services with Orleans</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Halo 4 is a first-person shooter on the Xbox 360, with fast-paced, competitive gameplay.  To complement the code on disc a set of services were developed and deployed in Azure.  These services needed to support high demand, with low latency, and high availability.  In this session will discuss some of the challenges faced while building this services, and how Orleans, Distributed Virtual Actors for Programmability and Scalability, was utilized to solve these problems.  </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>17:40 - 18:40</span></td>
+                        <td>
+                            <div>
+                                <a>Imagining the touchless generation move beyond glass</a>
+                            </div>
+                            <span class="speakerName">Paul Cronholm</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/paul-cronholm.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Imagining the touchless generation move beyond glass</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Mobile touchless interaction, connecting devices, internet of things</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </section>
-        <!-- /ko -->
+
+        <section class="slideTab scrollcontainer vscroll offRight" id="JohnnyFive">
+            <header>
+                <h2>
+                    <span>J-Five</span>
+                </h2>
+            </header>
+            <table class="agenda">
+                <tbody>
+                    <tr class="session">
+                        <td><span>9:00 - 10:00</span></td>
+                        <td>
+                            <div>
+                                <a></a>
+                            </div>
+                            <span class="speakerName"></span>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>10:20 - 11:00</span></td>
+                        <td>
+                            <div>
+                                <a></a>
+                            </div>
+                            <span class="speakerName"></span>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>11:20 - 12:00</span></td>
+                        <td>
+                            <div>
+                                <a>Generation 64 - the Shaping of a Successful IT and Gaming Nation</a>
+                            </div>
+                            <span class="speakerName">Jimmy Wilhelmsson</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/jimmy-wilhelmsson.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Generation 64 - the Shaping of a Successful IT and Gaming Nation</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Presentation by the author of "Generation 64: Commodore 64 Made Me Who I Am" - a coffee table book about the young Swedes who grew up with the Commodore 64 and laid the foundation of a successful IT and Gaming nation.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>12:20 - 13:00</span></td>
+                        <td>
+                            <div>
+                                <a></a>
+                            </div>
+                            <span class="speakerName"></span>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>13:20 - 14:00</span></td>
+                        <td>
+                            <div>
+                                <a></a>
+                            </div>
+                            <span class="speakerName"></span>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>14:20 - 15:00</span></td>
+                        <td>
+                            <div>
+                                <a>How Sons of Anarchy can teach your organisation to be more effective</a>
+                            </div>
+                            <span class="speakerName">Emil Cardell</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/emil-cardell.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>How Sons of Anarchy can teach your organisation to be more effective</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">The programmer anarchy movement has showed that team autonomy is one of the key factor to create an effective organisation. But how do create such an environment? In the series Sons of Anarchy we get to know southern California chapter of the Sons of Anarchy and how they operate in a world of chaos. Many of the concepts in the series like chapter, table, prospect and the nomads can be used to give teams more autonomy help your organisation to become more effective.  </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>15:40 - 16:20</span></td>
+                        <td>
+                            <div>
+                                <a>Stress and insomnia - the increasing Public Health Diseases</a>
+                            </div>
+                            <span class="speakerName">Helena Kubicek Boye</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/helena-kubicek-boye.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Stress and insomnia - the increasing Public Health Diseases</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Today 25 percent suffer from sleeping problems. What are the symptoms and consequences. And how can you deal better with stress and insomnia. </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>16:40 - 17:20</span></td>
+                        <td>
+                            <div>
+                                <a>Democratize data by igniting a crowd powered global movement.</a>
+                            </div>
+                            <span class="speakerName">Steve Jennings</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/steve-jennings.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Democratize data by igniting a crowd powered global movement.</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">DEMOCRATISING DATA<br><br>How do we democratize data by igniting a crowd powered global movement with the aim of building a collaborative social fabric-enabling layer across diverse cultures and markets? To do this during times of unprecedented social, economic, environmental, demographic, and political uncertainty will require us to take a bold approach and step outside of the way we normally do things. </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>17:40 - 18:40</span></td>
+                        <td>
+                            <div>
+                                <a>How To Market Yourself To Boost Your Career</a>
+                            </div>
+                            <span class="speakerName">John Sonmez</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/john-sonmez.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>How To Market Yourself To Boost Your Career</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Let's face it.<br><br>If you want to have a successful career in software development today, being a good coder doesn't just cut it anymore.<br><br>Sure, writing good code will help you keep your job, but there are plenty of good and great coders out there that you've never heard of, either looking for jobs, or unsatisfied with their current jobs.<br><br>If you really want to stand out and get noticed, you've got to learn how to promote yourself.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="slideTab scrollcontainer vscroll offRight" id="KITT">
+            <header>
+                <h2>
+                    <span>Kitt</span>
+                </h2>
+            </header>
+            <table class="agenda">
+                <tbody>
+                    <tr class="session">
+                        <td><span>9:00 - 10:00</span></td>
+                        <td>
+                            <div>
+                                <a></a>
+                            </div>
+                            <span class="speakerName"></span>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>10:20 - 11:00</span></td>
+                        <td>
+                            <div>
+                                <a>Using scriptcs as part of your API development workflow</a>
+                            </div>
+                            <span class="speakerName">Glenn Block</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/glenn-block.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Using scriptcs as part of your API development workflow</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">This talk will combine two things that I am extremely passionate about, API development and scriptcs. I am sure you’ve heard of APIs, but what is scriptcs? It’s a lightweight way to develop C# which offers a less-montonous C# experience and fully supports nuget. In this talk I am going to show you you can use scriptcs to offer a programmatic fiddleresque experience for interacting with APIs as your developing, including and most importantly working with Hypermedia.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>11:20 - 12:00</span></td>
+                        <td>
+                            <div>
+                                <a>Build a Better Bootstrap</a>
+                            </div>
+                            <span class="speakerName">Tim G. Thomas</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/tim-g-thomas.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Build a Better Bootstrap</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Need the power of Bootstrap without the bulk? Come see how to build your own CSS framework! We'll start with a solid CSS foundation, add on some component scaffolding for your most common use cases, and top it off by discussing how to share your new web framework with your team. Grab your hard hat and come learn how to build a better Bootstrap!</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>12:20 - 13:00</span></td>
+                        <td>
+                            <div>
+                                <a>OAuth 2.0 for JavaScript-Applications</a>
+                            </div>
+                            <span class="speakerName">Manfred Steyer</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/manfred-steyer.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>OAuth 2.0 for JavaScript-Applications</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">OAuth 2.0 brings several variations, called flows. But which of them can be used for JavaScript-Applications and what are the consequences in view of security? This session gives an answer to this question. It shows which flows are suitable in which situations, how to implement them with JavaScript as well as the pros and cons of the existing options.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>13:20 - 14:00</span></td>
+                        <td>
+                            <div>
+                                <a>ORMs - you're doing it wrong</a>
+                            </div>
+                            <span class="speakerName">Jimmy Bogard</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/jimmy-bogard.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>ORMs - you're doing it wrong</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">ORMs, the necessary evil, the so-called "Vietnam of computer science", the despised of DBAs everywhere. Much of the ORM hate comes from just bad usage of ORMs. In this session, we'll learn ORM anti-patterns and see what successful ORM usage looks like.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>14:20 - 15:00</span></td>
+                        <td>
+                            <div>
+                                <a>Bridging the Gap of the Module Wars</a>
+                            </div>
+                            <span class="speakerName">John K. Paul</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/john-k-paul.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Bridging the Gap of the Module Wars</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">RequireJS is for “client side” developers and browserify is for “node developers.” Bower is for “client side” developers and npm is for “node developers.” Or so the popular tweets and blog posts would make you think. I’d like to tear down these walls with you and show you how the two sides aren’t that different after all.  <br><br>Practically, I’ll show you not only how to use bower dependencies in your browserify project, and npm dependencies in your RequireJS project. </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>15:40 - 16:20</span></td>
+                        <td>
+                            <div>
+                                <a>ES6:  Getting ready for JavaScript vNext</a>
+                            </div>
+                            <span class="speakerName">Justin Beckwith</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/justin-beckwith.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>ES6:  Getting ready for JavaScript vNext</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">The latest version of JavaScript - ES6 - has arrived.   There's a lot to be excited about - class syntax, generators, arrow functions, modules, promises, and enough syntactic sugar to keep you up past bedtime.  The latest drops of Chrome and node.js make it easier than ever to start building ES6 applications both on the client and the server.  This talk is going to go in depth on the most important features of ES6, and show you how to use many of them today in an ES5 kind of world.  </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>16:40 - 17:20</span></td>
+                        <td>
+                            <div>
+                                <a>Security for developers</a>
+                            </div>
+                            <span class="speakerName">Emil Kvarnhammar</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/emil-kvarnhammar.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Security for developers</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">What makes SSL secure, and when is it not? How do we handle sensitive data in our apps/systems? Is encrypted data always protected (and protected against what)? Can we trust the code just because we wrote and/or compiled it ourselves? How do we protect our application logic?<br><br>These and similar questions are discussed (with demos) in this session. Whether you work on mobile/desktop apps or web/backend systems - if you want to learn more about security - this is the session for you.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>17:40 - 18:40</span></td>
+                        <td>
+                            <div>
+                                <a>FsLab: Doing data science with F#</a>
+                            </div>
+                            <span class="speakerName">Tomas Petricek</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/tomas-petricek.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>FsLab: Doing data science with F#</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">How to get knowledge from data? In this talk, I'll demonstrate end-to-end data analysis using FsLab - a cross-platform data science tools based on F# that make it easy to access data using type providers, analyze data in an explorative way and produce beautiful HTML5 reports visualizing the results. Along the way, we'll look at examples using open-government data, Wikipedia and other fun data sources!</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="slideTab scrollcontainer vscroll offRight" id="Marvin">
+            <header>
+                <h2>
+                    <span>Marvin</span>
+                </h2>
+            </header>
+            <table class="agenda">
+                <tbody>
+                    <tr class="session">
+                        <td><span>9:00 - 10:00</span></td>
+                        <td>
+                            <div>
+                                <a></a>
+                            </div>
+                            <span class="speakerName"></span>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>10:20 - 11:00</span></td>
+                        <td>
+                            <div>
+                                <a>Ingredients of Successful Java EE 7 Applications</a>
+                            </div>
+                            <span class="speakerName">Adam Bien</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/adam-bien.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Ingredients of Successful Java EE 7 Applications</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Depending how to tackle it, Java EE 7 can be hell or heaven. From a scary enterprise monster to a nimble startup killer app. <br>What makes Java EE applications succeed? In this session I would like to introduce you to the “Best of Breed” Java EE 7 and Java 8 APIs, approaches<br>and techniques of “successful” Java EE applications. “Successful” means: the application works and the developers enjoy the building and the maintenance process.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>11:20 - 12:00</span></td>
+                        <td>
+                            <div>
+                                <a>AngularJS 2.0</a>
+                            </div>
+                            <span class="speakerName">Rob Eisenberg</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/rob-eisenberg.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>AngularJS 2.0</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Have burning questions about AngularJS 2.0? Want to know what we're up to, what's planned or get a status update? This is the place. In this talk we'll start by looking at the fundamental motivators and design goals of AngularJS 2.0. Next, we'll talk about specific features such as Dependency Injection, Templating, Binding and Routing. You'll gain a solid understanding of what AngularJS 2.0 comprises and have a feel for what the next generation of JS client development will be like.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>12:20 - 13:00</span></td>
+                        <td>
+                            <div>
+                                <a>Functional Thinking</a>
+                            </div>
+                            <span class="speakerName">Neal Ford</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/neal-ford.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Functional Thinking</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Learning the syntax of a new language is easy, but learning to think under a different paradigm is hard. This session helps you transition from a Java writing imperative programmer to a functional programmer, using Java, Clojure and Scala for examples. This session takes common topics from imperative languages and looks at alternative ways of solving those problems in functional languages.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>13:20 - 14:00</span></td>
+                        <td>
+                            <div>
+                                <a>Life is Terrible: Let's Talk About the Web</a>
+                            </div>
+                            <span class="speakerName">James Mickens</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/james-mickens.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Life is Terrible: Let's Talk About the Web</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">It’s been known for years that JavaScript is a dangerous, unholy language that is banned in 27 countries and most fine restaurants. In this talk, I will use deeply personal and completely biased examples to describe why I hate JavaScript. I will then provide additional reasons why the entire web stack is a thing that should not be tolerated by moral human beings. I will also describe some of my futile research efforts to make web browsers moderately less the worse thing ever.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>14:20 - 15:00</span></td>
+                        <td>
+                            <div>
+                                <a>#NoEstimates Unplugged - A conversation about Agile as-if-you-meant-it</a>
+                            </div>
+                            <span class="speakerName">Vasco Duarte</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/vasco-duarte.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>#NoEstimates Unplugged - A conversation about Agile as-if-you-meant-it</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Woody Zuill and Vasco Duarte share their experiences with #NoEstimates and describe how #NoEstimates is just one small part of getting back to Agile-as-if-you-meant-it<br>We tackle: #NoEstimates implications on teams, stakeholders, product management and even business. But most of all we talk about the implications to us as human beings.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>15:40 - 16:20</span></td>
+                        <td>
+                            <div>
+                                <a>Bridging the gap between developers and operations creating multi tier application blueprints for easy consumption</a>
+                            </div>
+                            <span class="speakerName">Magnus Bergman</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/magnus-bergman.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Bridging the gap between developers and operations creating multi tier application blueprints for easy consumption</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">The session will be on how developers and application architects can begin the journey to DevOps by automating the end-to-end delivery and management of infrastructure and accelerate the application deployment and releases.<br>Through a library of VMware and partner blueprints middleware and integrated multi-tier applications can be rapidly deployed either in the public or private cloud.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>16:40 - 17:20</span></td>
+                        <td>
+                            <div>
+                                <a>Scaled Agile @ Spotify</a>
+                            </div>
+                            <span class="speakerName">Joakim Sundén</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/joakim-sunden.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Scaled Agile @ Spotify</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio"></div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>17:40 - 18:40</span></td>
+                        <td>
+                            <div>
+                                <a>A cold hard look at the world of Mobile Apps and where they may go</a>
+                            </div>
+                            <span class="speakerName">Christian Heilmann</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/christian-heilmann.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>A cold hard look at the world of Mobile Apps and where they may go</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">There's an app for that! The craze about apps and their usefulness as a form factor for mobile phones has been going on for a few years now and there are many beautiful success stories in the press about them. In this talk Chris Heilmann is going to give an overview of how the app market is doing, where you should invest and what may just be marketing instead of true facts. If you are into apps and you wonder where to go with yours, check this talk.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="slideTab scrollcontainer vscroll offRight" id="R2D2">
+            <header>
+                <h2>
+                    <span>R2D2</span>
+                </h2>
+            </header>
+            <table class="agenda">
+                <tbody>
+                    <tr class="session">
+                        <td><span>9:00 - 10:00</span></td>
+                        <td>
+                            <div>
+                                <a></a>
+                            </div>
+                            <span class="speakerName"></span>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>10:20 - 11:00</span></td>
+                        <td>
+                            <div>
+                                <a>Continuous Delivery with OpenShift</a>
+                            </div>
+                            <span class="speakerName">Siamak Sadeghianfar</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/siamak-sadeghianfar.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Continuous Delivery with OpenShift</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Building software is hard. Building the supporting environments and processes are even harder. OpenShift PaaS hides much of that complexity and provides a quick way towards delivering software quickly and continuously so that you can focus on building software rather than all the boring stuff. This talk will introduce OpenShift and demonstrate how to do Continuous Delivery though building a delivery pipeline on top of OpenShift. We will be pushing code to live servers within minutes.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>11:20 - 12:00</span></td>
+                        <td>
+                            <div>
+                                <a>A sign of the Times: Dates and Times in Java 8</a>
+                            </div>
+                            <span class="speakerName">Richard Warburton</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/richard-warburton.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>A sign of the Times: Dates and Times in Java 8</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">A long standing thorn in the side of Java developers is the set of problems associated<br>with java.util.Date and Calendar. Inconsistencies such as whether numbers start at 0, 1<br>or 1900. Poor design decisions such as inherently thread unsafe formatters.<br><br>Thankfully Java 8 introduces a new API for date and time values based on domain modelling, thread safety and fluency. If you want to learn about how to use the API and how to integrate it into your existing projects then this is the talk for you!</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>12:20 - 13:00</span></td>
+                        <td>
+                            <div>
+                                <a>Witness TDD with real, live REFACTORING MANIACS</a>
+                            </div>
+                            <span class="speakerName">Angela Harms</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/angela-harms.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Witness TDD with real, live REFACTORING MANIACS</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Classic old-school TDD recommends refactoring as part of every cycle -- red, green, refactor. In fact, it recommends refactoring mercilessly. Relentlessly. To succeed at classic TDD, you have to be some kind of refactoring maniac!<br><br>Refactoring maniacs are an endangered species, but you're in luck: we have one of the last remaining pairs. See for yourself how refactoring fits into the TDD cycle, and when practiced mercilessly, allows beautiful, simple code to emerge.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>13:20 - 14:00</span></td>
+                        <td>
+                            <div>
+                                <a>Mobile apps that work, even when your network doesn't</a>
+                            </div>
+                            <span class="speakerName">Yavor Georgiev</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/yavor-georgiev.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Mobile apps that work, even when your network doesn't</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">A deep dive on the new cross-platform offline data sync feature in Azure Mobile Services and how to data sync in existing apps.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>14:20 - 15:00</span></td>
+                        <td>
+                            <div>
+                                <a>Continuous Delivery in a .NET world</a>
+                            </div>
+                            <span class="speakerName">Adam Goucher</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/adam-goucher.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Continuous Delivery in a .NET world</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Continuous Delivery is not new. But Continuous Delivery with .NET is a shockingly sparse topic with few case studies to compare against [steal from]. This session outlines the .NET delivery pipeline I helped build, troubleshoot and maintain. Are you developing in .NET? There will be something in here for you.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>15:40 - 16:20</span></td>
+                        <td>
+                            <div>
+                                <a>Tester Love Developer</a>
+                            </div>
+                            <span class="speakerName">Karen Johnson</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/karen-johnson.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Tester Love Developer</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Want tighter collaboration and better working rapport between testers and developers? Enough of the antagonistic images and comments of the tester and developer relationship, sure testers find code issues and point out the flaws of developer’s work but testers are also “helpmates” to developers. Karen identifies seven specific areas to build collaboration during development and testing of a product. She also explains how having an empathic approach can improve a tester/developer relationship.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>16:40 - 17:20</span></td>
+                        <td>
+                            <div>
+                                <a>Microservices with Dart, Polymer and Hypermedia</a>
+                            </div>
+                            <span class="speakerName">Sébastien Deleuze</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/sebastien-deleuze.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Microservices with Dart, Polymer and Hypermedia</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">This talk is a feedback about developing OpenSnap, a SnapChat clone based on Dart end to end (client, server, tooling). I will explain how this application is structured, what code can be shared, and how Dart makes it easier to develop modular applications.<br><br>We will also see a concrete example of a Microservices architecture based on JSON, HAL (Hypermedia) and STOMP. On the client side, we will talk about Web Components, Polymer, Material Design and Paper Elements.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>17:40 - 18:40</span></td>
+                        <td>
+                            <div>
+                                <a>ClojureScript interfaces to React</a>
+                            </div>
+                            <span class="speakerName">Michiel Borkent</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/michiel-borkent.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>ClojureScript interfaces to React</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio"></div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="slideTab scrollcontainer vscroll offRight" id="Roomba">
+            <header>
+                <h2>
+                    <span>Roomba</span>
+                </h2>
+            </header>
+            <table class="agenda">
+                <tbody>
+                    <tr class="session">
+                        <td><span>9:00 - 10:00</span></td>
+                        <td>
+                            <div>
+                                <a></a>
+                            </div>
+                            <span class="speakerName"></span>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>10:20 - 11:00</span></td>
+                        <td>
+                            <div>
+                                <a>Don't Take It For Granted: How would we code if programming was worse in various ways?</a>
+                            </div>
+                            <span class="speakerName">Danielle Sucher</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/danielle-sucher.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Don't Take It For Granted: How would we code if programming was worse in various ways?</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">In order to better understand the choices and tradeoffs we make, it can be interesting to look at how various constraints might cause us program in other ways. We'll walk through how a small program would have to be implemented differently in a bunch of darker, angrier worlds - for example, what if we had no variables? If there was no stack? If there were no pointers? What can we learn by exploring a set of dangerous and tricksy alternate realities?</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>11:20 - 12:00</span></td>
+                        <td>
+                            <div>
+                                <a>Advanced Android TextView</a>
+                            </div>
+                            <span class="speakerName">Chiu-Ki Chan</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/chiu-ki-chan.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Advanced Android TextView</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">The humble TextView was there when you wrote your Hello World app. You know how to change its text size and color, perhaps its font too. But do you know that you can also put multiple font sizes in the same TextView? Highlight individual words? Embed inline images? Come and learn how to unleash the power of TextView with Span, Paint, and much more.  </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>12:20 - 13:00</span></td>
+                        <td>
+                            <div>
+                                <a>Julia –&nbsp;a fast dynamic language for technical computing</a>
+                            </div>
+                            <span class="speakerName">Stefan Karpinski</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/stefan-karpinski.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Julia –&nbsp;a fast dynamic language for technical computing</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Julia is a high-level, high-performance dynamic language for scientific computing. It has been gaining traction as a faster alternative to Matlab, R and NumPy and as a more productive alternative to C, C++ and Fortran. Julia is particularly relevant when both expressiveness and performance are paramount – in areas like machine learning, “big statistics”, linear algebra, bioinformatics, and image analysis.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>13:20 - 14:00</span></td>
+                        <td>
+                            <div>
+                                <a>Classical Typography and Digital Interfaces</a>
+                            </div>
+                            <span class="speakerName">Sean Wolcott</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/sean-wolcott.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Classical Typography and Digital Interfaces</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">What does 500 to 50 year old teaching on typography have to do with making a good digital interface today? This session will look at Gutenberg, Garamond, Bodoni, on up to early 20th century typographers such as Tschichold, Frutiger and the relevance of their work in designing better interfaces and digital experiences now in 2014.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>14:20 - 15:00</span></td>
+                        <td>
+                            <div>
+                                <a></a>
+                            </div>
+                            <span class="speakerName"></span>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>15:40 - 16:20</span></td>
+                        <td>
+                            <div>
+                                <a>The Quantum Physics of Java</a>
+                            </div>
+                            <span class="speakerName">Michael Heinrichs</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/michael-heinrichs.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>The Quantum Physics of Java</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">If we were able to take a microscope and observe how our programs work on the lowest level, we would be surprised and shocked. Close to the wire, programs behave very differently from what we expect.<br><br>In this session we will go through code examples that show the counter-intuitive behavior of Java on the lowest level. Topics covered will be the cache hierarchy, false sharing, pipelining, branch prediction, and out-of-order execution. </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>16:40 - 17:20</span></td>
+                        <td>
+                            <div>
+                                <a>Teaching Our CSS To Play Nice</a>
+                            </div>
+                            <span class="speakerName">Jen Myers</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/jen-myers.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Teaching Our CSS To Play Nice</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">As our websites, applications and teams grow larger and more complicated, so does our CSS. Before we know it, we find ourselves no longer with cute little stylesheets, but sprawling, surly teenaged CSS that doesn’t always play nice with others. We can use best practices for organization, formatting and syntax, along with tools like pre-compilers, frameworks and style guides to raise full-grown stylesheets any designer or developer would be happy to work with.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>17:40 - 18:40</span></td>
+                        <td>
+                            <div>
+                                <a>Framework and smoke machines - true story</a>
+                            </div>
+                            <span class="speakerName">Mads Hensel</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/mads-hensel.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Framework and smoke machines - true story</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">In this session I will share the story of our framework; how it started, the wins, the fails, our daily workflow and how we plan to take it to the next level by making it a crucial part of our Design, UX and Development processes.<br><br>Last but not least I will try to explain why a framework and smoke machines are a great match! Why they are a must have in every workplace and why/how they need to become bigger and more powerful.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="slideTab scrollcontainer vscroll offRight" id="T-800">
+            <header>
+                <h2>
+                    <span>T-800</span>
+                </h2>
+            </header>
+            <table class="agenda">
+                <tbody>
+                    <tr class="session">
+                        <td><span>9:00 - 10:00</span></td>
+                        <td>
+                            <div>
+                                <a></a>
+                            </div>
+                            <span class="speakerName"></span>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>10:20 - 11:00</span></td>
+                        <td>
+                            <div>
+                                <a>Beyond responsive design - UI for the modern web application</a>
+                            </div>
+                            <span class="speakerName">Peter Smith</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/peter-smith.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Beyond responsive design - UI for the modern web application</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Responsive design is great for websites, but it's use is limited when it comes to web applications. It's much better to design your UI from the ground up using  to work equally well on phones, tablets and browsers and in this talk, I'll show you how.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>11:20 - 12:00</span></td>
+                        <td>
+                            <div>
+                                <a>ClojureScript for the web</a>
+                            </div>
+                            <span class="speakerName">Michiel Borkent</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/michiel-borkent.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>ClojureScript for the web</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio"></div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>12:20 - 13:00</span></td>
+                        <td>
+                            <div>
+                                <a>Automation Abstractions - Page Objects and Beyond</a>
+                            </div>
+                            <span class="speakerName">Alan Richardson</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/alan-richardson.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Automation Abstractions - Page Objects and Beyond</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Writing automation code requires good design and organisation in addition to 'test' code. Abstraction layers help make code readable, and maintainable. But what options are open to you? DSLs, DOM Level Abstractions? Page Objects? What about Gherkin? In this session you will see examples and learn the thought processes that led to the decisions.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>13:20 - 14:00</span></td>
+                        <td>
+                            <div>
+                                <a>Testing Your Mobile App for Real-World Network Conditions</a>
+                            </div>
+                            <span class="speakerName">Doug Sillars</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/doug-sillars.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Testing Your Mobile App for Real-World Network Conditions</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Mobile is no longer an option – more people are browsing, using mobile devices than desktops. Now that you have a mobile presence, how does it behave in extreme network conditions? (some of your customers will be on 2G, or at a conference)  Learn techniques and tools to make sure your mobile experience is awesome at any speed.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>14:20 - 15:00</span></td>
+                        <td>
+                            <div>
+                                <a>UX behind the steering wheel</a>
+                            </div>
+                            <span class="speakerName">Steffen Kramer Valsted</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/steffen-kramer-valsted.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>UX behind the steering wheel</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">The next generation of cars are being designed with digital systems integrated to the in-car experience. This presentation will introduce key aspects of designing UX for cars and will provide examples from Volvo Cars’ new SPA-platform. </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>15:40 - 16:20</span></td>
+                        <td>
+                            <div>
+                                <a>Datomic for the 96 Percent</a>
+                            </div>
+                            <span class="speakerName">Ryan Neufeld</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/ryan-neufeld.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Datomic for the 96 Percent</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Traditional SQL databases have great power, via ACID transactions and declarative query language (SQL). But these databases encounter problems on the web: namely they have rigid information models, update-in-place storage (no history!) and they struggle under high write volumes.<br><br>While the NoSQL movement has tried solving the third problem, the problem of the 4%, Datomic solves the first two problems with a flexible information and deployment models suited for the cloud.<br><br>Datomic is for the 96%.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>16:40 - 17:20</span></td>
+                        <td>
+                            <div>
+                                <a>Do more of what you love, less of what you don't love with Cloud Foundry</a>
+                            </div>
+                            <span class="speakerName">Holly Cummins</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/holly-cummins.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Do more of what you love, less of what you don't love with Cloud Foundry</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Cloud Foundry eliminates a lot of the more boring aspects of our job - no more installing middleware, sorting out databases, and banging heads against complex deployments. This leaves us with more time for the fun stuff - writing code and getting stuff out to users fast. This talk will demonstrate how to get started with Cloud Foundry by live-coding an application (with a front-end, a back-end, and even a middle-bit) and then live-deploying it to the web.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>17:40 - 18:40</span></td>
+                        <td>
+                            <div>
+                                <a>Analyzing and searching data using Elasticsearch</a>
+                            </div>
+                            <span class="speakerName">Honza Kral</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/honza-kral.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Analyzing and searching data using Elasticsearch</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">In this talk I would like to show you a few real-life use-cases where Elasticsearch can enhance the user experience of your applications. We will start with the most basic use case with a seemingly simple problem of searching for documents and move on to more advanced topics such as faceted navigation and structured search.<br><br>I would like to demonstrate that the very same tool and dataset can be used for real-time analytics (topic distribution, publishing frequency, most popular or commented on content) and data mining in a distributed environment capable of handling terabyte-sized datasets.<br><br>Finally we will demonstrate how Elasticsearch can provide the infrastructure for features beyond search, such as automatic content categorization, user-defined categories or even real-time alerts.<br><br>Attendees should walk away with a good understanding of what Elasticsearch can bring them and where it is a good fit.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="slideTab scrollcontainer vscroll offRight" id="Wall-E">
+            <header>
+                <h2>
+                    <span>Wall-E</span>
+                </h2>
+            </header>
+            <table class="agenda">
+                <tbody>
+                    <tr class="session">
+                        <td><span>9:00 - 10:00</span></td>
+                        <td>
+                            <div>
+                                <a></a>
+                            </div>
+                            <span class="speakerName"></span>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>10:20 - 11:00</span></td>
+                        <td>
+                            <div>
+                                <a>Refactoring to Functional</a>
+                            </div>
+                            <span class="speakerName">Hadi Hariri</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/hadi-hariri.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Refactoring to Functional</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">How many times have been told how functional programming is so much better than imperative, and then being presented with a functional approach to calculating a fibonacci sequence, leaving you wondering how that can be even remotely useful when working in real world applications? Yep, we’ve all been there. It seems that every time someone wants to explain functional programming to us, it’s around how to solve some mathematical problem. But how does that provide us value? How do we deal with things like grouping functionality, loose coupling and consequently dependency injection?</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>11:20 - 12:00</span></td>
+                        <td>
+                            <div>
+                                <a>Retrospectives are boring and useless – or are they?</a>
+                            </div>
+                            <span class="speakerName">Gitte Klitgaard</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/gitte-klitgaard.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Retrospectives are boring and useless – or are they?</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Often I hear people say that retrospectives are useless, boring &amp; take too long.<br> <br>This means that its not done right; do it right and get some value from it :)<br> <br>The difference between a good &amp; a bad retrospective?<br>The structure and the facilitation.<br> <br>Retrospectives are the strongest tools in the agile toolbox and an important part of continuously inspect &amp; adapt.<br> <br>I will talk about the structure of a good retrospective and important principles to follow to get a good retrospective every time.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>12:20 - 13:00</span></td>
+                        <td>
+                            <div>
+                                <a>JavaFX on your wall, in your car, or on a plane!</a>
+                            </div>
+                            <span class="speakerName">Richard Bair</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/richard-bair.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>JavaFX on your wall, in your car, or on a plane!</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Fast and sexy, JavaFX is the perfect toolkit for creating cool UIs for embedded applications such as on wall displays, in car dashboards, or in flight entertainment systems. For embedded development, performance and size are key, and with JavaSE Embedded 8 it is possible to deploy a smaller, faster subset of Java to embedded systems.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>13:20 - 14:00</span></td>
+                        <td>
+                            <div>
+                                <a>Your Agile challenges</a>
+                            </div>
+                            <span class="speakerName">Helen Sharp</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/helen-sharp.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Your Agile challenges</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Agile development has become increasingly popular in practice but many challenges still exist. This talk will be based on an industry-academic partnership (Agile Research Network (ARN)). ARN aims to identify and investigate agile challenges and disseminate the findings. I will present an overview of the many different challenges and discuss our experiences. During the conference we will be running an “agile challenges wall” where you will be able to post YOUR agile challenges.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>14:20 - 15:00</span></td>
+                        <td>
+                            <div>
+                                <a>Vagrant - the essence of DevOps in a tool</a>
+                            </div>
+                            <span class="speakerName">Paul Stack</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/paul-stack.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Vagrant - the essence of DevOps in a tool</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Traditionally, developers would write their applications without any thought as to what system it was going to be deployed on in production. It was also very difficult for them to understand how their software would react when releasing it into a production environment as they didn't really understand how that environment was configured. What if there was a way that developers could create the scripts needed to install dependencies and get the software running as it is developed? Vagrant does exactly this, it is a tool to create and configure lightweight, reproducible, and portable development environments. In this session, I will show you how to create a development work flow that will allow developers to use Vagrant to create a real continuous delivery pipeline. This means understanding the environment needs as well as what is needed to run the software. I will also show how we, at OpenTable, integrate Vagrant into our pipeline to allow us to create a good acceptance testing environment against known data sets rather than having brittle test.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>15:40 - 16:20</span></td>
+                        <td>
+                            <div>
+                                <a>The Three Kinds of Code(rs)</a>
+                            </div>
+                            <span class="speakerName">Thomas Q Brady</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/thomas-q-brady.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>The Three Kinds of Code(rs)</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">See the hardcore production developer. See her optimize. See her unit test. See her scoff at the design implementation developer, who knows nothing of optimization, who, however, can turn a thumb drive full of drawings into an application before lunch. Brunch even. See them both scoff at the prototype developer. See the prototype developer invent five new interaction models between brunch and lunch, vetting them and down-selecting to the best of them before tea time. Let's see them all.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>16:40 - 17:20</span></td>
+                        <td>
+                            <div>
+                                <a>Distractedly Intimate - Your Users on Mobile</a>
+                            </div>
+                            <span class="speakerName">Cate Huston</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/cate-huston.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Distractedly Intimate - Your Users on Mobile</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">Building for mobile is not just a change of form factor, and web versus native is one of the least interesting design questions to answer. How do we build for the user's most intimate and most loved device, and allow for the intermittent, partial attention? When everyone has a device this powerful on them all the time, everything changes. Let's talk about what that means.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="session">
+                        <td><span>17:40 - 18:40</span></td>
+                        <td>
+                            <div>
+                                <a>Teaching Kids Programming using the Intentional Method</a>
+                            </div>
+                            <span class="speakerName">Lynn Langit</span>
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" src="images/speakers/lynn-langit.jpg">
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span>Teaching Kids Programming using the Intentional Method</span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio">TKP has created and uses a new method of teaching children programming. We call this the intentional method. TKP output consists of customized courseware and teaching techniques. All of TKP material is freely available to use and improve.</div>
+                                    </section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </div>
 </article>
 <script type="text/javascript">
-    var agendaLoaded = function (tracks, sessions) {
-        var data = tracks;
-        data.Sessions = sessions;
-
-        var sessionInfo = function (trackId, timeSlotId) {
-            if (timeSlotId != "9.00" || trackId == "Marvin") {
-                return ko.utils.arrayFirst(data.Sessions, function (session) {
-                    return session.Room == trackId && session.TimeSlotId == timeSlotId;
-                }) || { Title: "", Speaker: "" };
+    $(function () {
+        $("body").off('click', 'tr');
+        $("body").on('click', 'tr', function (e) {
+            var source = $(this).find("div.speakerdetail");
+            var speakerName = $(this).find(".speakerName").text();
+            if (source.length > 0) {
+                window.interactions.openPropertySheet("sessiondetail", speakerName);
+                $("main > aside").empty().html(source.html());
             }
-            return { Title: "", Speaker: "" };
-        }
-
-        var viewModel = {};
-        viewModel.Tracks = data.Tracks;
-        viewModel.TimeSlots = data.TimeSlots;
-        viewModel.sessionInfo = sessionInfo;
-        viewModel.prettifyTime = prettifyTime;
-        viewModel.click = function (session, e) {
-            window.interactions.openPropertySheet("sessiondetail", session.Speaker).done(function () {
-                ko.applyBindings(session, $("main > aside.propertySheet > div")[0]);
-            });
 
             e.stopPropagation();
             e.preventDefault();
-        }
-
-        ko.applyBindings(viewModel, $("article")[0]);
-        interactions.slideToTab('HAL9000');
-    }
-
-    var prettifyTime = function (from, to) {
-        return from + " - " + to;
-    }
-
-    function pad(pad, str, padLeft) {
-        if (str == undefined) return pad;
-        if (padLeft) {
-            return (pad + str).slice(-pad.length);
-        } else {
-            return (str + pad).substring(0, pad.length);
-        }
-    }
-
-    $(function () {
-        $.get("content/agenda-Day-4.json").done(function (data) {
-            return $.get("content/tracks.json").done(function (tracks) {
-                agendaLoaded(tracks, data);
-            });
         });
+
+        interactions.slideToTab('HAL9000');
     });
-
 </script>
-
 <aside class="propertySheet wide offRight"></aside>
 <style>
     tr.session > td:first-child {

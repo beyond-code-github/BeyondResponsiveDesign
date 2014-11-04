@@ -1,0 +1,127 @@
+﻿<article>
+    <nav class="toolbar">
+        <ul data-bind="foreach: { data: Tracks, as: 'track' }">
+            <li data-bind="attr: { id: 'tab-' + track.Identifier }">
+                <div class="highlight">&nbsp;</div>
+                <a data-bind="attr: { href: 'javascript:interactions.slideToTab(\'' + track.Identifier + '\')' }">
+                    <span data-bind="text: track.Name"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="slideTabContainer">
+        <!-- ko foreach: { data: Tracks, as: 'track' } -->
+        <section data-bind="attr: {id : track.Identifier}" class="slideTab scrollcontainer vscroll offRight">
+            <header>
+                <h2>
+                    <span data-bind="text: track.Name"></span>
+                </h2>
+            </header>
+            <table class="agenda">
+                <tbody data-bind="foreach: { data: $root.TimeSlots, as: 'timeSlot' }">
+                    <!--  ko with: $root.sessionInfo(track.Id, timeSlot.Id) -->
+                    <tr class="session">
+                        <td><span data-bind="text: $root.prettifyTime(timeSlot.From, timeSlot.To)"></span></td>
+                        <td>
+                            <div>
+                                <a data-bind="text: Title"></a>
+                            </div>
+                            <span class="speakerName" data-bind="text: Speaker"></span>
+                            <!-- ko if: Speaker -->
+                            <div class="speakerdetail" style="display: none">
+                                <div class="scrollcontainer vscroll">
+                                    <section class="presentation">
+                                        <div class="responsiveimage">
+                                            <img class="rounded" data-bind="attr: { src: 'images/speakers/' + SpeakerId + '.jpg' }" />
+                                        </div>
+                                    </section>
+                                    <section class="presentation">
+                                        <header>
+                                            <h2>
+                                                <span data-bind="text: Title"></span>
+                                            </h2>
+                                        </header>
+                                        <div class="bio" data-bind="html: Abstract"></div>
+                                    </section>
+                                </div>
+                            </div>
+                            <!-- /ko -->
+                        </td>
+                    </tr>
+                    <!-- /ko -->
+                </tbody>
+            </table>
+        </section>
+        <!-- /ko -->
+    </div>
+</article>
+<script type="text/javascript">
+    var agendaLoaded = function (tracks, sessions) {
+        var data = tracks;
+        data.Sessions = sessions;
+
+        var sessionInfo = function (trackId, timeSlotId) {
+            if (timeSlotId != "9.00" || trackId == "Marvin") {
+                return ko.utils.arrayFirst(data.Sessions, function (session) {
+                    return session.Room == trackId && session.TimeSlotId == timeSlotId;
+                }) || { Title: "", Speaker: "" };
+            }
+            return { Title: "", Speaker: "" };
+        }
+
+        var viewModel = {};
+        viewModel.Tracks = data.Tracks;
+        viewModel.TimeSlots = data.TimeSlots;
+        viewModel.sessionInfo = sessionInfo;
+        viewModel.prettifyTime = prettifyTime;
+
+        $("body").off('click', 'tr');
+        $("body").on('click', 'tr', function (e) {
+            var source = $(this).find("div.speakerdetail");
+            var speakerName = $(this).find(".speakerName").text();
+            if (source.length > 0) {
+                window.interactions.openPropertySheet("sessiondetail", speakerName);
+                $("main > aside").empty().html(source.html());
+            }
+
+            e.stopPropagation();
+            e.preventDefault();
+        });
+
+        ko.applyBindings(viewModel, $("article")[0]);
+        interactions.slideToTab('HAL9000');
+    }
+
+    var prettifyTime = function (from, to) {
+        return from + " - " + to;
+    }
+
+    function pad(pad, str, padLeft) {
+        if (str == undefined) return pad;
+        if (padLeft) {
+            return (pad + str).slice(-pad.length);
+        } else {
+            return (str + pad).substring(0, pad.length);
+        }
+    }
+
+    $(function () {
+        $.get("content/agenda-Day-3.json").done(function (data) {
+            return $.get("content/tracks.json").done(function (tracks) {
+                agendaLoaded(tracks, data);
+            });
+        });
+    });
+
+</script>
+
+<aside class="propertySheet wide offRight"></aside>
+<style>
+    tr.session > td:first-child {
+        -moz-min-width: 3.5em;
+        -ms-min-width: 3.5em;
+        -o-min-width: 3.5em;
+        -webkit-min-width: 3.5em;
+        min-width: 3.5em;
+    }
+</style>

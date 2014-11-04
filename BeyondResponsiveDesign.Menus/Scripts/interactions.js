@@ -194,16 +194,10 @@
         modalBackground.prependTo('main');
 
         $("body > main > aside.propertySheet").empty().removeClass("offRight").addClass("active")
-            .on('swiperight', function (e) {
+            .on('swiperight', function(e) {
                 interactions.closePropertySheet();
                 e.stopPropagation();
             });
-
-        return $.get("content/" + location + ".html").done(function (html) {
-            var target = $("main > aside");
-            target.empty();
-            target.html(html);
-        });
     }
 
     interactions.closePropertySheet = function () {

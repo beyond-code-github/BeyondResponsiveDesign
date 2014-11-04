@@ -74,13 +74,12 @@
   <ItemGroup>
     <Content Include="content\agenda-thursday.html" />
     <Content Include="content\agenda-friday.html" />
-    <Content Include="content\sessiondetail.html" />
-    <Content Include="content\speakerdetail.html" />
+    <Content Include="content\renderagenda.html" />
     <Content Include="content\partnership.html" />
     <Content Include="content\about.html" />
     <Content Include="content\contact.html" />
     <Content Include="content\partners.html" />
-    <Content Include="content\sessions.html" />
+    <Content Include="content\renderspeakers.html" />
     <Content Include="content\speakers.html" />
     <Content Include="content\presentation.html" />
     <Content Include="content\agenda-wednesday.html" />
