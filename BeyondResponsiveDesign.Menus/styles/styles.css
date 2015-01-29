@@ -118,9 +118,9 @@ body > header > ul > li.logo > a {
 body > header > ul > li.logo > a > img {
   border: 0 none;
   height: 2rem;
-  max-height: 2rem;
+  max-height: 1.8rem;
   max-width: 15rem;
-  padding: 0.5rem 0 0 0.3rem;
+  padding: 0.6rem 0 0 0.3rem;
 }
 body > nav {
   position: absolute;

@@ -18,7 +18,7 @@ body {
   margin: 0;
 }
 a {
-  color: #005800;
+  color: #56c2f0;
   font-weight: 350;
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -39,7 +39,7 @@ h3 {
   display: block;
 }
 a:hover {
-  color: #31a431;
+  color: #00b1ee;
 }
 table {
   width: 100%;
@@ -126,7 +126,7 @@ div.popup > ul > li > a {
   text-overflow: ellipsis;
 }
 body > header {
-  background: #005800;
+  background: #56c2f0;
   box-shadow: rgba(0, 0, 0, 0.4) 0 1px 0.25rem;
   clip: rect(auto, auto, 3.375em, auto);
 }
@@ -192,7 +192,7 @@ body > header > ul > li > a:hover {
 body > header > ul > li.active {
   color: #607d8b;
   cursor: pointer;
-  background: #227122;
+  background: #a8e5ff;
 }
 body > nav {
   background-color: #f2f2f2;
@@ -303,7 +303,7 @@ body > nav > div > div > ul > li.active > div {
   height: auto;
 }
 body > nav > div > div > ul > li.active > div > ul > li.active {
-  background-color: #31a431;
+  background-color: #00b1ee;
   color: #ffffff;
 }
 body > nav > div > div > ul > li.active > div > ul > li.active > a {
@@ -312,12 +312,12 @@ body > nav > div > div > ul > li.active > div > ul > li.active > a {
 body > nav > div > div > ul > li.active > a {
   color: #ffffff;
   text-decoration: none;
-  background-color: #227122;
+  background-color: #008dbd;
 }
 body > nav > div > div > ul > li.active > a > h2 {
   color: #ffffff;
   text-decoration: none;
-  background-color: #227122;
+  background-color: #008dbd;
 }
 body > nav > div > div > ul > li.active > a > h2 > i[data-icon="add"] {
   background-image: url('../images/plus_white.svg');
@@ -393,7 +393,7 @@ body > main > article > nav.toolbar > ul > li > .highlight {
   position: relative;
   top: 2.70em;
   height: 1px;
-  border-bottom: 5px solid #227122;
+  border-bottom: 5px solid #008dbd;
 }
 body > main > article > nav.toolbar > ul > li.active > .highlight {
   visibility: visible;

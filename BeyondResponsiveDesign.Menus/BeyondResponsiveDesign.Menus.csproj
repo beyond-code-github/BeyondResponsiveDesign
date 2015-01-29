@@ -93,7 +93,7 @@
     <Content Include="images\favicon.ico" />
     <Content Include="images\googleplaystore.gif" />
     <Content Include="images\itunesappstore.gif" />
-    <Content Include="images\logo-notext-green.png" />
+    <Content Include="images\logo-notext.png" />
     <Content Include="images\speakers\11.jpg" />
     <Content Include="images\speakers\1313.jpg" />
     <Content Include="images\speakers\23.jpg" />
