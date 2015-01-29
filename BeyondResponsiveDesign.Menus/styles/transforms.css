@@ -134,9 +134,6 @@ body > main > aside.propertySheet.offRight {
   }
 }
 @media only screen and (max-width: 800px) {
-  table.accommodation > tbody > tr > td > p {
-    max-width: 14em;
-  }
   body > header > ul > li.menuToggle {
     display: block;
     left: -1.2em;
@@ -160,10 +157,6 @@ body > main > aside.propertySheet.offRight {
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-  }
-  body > header > .header-text {
-    background-position: center;
-    width: 100%;
   }
   body.sidebar > header > ul > li.menuToggle {
     left: -1.5em;
@@ -211,8 +204,8 @@ body > main > aside.propertySheet.offRight {
   }
 }
 @media only screen and (max-width: 480px) {
-  body > header > .header-text {
-    display: none;
+  body > main section > table > tbody > tr.session > td:first-child {
+    min-width: 3.5em;
   }
   table > tbody > tr > td.bio {
     display: none;

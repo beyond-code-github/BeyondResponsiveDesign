@@ -373,6 +373,7 @@
     <Content Include="content\agenda-Day-5.json" />
     <Content Include="content\speakers.json" />
     <Content Include="content\tracks.json" />
+    <None Include="Properties\PublishProfiles\oredevunofficial.pubxml" />
     <None Include="scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="scripts\jquery-2.1.1.js" />
     <Content Include="scripts\jquery-2.1.1.min.js" />

@@ -203,7 +203,7 @@ body > header {
         text-align: center;
         margin: 0 auto;
     }
-    
+
     > ul {
         &.diagonal-black {
             .diagonal-black();
@@ -439,6 +439,10 @@ body > main {
     section {
         &.presentation > div {
             padding: .75rem .75rem 0 .75rem;
+        }
+
+        > table > tbody > tr.session > td:first-child {
+            min-width: 6em;
         }
 
         > header {

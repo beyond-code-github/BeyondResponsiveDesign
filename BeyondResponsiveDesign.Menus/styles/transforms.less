@@ -148,10 +148,6 @@ body > main > aside.propertySheet {
 }
 
 @media only screen and (max-width: 800px) {
-    table.accommodation > tbody > tr > td > p {
-        max-width: 14em;
-    }
-
     body {
         > header > ul > li.menuToggle {
             display: block;
@@ -170,11 +166,6 @@ body > main > aside.propertySheet {
             margin-left: -1px;
             .animate;
         }
-    }
-
-    body > header > .header-text {
-        background-position: center;
-        width: 100%;
     }
 
     body.sidebar > header > ul > li.menuToggle {
@@ -225,8 +216,8 @@ body > main > aside.propertySheet {
 }
 
 @media only screen and (max-width: 480px) {
-    body > header > .header-text {
-        display: none;
+    body > main section > table > tbody > tr.session > td:first-child {
+        min-width: 3.5em;
     }
 
     table > tbody > tr > td {

@@ -342,6 +342,9 @@ body > main {
 body > main section.presentation > div {
   padding: .75rem .75rem 0 .75rem;
 }
+body > main section > table > tbody > tr.session > td:first-child {
+  min-width: 6em;
+}
 body > main section > header > h2 {
   background-image: url("../images/headerunderline.png");
   background-position: left bottom;
