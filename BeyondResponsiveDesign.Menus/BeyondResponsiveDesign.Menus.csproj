@@ -94,31 +94,31 @@
     <Content Include="images\googleplaystore.gif" />
     <Content Include="images\itunesappstore.gif" />
     <Content Include="images\logo-notext.png" />
-    <Content Include="images\speakers\11.jpg" />
-    <Content Include="images\speakers\1313.jpg" />
-    <Content Include="images\speakers\23.jpg" />
-    <Content Include="images\speakers\2311.jpg" />
-    <Content Include="images\speakers\2312.jpg" />
-    <Content Include="images\speakers\2314.jpg" />
-    <Content Include="images\speakers\2316.jpg" />
-    <Content Include="images\speakers\293.jpg" />
-    <Content Include="images\speakers\30.jpg" />
-    <Content Include="images\speakers\302.jpg" />
-    <Content Include="images\speakers\303.jpg" />
-    <Content Include="images\speakers\309.jpg" />
-    <Content Include="images\speakers\3319.jpg" />
-    <Content Include="images\speakers\3320.jpg" />
-    <Content Include="images\speakers\3322.jpg" />
-    <Content Include="images\speakers\3323.jpg" />
-    <Content Include="images\speakers\3324.jpg" />
-    <Content Include="images\speakers\34.jpg" />
-    <Content Include="images\speakers\4328.jpg" />
-    <Content Include="images\speakers\4331.jpg" />
-    <Content Include="images\speakers\4332.jpg" />
-    <Content Include="images\speakers\48.jpg" />
-    <Content Include="images\speakers\53.jpg" />
-    <Content Include="images\speakers\5333.jpg" />
-    <Content Include="images\speakers\62.jpg" />
+    <Content Include="images\speakers\adam.warski.5.jpg" />
+    <Content Include="images\speakers\alberto.lopez.jpg" />
+    <Content Include="images\speakers\greg.young.7106.jpg" />
+    <Content Include="images\speakers\juergenhoeller.jpg" />
+    <Content Include="images\speakers\lukaseder1.jpg" />
+    <Content Include="images\speakers\mario.fusco.jpg" />
+    <Content Include="images\speakers\mariozechner.jpg" />
+    <Content Include="images\speakers\michaelnitschinger.jpg" />
+    <Content Include="images\speakers\norberto1.jpg" />
+    <Content Include="images\speakers\ogierke.jpg" />
+    <Content Include="images\speakers\paul.szulc.jpg" />
+    <Content Include="images\speakers\radcortez.jpg" />
+    <Content Include="images\speakers\rafaelwinterhalter.jpg" />
+    <Content Include="images\speakers\roman8.jpg" />
+    <Content Include="images\speakers\roysvork.jpg" />
+    <Content Include="images\speakers\sergey.kuksenko.jpg" />
+    <Content Include="images\speakers\simonmaple.jpg" />
+    <Content Include="images\speakers\simonritter.jpg" />
+    <Content Include="images\speakers\svenpeters.jpg" />
+    <Content Include="images\sponsors\ejug.png" />
+    <Content Include="images\sponsors\gdg-vienna.png" />
+    <Content Include="images\sponsors\jsug.png" />
+    <Content Include="images\sponsors\pluralsight.png" />
+    <Content Include="images\sponsors\Typesafe.png" />
+    <Content Include="images\sponsors\vienna-scala-user-group-logo.png" />
     <Content Include="images\venue.jpg" />
     <Content Include="scripts\knockout-3.1.0.debug.js" />
     <Content Include="scripts\knockout-3.1.0.js" />
@@ -302,7 +302,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>64566</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

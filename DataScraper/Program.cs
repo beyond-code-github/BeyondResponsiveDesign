@@ -21,16 +21,24 @@
 
     public class Session
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         public string Title { get; set; }
 
+        public string TimeSlotId { get; set; }
+
+        public string TrackId { get; set; }
+
         public string Abstract { get; set; }
+
+        public string Speaker { get; set; }
+
+        public string SpeakerId { get; set; }
     }
 
     public class Speaker
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         public string Name { get; set; }
 
@@ -45,82 +53,174 @@
     {
         public static void Main(string[] args)
         {
-            const string AgendaUrl = "/Agenda";
-            const string OutputDir =
-                "D:\\Code\\BeyondResponsiveDesign\\BeyondResponsiveDesign.Menus\\images\\speakers";
-
             var imageClient = new HttpClient();
-            var htmlClient = new HttpClient { BaseAddress = new Uri("http://www.dddeastanglia.com") };
+            imageClient.DefaultRequestHeaders.Add(
+                "User-Agent",
+                "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.91 Safari/537.36");
+
+            var htmlClient = new HttpClient { BaseAddress = new Uri("http://voxxeddaysvienna2015.sched.org/") };
+            htmlClient.DefaultRequestHeaders.Add("Accept", "text/html");
+            htmlClient.DefaultRequestHeaders.Add(
+                "User-Agent",
+                "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.91 Safari/537.36");
+
+            ScrapeSpeakers(htmlClient, imageClient);
+
+            Console.WriteLine("Process completed, press any key to exit");
+            Console.ReadKey();
+        }
+
+        private static void ScrapeSpeakers(HttpClient htmlClient, HttpClient imageClient)
+        {
+            const string SpeakersUrl = "directory/speakers";
+            const string OutputDir = "D:\\Code\\BeyondResponsiveDesign\\BeyondResponsiveDesign.Menus\\images\\speakers";
 
             var htmlDoc = new HtmlDocument();
-            htmlDoc.LoadHtml(htmlClient.GetStringAsync(AgendaUrl).Result);
+            htmlDoc.LoadHtml(htmlClient.GetStringAsync(SpeakersUrl).Result);
 
-            var speakerLinks =
-                htmlDoc.DocumentNode.Descendants("a")
-                    .Where(o => o.Attributes.Contains("class") && o.Attributes["class"].Value == "speakerName");
+            var speakerContainers = htmlDoc.DocumentNode.Descendants("div").Where(o => o.HasClass("sched-person"));
 
             var speakers = new ConcurrentQueue<Speaker>();
-            Task.WaitAll(speakerLinks.Select(link => Task.Run(async () =>
-                {
-                    var href = link.Attributes["href"].Value;
-                    var speakerPage = new HtmlDocument();
-                    speakerPage.LoadHtml(await htmlClient.GetStringAsync(href));
+            var allSessions = new ConcurrentQueue<Session>();
 
-                    var container =
-                        speakerPage.DocumentNode.Descendants("div")
-                            .First(
-                                o => o.Attributes.Contains("class") && o.Attributes["class"].Value.Contains("speaker"));
+            //foreach (var container in speakerContainers)
+            //{
 
-                    var titleElement = container.Descendants("h3").First();
-                    var linkElements = container.Descendants("section").First().Descendants("p");
-                    var paragraphElements = container.Elements("p");
-                    var sessionLinkElements = container.Element("ul").Descendants("a");
+            Task.WaitAll(
+               speakerContainers.Skip(4).Select(
+                   container => Task.Run(
+                       async () =>
+                       {
+                           var link = container.Descendants("h2").First().Descendants("a").First();
+                           var href = link.Attributes["href"].Value;
+                           var speakerPage = new HtmlDocument();
+                           speakerPage.LoadHtml(await htmlClient.GetStringAsync(href));
 
-                    var id = int.Parse(href.Split('/').Last());
-                    var name = titleElement.Element("#text").InnerHtml;
-                    var bio = string.Join(string.Empty, paragraphElements.Select(o => o.InnerHtml));
-                    var links = (from linkElement in linkElements
-                                 let icon = linkElement.Descendants("i").First().Attributes["class"].Value
-                                 let url = linkElement.Descendants("a").First().Attributes["href"].Value
-                                 select new Link { Icon = icon, Url = url }).ToList();
+                           var speakerContainer =
+                               speakerPage.DocumentNode.Descendants("div").First(o => o.Id == "sched-page-me-profile");
 
-                    var sessions = new List<Session>();
-                    foreach (var sessionLinkElement in sessionLinkElements)
-                    {
-                        var sessionHref = sessionLinkElement.Attributes["href"].Value;
-                        var sessionId = int.Parse(sessionHref.Split('/').Last());
-                        var title = sessionLinkElement.InnerText;
+                           var titleElement = speakerContainer.Descendants("h1").First(o => o.Id == "sched-page-me-name");
+                           var linkContainer =
+                               speakerContainer.Descendants("div").FirstOrDefault(o => o.Id == "sched-page-me-networks");
 
-                        var sessionPage = new HtmlDocument();
-                        sessionPage.LoadHtml(await htmlClient.GetStringAsync(sessionHref));
+                           IEnumerable<HtmlNode> linkElements = new List<HtmlNode>();
+                           if (linkContainer != null)
+                           {
+                               linkElements =
+                                   linkContainer.Descendants("div")
+                                       .Where(o => o.HasClass("sched-network-link"))
+                                       .Select(o => o.Element("a"));
+                           }
 
-                        var abstractElement =
-                            sessionPage.DocumentNode.Descendants("div")
-                                .First(o => o.Attributes.Contains("class") && o.Attributes["class"].Value == "abstract");
+                           var roleCountryContainer = speakerContainer.Descendants("div")
+                                   .FirstOrDefault(o => o.Id == "sched-page-me-profile-data");
 
-                        var @abstract = abstractElement.InnerHtml;
-                        sessions.Add(new Session { Id = sessionId, Title = title, Abstract = @abstract});
-                    }
+                           HtmlNode roleCountryElement;
+                           if (roleCountryContainer != null)
+                           {
+                               roleCountryElement = roleCountryContainer.Element("strong");
+                           }
 
-                    speakers.Enqueue(
-                        new Speaker { Id = id, Name = name, Links = links, Bio = bio, Sessions = sessions });
+                           var bioContainer = speakerContainer.Elements("div").FirstOrDefault(o => o.Id == "sched-page-me-profile-about");
+                           var sessionContainer =
+                               speakerPage.DocumentNode.Descendants("div").FirstOrDefault(o => o.Id == "sched-page-me-schedule");
 
-                    var imageTag = titleElement.Descendants("img").First();
-                    var imageUrl = imageTag.Attributes["src"].Value.Replace("s=50", "s=300");
+                           var id = href.Split('/').Last();
+                           var name = titleElement.Element("#text").InnerHtml.Trim();
+                           var links = linkElements.Select(o => new Link { Url = o.Attributes["href"].Value, Icon = o.Element("img").Attributes["alt"].Value });
+                           var bio = bioContainer == null ? string.Empty : bioContainer.InnerHtml.Trim();
 
-                    var stream = await imageClient.GetStreamAsync(imageUrl);
-                    var file = File.OpenWrite(string.Format("{0}\\{1}.jpg", OutputDir, id));
-                    await stream.CopyToAsync(file);
+                           var sessions = new List<Session>();
+                           foreach (
+                               var sessionLinkContainer in
+                                   sessionContainer.Descendants("div").Where(o => o.HasClass("sched-container-inner")))
+                           {
+                               var sessionLinkElement = sessionLinkContainer.Descendants("a").First();
+                               var sessionHref = sessionLinkElement.Attributes["href"].Value;
+                               var sessionId = sessionHref.Split('/').Last();
+                               var title = sessionLinkElement.Element("#text").InnerText.Trim();
 
-                    file.Close();
-                })).ToArray());
+                               var sessionPage = new HtmlDocument();
+                               sessionPage.LoadHtml(await htmlClient.GetStringAsync(sessionHref));
+
+                               var abstractElement =
+                                   sessionPage.DocumentNode.Descendants("div").FirstOrDefault(o => o.HasClass("tip-description"));
+
+                               var @abstract = string.Empty;
+                               if (abstractElement != null)
+                               {
+                                   @abstract = abstractElement.InnerText.Trim();
+                               }
+
+                               var slotElement =
+                                   sessionPage.DocumentNode.Descendants("div")
+                                       .First(o => o.HasClass("sched-container-dates"));
+
+                               var roomElement =
+                                   sessionPage.DocumentNode.Descendants("div")
+                                       .First(o => o.HasClass("sched-event-details-timeandplace")).Element("a");
+
+                               var slot =
+                                   slotElement.Elements("#text")
+                                       .Last()
+                                       .InnerText.Split("&bull;".ToCharArray())
+                                       .Last()
+                                       .Trim();
+
+                               var room = roomElement.InnerText.Trim();
+
+                               var session = new Session
+                                                 {
+                                                     Id = sessionId,
+                                                     Title = title,
+                                                     TimeSlotId = slot,
+                                                     TrackId = room,
+                                                     Abstract = @abstract,
+                                                     Speaker = name,
+                                                     SpeakerId = id
+                                                 };
+
+                               allSessions.Enqueue(session);
+                               sessions.Add(session);
+                           }
+
+                           speakers.Enqueue(new Speaker { Id = id, Name = name, Links = links, Bio = bio, Sessions = sessions });
+
+                           var avatarContainer =
+                               speakerContainer.Descendants("span").FirstOrDefault(o => o.Id == "sched-page-me-profile-avatar");
+
+                           if (avatarContainer != null)
+                           {
+                               var imageTag = avatarContainer.Descendants("img").FirstOrDefault();
+                               if (imageTag != null)
+                               {
+                                   var rawUrl = imageTag.Attributes["src"].Value;
+                                   var imageUrl = rawUrl.StartsWith("//") ? rawUrl.Replace("//", "http://") : rawUrl;
+
+                                   var stream = await imageClient.GetStreamAsync(imageUrl);
+                                   var file = File.OpenWrite(string.Format("{0}\\{1}.jpg", OutputDir, id));
+
+                                   await stream.CopyToAsync(file);
+                                   file.Close();
+                               }
+                           }
+                       })).ToArray());
 
             var streamWriter = new StreamWriter(string.Format("{0}\\speakers.json", OutputDir));
             streamWriter.Write(JsonConvert.SerializeObject(speakers.OrderBy(o => o.Name)));
             streamWriter.Close();
 
-            Console.WriteLine("Process completed, press any key to exit");
-            Console.ReadKey();
+            var agendaWriter = new StreamWriter(string.Format("{0}\\agenda.json", OutputDir));
+            agendaWriter.Write(JsonConvert.SerializeObject(allSessions.OrderBy(o => o.TrackId).ThenBy(o => o.TimeSlotId)));
+            agendaWriter.Close();
+        }
+    }
+
+    public static class Extensions
+    {
+        public static bool HasClass(this HtmlNode o, string className)
+        {
+            return o.Attributes.Contains("class") && o.Attributes["class"].Value == className;
         }
     }
 }
