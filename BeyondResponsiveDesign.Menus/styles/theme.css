@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
   font-family: 'OpenSans';
   src: url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot');
   src: url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?iefix') format('eot'), url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff') format('woff'), url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.ttf') format('truetype'), url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.svg#webfont') format('svg');
@@ -413,9 +413,8 @@ body > main > article > nav.toolbar > ul > li > a {
 }
 body > main > article > nav.toolbar > ul > li > a > i {
   font-weight: 300;
-  padding-right: 0.28571429em;
+  padding-right: 0.28571429;
 }
 body > main > article > nav.toolbar > ul > li > a:hover {
   color: #b3b3b3;
 }
-/*# sourceMappingURL=theme.css.map */

@@ -1,4 +1,4 @@
-﻿.animateFast {
+.animateFast {
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
@@ -218,4 +218,3 @@ body > main > aside.propertySheet.offRight {
     border-left: 0 none;
   }
 }
-/*# sourceMappingURL=transforms.css.map */
