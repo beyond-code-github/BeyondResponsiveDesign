@@ -20,7 +20,7 @@
     "TimeSlots": [
         {
             "Id": "09:00 - 10:00",
-            "Info": "Keynote"
+            "Info": null
         },
         {
             "Id": "10:30 - 11:20",
