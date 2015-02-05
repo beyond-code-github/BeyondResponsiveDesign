@@ -38,6 +38,7 @@ body > nav > div > ul > li:not(.active) > div {
     overflow: hidden;
     height: 0;
 
+    /* Hide the submenu when main item is not active */
     > ul {
         -webkit-transform: translate3d(0,-100%,0);
         -ms-transform: translate3d(0,-100%,0);
@@ -48,6 +49,7 @@ body > nav > div > ul > li:not(.active) > div {
 }
 
 body > nav > div > ul > li.active > div > ul {
+    /* Return submenu to normal position when main item is active */
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     -moz-transform: translate3d(0,0,0);
@@ -91,6 +93,7 @@ body > main > article > div.slideTabContainer {
 }
 
 body > main > article > nav.toolbar > ul > li {
+    /* Transforms controlling the tab selection underline */
     > .highlight {
         display: block;
     }
@@ -141,12 +144,15 @@ body > main > aside.propertySheet {
     body > main > article {
         .animate;
     }
+
+    /* Wide property sheets are 50% width on large screens */
     body > main > aside.propertySheet.wide {
         width: 50%;
     }
 }
 
 @media only screen and (max-width: 800px) {
+    /* Auto hide sidebar and enable toggle button on smaller screens */
     body {
         > header > ul > li.menuToggle {
             display: block;
@@ -191,6 +197,7 @@ body > main > aside.propertySheet {
 }
 
 @media only screen and (max-width: 600px) {
+    /* Drop down menu becomes pop-up on horizontal mobile screens */
     div.popup {
         position: fixed;
         bottom: 0;
@@ -215,12 +222,14 @@ body > main > aside.propertySheet {
 }
 
 @media only screen and (max-width: 480px) {
+    /* Hide bio on smaller screens - positive use of reactive design */
     table > tbody > tr > td {
         &.bio {
             display: none;
         }
     }
 
+    /* Property sheets are 100% width on portrait mobile screens */
     body > main > aside.propertySheet {
         width: 100%;
         min-width: 100%;

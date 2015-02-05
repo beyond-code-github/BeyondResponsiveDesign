@@ -23,14 +23,6 @@ body {
 
 .scrollcontainer {
     overflow: hidden;
-
-    > .scrollcontainer {
-        height: 100%;
-
-        > .wrapper {
-            xmin-height: 100%;
-        }
-    }
 }
 
 .vscroll {
@@ -53,35 +45,6 @@ body {
     }
 }
 
-.modalbackground, .popupbackground {
-    .originFixed;
-    background-color: #000000;
-    opacity: 0.4;
-    z-index: 100000;
-}
-
-.popupbackground {
-    top: @header-height;
-}
-
-div.popup {
-    z-index: 9999999;
-    background: white;
-    position: absolute;
-    visibility: hidden;
-    display: none;
-    max-width: 37.5rem;
-    min-width: 12.5rem;
-
-    &.active {
-        visibility: visible;
-    }
-
-    > ul > li {
-        float: none;
-    }
-}
-
 body > header {
     .originFixed;
     z-index: 4;
@@ -99,6 +62,7 @@ body > header {
     > ul {
         float: left;
         height: @header-height;
+        margin: 0;
 
         > li {
             line-height: @header-height;
@@ -118,6 +82,10 @@ body > header {
                 z-index: 2;
                 min-width: 5em;
                 left: -0.5em;
+            }
+
+            > h2 {
+                margin: 0;
             }
 
             > a {
@@ -212,4 +180,33 @@ body > main > article > nav.toolbar {
             float: left;
         }
     }
+}
+
+.modalbackground, .popupbackground {
+  .originFixed;
+  background-color: #000000;
+  opacity: 0.4;
+  z-index: 100000;
+}
+
+.popupbackground {
+  top: @header-height;
+}
+
+div.popup {
+  z-index: 9999999;
+  background: white;
+  position: absolute;
+  visibility: hidden;
+  display: none;
+  max-width: 37.5rem;
+  min-width: 12.5rem;
+
+  &.active {
+    visibility: visible;
+  }
+
+  > ul > li {
+    float: none;
+  }
 }

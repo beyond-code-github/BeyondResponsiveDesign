@@ -14,12 +14,6 @@ body {
 .scrollcontainer {
   overflow: hidden;
 }
-.scrollcontainer > .scrollcontainer {
-  height: 100%;
-}
-.scrollcontainer > .scrollcontainer > .wrapper {
-  xmin-height: 100%;
-}
 .vscroll {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -35,35 +29,6 @@ body {
 .hscroll > .wrapper {
   display: inline-block;
   min-width: 100%;
-}
-.modalbackground,
-.popupbackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #000000;
-  opacity: 0.4;
-  z-index: 100000;
-}
-.popupbackground {
-  top: 3em;
-}
-div.popup {
-  z-index: 9999999;
-  background: white;
-  position: absolute;
-  visibility: hidden;
-  display: none;
-  max-width: 37.5rem;
-  min-width: 12.5rem;
-}
-div.popup.active {
-  visibility: visible;
-}
-div.popup > ul > li {
-  float: none;
 }
 body > header {
   position: absolute;
@@ -85,6 +50,7 @@ body > header > h1 {
 body > header > ul {
   float: left;
   height: 3em;
+  margin: 0;
 }
 body > header > ul > li {
   line-height: 3em;
@@ -103,6 +69,9 @@ body > header > ul > li.navigator {
   z-index: 2;
   min-width: 5em;
   left: -0.5em;
+}
+body > header > ul > li > h2 {
+  margin: 0;
 }
 body > header > ul > li > a {
   line-height: 3em;
@@ -147,12 +116,6 @@ body > main > article {
   right: 0;
   bottom: 0;
   overflow: hidden;
-}
-body > main > article > .scrollcontainer {
-  height: 100%;
-}
-body > main > article > .scrollcontainer > .wrapper {
-  xmin-height: 100%;
 }
 body > main > article > .slideTabContainer > .slideTab {
   display: none;
@@ -200,4 +163,33 @@ body > main > article > nav.toolbar > ul {
 body > main > article > nav.toolbar > ul > li {
   display: block;
   float: left;
+}
+.modalbackground,
+.popupbackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.4;
+  z-index: 100000;
+}
+.popupbackground {
+  top: 3em;
+}
+div.popup {
+  z-index: 9999999;
+  background: white;
+  position: absolute;
+  visibility: hidden;
+  display: none;
+  max-width: 37.5rem;
+  min-width: 12.5rem;
+}
+div.popup.active {
+  visibility: visible;
+}
+div.popup > ul > li {
+  float: none;
 }
