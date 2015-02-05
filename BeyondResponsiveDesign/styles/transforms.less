@@ -34,7 +34,7 @@ body:not(.propertySheet) > header > ul > li {
     }
 }
 
-body > nav > div > div > ul > li:not(.active) > div {
+body > nav > div > ul > li:not(.active) > div {
     overflow: hidden;
     height: 0;
 
@@ -47,7 +47,7 @@ body > nav > div > div > ul > li:not(.active) > div {
     }
 }
 
-body > nav > div > div > ul > li.active > div > ul {
+body > nav > div > ul > li.active > div > ul {
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     -moz-transform: translate3d(0,0,0);
@@ -147,10 +147,6 @@ body > main > aside.propertySheet {
 }
 
 @media only screen and (max-width: 800px) {
-    table.accommodation > tbody > tr > td > p {
-        max-width: 14em;
-    }
-
     body {
         > header > ul > li.menuToggle {
             display: block;

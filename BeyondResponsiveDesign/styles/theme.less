@@ -95,15 +95,6 @@ table {
         color: @body-text-light-color;
     }
 
-    &.accommodation > tbody > tr > td {
-        display: block;
-        float: left;
-    }
-
-    &.accommodation > tbody > tr > td > img {
-        .rounded;
-    }
-
     > tbody > tr {
         border-bottom: 1px solid @border-line-color;
         cursor: pointer;
@@ -260,7 +251,7 @@ body > nav {
     padding: 0;
     margin: 0;
 
-    > div > div > ul {
+    > div > ul {
         list-style-type: none;
         text-indent: 0;
         margin: 0;
@@ -419,34 +410,32 @@ body > main {
             padding: .75rem .75rem 0 .75rem;
         }
 
-        > header {
-            > h2 {
-                background: #fff;
-                display: block;
-                width: 100%;
-                line-height: 2.9375rem;
-                border-bottom: 1px solid #b2b2b2;
-                margin: 0;
-                white-space: nowrap;
-                overflow: hidden;
-                -ms-text-overflow: ellipsis;
-                -o-text-overflow: ellipsis;
-                text-overflow: ellipsis;
+        > header > h2 {
+            background: #fff;
+            display: block;
+            width: 100%;
+            line-height: 2.9375rem;
+            border-bottom: 1px solid #b2b2b2;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
 
-                > i.fa {
-                    position: relative;
-                    top: 0.0625rem;
-                    left: .5625rem;
-                    font-weight: 300;
-                    font-size: 1.5rem;
-                }
+            > i.fa {
+                position: relative;
+                top: 0.0625rem;
+                left: .5625rem;
+                font-weight: 300;
+                font-size: 1.5rem;
+            }
 
-                > span {
-                    padding: 0 3.75rem 0 1rem;
-                    font-weight: 400;
-                    font-size: 1.125rem;
-                    text-indent: 0;
-                }
+            > span {
+                padding: 0 3.75rem 0 1rem;
+                font-weight: 400;
+                font-size: 1.125rem;
+                text-indent: 0;
             }
         }
     }

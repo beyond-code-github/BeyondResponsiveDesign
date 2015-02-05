@@ -17,18 +17,18 @@ body.propertySheet > header > ul > li.menuToggle {
 body:not(.propertySheet) > header > ul > li.navigator {
   display: none;
 }
-body > nav > div > div > ul > li:not(.active) > div {
+body > nav > div > ul > li:not(.active) > div {
   overflow: hidden;
   height: 0;
 }
-body > nav > div > div > ul > li:not(.active) > div > ul {
+body > nav > div > ul > li:not(.active) > div > ul {
   -webkit-transform: translate3d(0, -100%, 0);
   -ms-transform: translate3d(0, -100%, 0);
   -moz-transform: translate3d(0, -100%, 0);
   -o-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
 }
-body > nav > div > div > ul > li.active > div > ul {
+body > nav > div > ul > li.active > div > ul {
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -134,9 +134,6 @@ body > main > aside.propertySheet.offRight {
   }
 }
 @media only screen and (max-width: 800px) {
-  table.accommodation > tbody > tr > td > p {
-    max-width: 14em;
-  }
   body > header > ul > li.menuToggle {
     display: block;
     left: -1.2em;

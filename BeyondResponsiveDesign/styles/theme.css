@@ -54,17 +54,6 @@ table.agenda > tbody > tr:not(.session) {
   cursor: auto;
   color: #999999;
 }
-table.accommodation > tbody > tr > td {
-  display: block;
-  float: left;
-}
-table.accommodation > tbody > tr > td > img {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-}
 table > tbody > tr {
   border-bottom: 1px solid #f2f2f2;
   cursor: pointer;
@@ -200,14 +189,14 @@ body > nav {
   padding: 0;
   margin: 0;
 }
-body > nav > div > div > ul {
+body > nav > div > ul {
   list-style-type: none;
   text-indent: 0;
   margin: 0;
   padding: 0;
   width: 100%;
 }
-body > nav > div > div > ul > li {
+body > nav > div > ul > li {
   color: #666666;
   text-indent: 0;
   padding: 0;
@@ -215,14 +204,14 @@ body > nav > div > div > ul > li {
   vertical-align: middle;
   position: relative;
 }
-body > nav > div > div > ul > li img {
+body > nav > div > ul > li img {
   vertical-align: middle;
 }
-body > nav > div > div > ul > li > a {
+body > nav > div > ul > li > a {
   position: relative;
   z-index: 2;
 }
-body > nav > div > div > ul > li > a > h2 {
+body > nav > div > ul > li > a > h2 {
   font-size: 1em;
   font-weight: 400;
   vertical-align: middle;
@@ -238,32 +227,32 @@ body > nav > div > div > ul > li > a > h2 {
   overflow: hidden;
   position: relative;
 }
-body > nav > div > div > ul > li > a > h2 > span {
+body > nav > div > ul > li > a > h2 > span {
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
-body > nav > div > div > ul > li > a > h2 > i.fa {
+body > nav > div > ul > li > a > h2 > i.fa {
   float: left;
   outline: none;
   line-height: 3rem;
   font-size: 1.1875rem;
   width: 1.5rem;
 }
-body > nav > div > div > ul > li > div {
+body > nav > div > ul > li > div {
   overflow: hidden;
   /*height: 0;*/
   height: auto;
 }
-body > nav > div > div > ul > li > div > ul {
+body > nav > div > ul > li > div > ul {
   list-style-type: none;
   text-indent: 0;
   margin: 0;
   padding: 0;
 }
-body > nav > div > div > ul > li > div > ul > li {
+body > nav > div > ul > li > div > ul > li {
   font-size: 0.875em;
   line-height: 2rem;
   text-indent: 0;
@@ -273,7 +262,7 @@ body > nav > div > div > ul > li > div > ul > li {
   color: #666666;
   position: relative;
 }
-body > nav > div > div > ul > li > div > ul > li > a {
+body > nav > div > ul > li > div > ul > li > a {
   display: block;
   margin: 0;
   padding: 0 0.75rem 0 1.5rem;
@@ -285,41 +274,41 @@ body > nav > div > div > ul > li > div > ul > li > a {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
-body > nav > div > div > ul > li > div > ul > li > a > i.fa {
+body > nav > div > ul > li > div > ul > li > a > i.fa {
   float: left;
   outline: none;
   line-height: 2rem;
   width: 1.25rem;
   max-width: 1.25rem;
 }
-body > nav > div > div > ul > li > div > ul > li > a:hover {
+body > nav > div > ul > li > div > ul > li > a:hover {
   color: #999999;
 }
-body > nav > div > div > ul > li > div > ul > li.active > a {
+body > nav > div > ul > li > div > ul > li.active > a {
   color: #ffffff;
 }
-body > nav > div > div > ul > li.active > div {
+body > nav > div > ul > li.active > div {
   overflow: hidden;
   height: auto;
 }
-body > nav > div > div > ul > li.active > div > ul > li.active {
+body > nav > div > ul > li.active > div > ul > li.active {
   background-color: #00b1ee;
   color: #ffffff;
 }
-body > nav > div > div > ul > li.active > div > ul > li.active > a {
+body > nav > div > ul > li.active > div > ul > li.active > a {
   color: #ffffff;
 }
-body > nav > div > div > ul > li.active > a {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #008dbd;
-}
-body > nav > div > div > ul > li.active > a > h2 {
+body > nav > div > ul > li.active > a {
   color: #ffffff;
   text-decoration: none;
   background-color: #008dbd;
 }
-body > nav > div > div > ul > li.active > a > h2 > i[data-icon="add"] {
+body > nav > div > ul > li.active > a > h2 {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #008dbd;
+}
+body > nav > div > ul > li.active > a > h2 > i[data-icon="add"] {
   background-image: url('../images/plus_white.svg');
 }
 body > main {

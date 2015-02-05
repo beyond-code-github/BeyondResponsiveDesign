@@ -229,8 +229,8 @@
             target.empty();
             target.html(html);
 
-            $("nav > div > div > ul  li").removeClass("active");
-            var menuitem = $("nav > div > div > ul li#menu-" + location);
+            $("nav > div > ul  li").removeClass("active");
+            var menuitem = $("nav > div > ul li#menu-" + location);
             menuitem.addClass("active");
 
             var title = menuitem.find("a span").first().text();
