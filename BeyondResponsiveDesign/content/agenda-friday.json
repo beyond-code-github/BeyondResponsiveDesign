@@ -1,0 +1,424 @@
+{
+  "Tracks": [
+    {
+      "Id": "Innovation",
+      "Identifier": "1"
+    },
+    {
+      "Id": "Devops",
+      "Identifier": "2"
+    },
+    {
+      "Id": "Mobile",
+      "Identifier": "3"
+    },
+    {
+      "Id": "IoT - Maker - Wearable",
+      "Identifier": "4"
+    },
+    {
+      "Id": "Security - Hack",
+      "Identifier": "5"
+    },
+    {
+      "Id": "Methods",
+      "Identifier": "6"
+    },
+    {
+      "Id": "Big Data - Cloud",
+      "Identifier": "7"
+    },
+    {
+      "Id": "Languages",
+      "Identifier": "8"
+    }
+  ],
+  "TimeSlots": [
+    {
+      "Id": "09:00/09:50",
+      "Info": "Keynote"
+    },
+    {
+      "Id": "10:00/11:00",
+      "Info": null
+    },
+    {
+      "Id": "11:00/11:30",
+      "Info": "Coffee break"
+    },
+    {
+      "Id": "11:30/12:10",
+      "Info": null
+    },
+    {
+      "Id": "12:20/13:00",
+      "Info": null
+    },
+    {
+      "Id": "13:00/14:00",
+      "Info": "Lunch time"
+    },
+    {
+      "Id": "14:00/14:40",
+      "Info": null
+    },
+    {
+      "Id": "14:50/15:50",
+      "Info": null
+    },
+    {
+      "Id": "15:50/16:10",
+      "Info": "Coffee break"
+    },
+    {
+      "Id": "16:10/17:10",
+      "Info": null
+    },
+    {
+      "Id": "17:20/18:00",
+      "Info": null
+    }
+  ],
+  "Sessions": [
+    {
+      "Id": "977",
+      "Title": "Windows 10 e il futuro delle Universal App",
+      "TimeSlotId": "10:00/11:00",
+      "TrackId": "1",
+      "Abstract": "Windows 10 è la piattaforma unificata per telefoni, tablet, desktop, Xbox, board, Hololens e Surface Hub. In questa sessione vedremo quali sono le novità principali della nuova piattaforma e come sfruttarle al meglio nelle nostre applicazioni.",
+      "Speaker": "Erica Barone",
+      "SpeakerId": "1176",
+      "Day": "Friday"
+    },
+    {
+      "Id": "979",
+      "Title": "NO. La sottile arte di trovare il tempo dove non esiste.",
+      "TimeSlotId": "11:30/12:10",
+      "TrackId": "1",
+      "Abstract": "Non abbiamo mai tempo per fare nulla. Quante volte avete detto: &quot;Vorrei rilasciare un progetto Open Source&quot; oppure &quot;Vorrei studiare Obj-C e imparare a fare App!&quot;. E poi andate su GitHub e trovate persone che hanno rilasciato o contributo a CENTINAIA di progetti, conoscono 6-7 linguaggi di programmazione diversi e parlano a conferenze in giro per l'Italia e l'Europa. Come fanno a gestire il tempo? Sono più bravi di noi? NO è la risposta.",
+      "Speaker": "Matteo Collina",
+      "SpeakerId": "167",
+      "Day": "Friday"
+    },
+    {
+      "Id": "980",
+      "Title": "In Flight Data Fusion. Drones How To and Why",
+      "TimeSlotId": "12:20/13:00",
+      "TrackId": "1",
+      "Abstract": "No one doubts that a drone flights. We will show what there is behind the data fusion of all the data from the single sensors  and how/why the drones use them for flight functionality.\r\nToday drones are &quot;isolated systems&quot; with and high need of ideas and software developments to be part of a more integrated world.",
+      "Speaker": "Roberto Collina",
+      "SpeakerId": "1169",
+      "Day": "Friday"
+    },
+    {
+      "Id": "982",
+      "Title": "Building Successful APIs Overnight",
+      "TimeSlotId": "14:00/14:40",
+      "TrackId": "1",
+      "Abstract": "Hackathons have boomed, people attending such events have been consuming thousands of APIs to power their creative projects. However, not everyone can consume APIs like a boss. Companies spend hundreds of thousands of dollars in promoting and ensuring best practices are followed when building APIs.\r\nIn this talk I will give you an overview of how to build a potentially successful API overnight, like hackathoneers do. A recipe for success as a takeaway from this talk will be shared.\r\nTopics covered: Evolution of APIs, Hackathons, REST API Frameworks, API Design, API Editors, API Management",
+      "Speaker": "Orlando K",
+      "SpeakerId": "1062",
+      "Day": "Friday"
+    },
+    {
+      "Id": "983",
+      "Title": "The second screen world in the Google Cast era",
+      "TimeSlotId": "14:50/15:50",
+      "TrackId": "1",
+      "Abstract": "TVs are the biggest, most beautiful screen in people’s living rooms. Google Cast is a technology that enables true multi-screen experiences for the users.\r\n\r\nIntegrating Google Cast into existing applications is simple, and we’re going to cover the SDK and resources available to make your application Cast enabled really easily. Android, iOS and Web.\r\n\r\nPossibilities? Endless: not only casting video or audio, but also games where the TV becomes the new and high-tech game board or a variety of other apps to enjoy with friends, sitting together on the couch.",
+      "Speaker": "Alfredo Morresi",
+      "SpeakerId": "391",
+      "Day": "Friday"
+    },
+    {
+      "Id": "987",
+      "Title": "Good artists copy; Great artists replicate",
+      "TimeSlotId": "10:00/11:00",
+      "TrackId": "2",
+      "Abstract": "Let's talk about replication.\r\n\r\nDatabase replication is probably one of the most misunderstood things in computer science.\r\nSome argue that mongodb's way is the best. Some argue postgres. Some prefer emailing zips of database dumps around the office.\r\n\r\nIn general, replication is a *really hard* problem. However, it is actually pretty simple if you are willing to accept some trade-offs.\r\n\r\nThis talk will be a hands on approach about investigating how we can make replication simpler by building specialized databases. There will be lots of demos.",
+      "Speaker": "Mathias Buus",
+      "SpeakerId": "1020",
+      "Day": "Friday"
+    },
+    {
+      "Id": "989",
+      "Title": "Measuring Micro-services",
+      "TimeSlotId": "11:30/12:10",
+      "TrackId": "2",
+      "Abstract": "Micro-service systems deliver wonderful adaptability to business needs, easy scalability, and low-risk deployment. What's not to like?\r\nYou also end up with a system that's hard to understand, measure and predict. Traditional approaches to monitoring simply aren't powerful enough to handle the emergent properties of a system with lots of moving parts.\r\nThe solution is to apply the scientific method! Anything can be measured. Uncertainty can be reduced, and stability can be an emergent property. We just have to learn the lessons that the natural world can teach us.",
+      "Speaker": "Richard Rodger",
+      "SpeakerId": "1164",
+      "Day": "Friday"
+    },
+    {
+      "Id": "992",
+      "Title": "Continuous Delivery di una webapp by example",
+      "TimeSlotId": "14:00/14:40",
+      "TrackId": "2",
+      "Abstract": "Una feature non è completa finché non è nelle mani di chi la deve usare. Solo da lì inizia a produrre valore, sia economico o feedback. Che si tratti di master, preview o prod, con l’automazione delle build si possono evitare operazioni ripetitive, complesse, risparmiare tempo ed ottenere interessanti metriche. Tutto al fine di arrivare a poter rilasciare ogni poche ore (ogni volta che la build è verde!). Una overview di una delle 12 pratiche di Extreme Programming: continuous integration (e delivery) con gli strumenti al momento più interessanti. Esempio con una webapp in PHP.",
+      "Speaker": "Fabio Mora",
+      "SpeakerId": "236",
+      "Day": "Friday"
+    },
+    {
+      "Id": "994",
+      "Title": "Apt-get no more let Vagrant, Puppet and Docker take the stage",
+      "TimeSlotId": "16:10/17:10",
+      "TrackId": "2",
+      "Abstract": "How frustrating is to configure your dev machine everytime to meet the production specs?\r\nHow frustrating is to be sure that all of your colleagues have the same setup?\r\nHow to avoid distributing a new 4 GB vm to your team devs everytime you change the specs?\r\nEnter Vagrant, Puppet and Docker, the easy way to distribute vm and integrate them in your project repo\r\nwith just few KB!",
+      "Speaker": "Alessandro Cinelli",
+      "SpeakerId": "470",
+      "Day": "Friday"
+    },
+    {
+      "Id": "995",
+      "Title": "Monitoraggio, logging e alerting moderni",
+      "TimeSlotId": "17:20/18:00",
+      "TrackId": "2",
+      "Abstract": "Gestire un'infrastruttura sembra un'attività arida e ripetitiva, ma non\r\ne così: negli ultimi anni sono stati sviluppati sempre piu software\r\nfree alternativi alle soluzioni consolidate.\r\n\r\nGrazie ai sistemi cloud e alla virtualizzazione, nei prossimi anni\r\nsarà necessario dotarsi di strumenti efficaci per gestire la\r\ncomplessità di un'infrastruttura distribuita, e gli strumenti che\r\nabbiamo adesso a disposizione possono rendere questa attività\r\ngratificante ... anche da un punto di vista estetico !",
+      "Speaker": "Michele Finelli",
+      "SpeakerId": "93",
+      "Day": "Friday"
+    },
+    {
+      "Id": "997",
+      "Title": "Ubuntu phone, smart from the source (code)",
+      "TimeSlotId": "10:00/11:00",
+      "TrackId": "3",
+      "Abstract": "Un'introduzione al mondo di Ubuntu Touch, il nuovo sistema operativo mobile che fa della convergenza la sua bandiera, creato da Canonical e dalla comunità di Ubuntu, proponendo un nuovo modello realmente aperto e basato su nuove tecnologie che cercano di rivedere i paradigmi del passato.\r\n\r\nSi parlerà di sviluppo di applicazioni, dei suoi framework, della sicurezza.",
+      "Speaker": "Marco Trevisan",
+      "SpeakerId": "991",
+      "Day": "Friday"
+    },
+    {
+      "Id": "999",
+      "Title": "Xamarin Forms: one technology to rule them all",
+      "TimeSlotId": "11:30/12:10",
+      "TrackId": "3",
+      "Abstract": "Xamarin Forms è la nuova tecnologia introdotta da Xamarin per supportare lo sviluppo multi piattaforma di applicazioni per iOS, Android e Windows Phone utilizzando un unico linguaggio di design (lo XAML) e di sviluppo (C#). Nel corso di questa sessione vedremo le basi di questa piattaforma, gli scenari in cui è adatta e quelli in cui lo è di meno e una serie di preziosi consigli, nati dall'esperienza maturata nello sviluppo di un'importante progetto.",
+      "Speaker": "Matteo Pagani",
+      "SpeakerId": "1146",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1002",
+      "Title": "Introduzione alla tecnologia iBeacon",
+      "TimeSlotId": "14:00/14:40",
+      "TrackId": "3",
+      "Abstract": "Presentata in maniera piuttosto discreta tra le novità di iOS 7 nel 2013, le tecnologia iBeacon consente la localizzazione a corto raggio (prevalentemente indoor) e la realizzazione di servizi sensibili alla prossimità. L’intuizione di Apple sfrutta una delle caratteristiche fondamentali di Bluetooth Low Energy e questo rende gli iBeacon pressoché universali. In pochissimo tempo, sono comparsi sul mercato numerosi prodotti hardware che implementano la specifica (ufficiale e reverse engineered) e diverse API e librerie per l’integrazione di funzionalità di prossimità all’interno di mobile app.",
+      "Speaker": "Stefano Sanna",
+      "SpeakerId": "1165",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1003",
+      "Title": "Improving Mobile UX with Apache DeviceMap",
+      "TimeSlotId": "14:50/15:50",
+      "TrackId": "3",
+      "Abstract": "We experience a growing number of mobile phones, tablets, phablets, smart TV and similar devices flooding the market almost every day. If you want to create a comfortable user experience you need dynamic content according to hardware and browser of your device. That’s the reason for Device Description Repositories (DDR).\r\n\r\nApache DeviceMap started in January 2012, after OpenDDR contributed data and APis. It graduated from Apache Incubator November 2014. Next steps include an improved data format, maintenance of device data by the community via common API based on REST/OAuth and XML or JSON.",
+      "Speaker": "Werner Keil",
+      "SpeakerId": "953",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1005",
+      "Title": "Tips and Tricks for Mobile Apps Prototyping",
+      "TimeSlotId": "17:20/18:00",
+      "TrackId": "3",
+      "Abstract": "Probably every company has faced the following problem - you are starting new Mobile app with really outstanding idea. All tech processes are adjusted and the project is being developed by experienced developers, designers and QA engineers. Seems that everything should be fine, but when the app was uploaded to the App Store the users receive it coldly. &quot;It's so inconvenient, the app's logic is unclear at all!&quot; - they say. Whose fault is it? Let's try to figure out.",
+      "Speaker": "Yauheni Kaziak",
+      "SpeakerId": "595",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1015",
+      "Title": "Sviluppo IoT - Un approccio standard da Nerd ad Impresa, prove pratiche di Mesh",
+      "TimeSlotId": "14:00/14:40",
+      "TrackId": "4",
+      "Abstract": "Gli anni passati a veder nascere e crescere tecnologie e tendenze ci aiutano a comprendere come l'Internet delle Cose sia diventata matura per il mercato delle imprese. L’intervento, che include una panoramica sulle tendenze attuali e future dell’IoT, è centrato sullo sviluppo di soluzioni basate su standard industriali in ascesa (eg. Z-Wave), mettendo in evidenza gli inevitabili vantaggi e limiti derivanti dall’adozione di una metodologia industriale: solo un approccio industriale può rappresentare il vero e proprio salto di qualità per proporre prodotti efficaci per un mercato a doppia cifra",
+      "Speaker": "Nino Guarnacci",
+      "SpeakerId": "413",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1017",
+      "Title": "Hacking your doorbell",
+      "TimeSlotId": "16:10/17:10",
+      "TrackId": "4",
+      "Abstract": "Interested in getting started reverse engineering hardware? In this talk we will take a look at how I took a regular doorbell and made it computer controlled, and how extremely simple it was! This talk asserts the possible technology choices for hardware hacking such as Arduino, Netduino,Raspberry PI and more, how basic reverse engineering of existing hardware is done (analysis, tools for analysis etc) and how to get started hacking hardware in a Microsoft/C# .NET  (well mostly) environment TODAY!",
+      "Speaker": "Karl-Henrik Nilsson",
+      "SpeakerId": "834",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1018",
+      "Title": "Trash Robotic Router Platform",
+      "TimeSlotId": "17:20/18:00",
+      "TrackId": "4",
+      "Abstract": "Building a drone from scratch with spare parts is a challenging business. To accomplish this journey, a Linux embedded stability control system is developed entirely from 0.This is a journey starting from the hardware choosing (a home WIFI router), to a stable and real flight. Unconventional implementations are one of the main topic, like using WiFi as communication between drone and pilot, HTML5 and COMET to show telemetry from the router web server, and implementing a entirely new protocol based on 802.11 Beacon Frames to prevent deauthentication attacks.",
+      "Speaker": "David Melendez",
+      "SpeakerId": "1110",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1021",
+      "Title": "The Dark Side of Malware Analysis",
+      "TimeSlotId": "10:00/11:00",
+      "TrackId": "5",
+      "Abstract": "Storicamente il reversing di eseguibili è sempre stata una pratica oscura associata alla pirateria o allo spionaggio industriale, ma oggi, con l'aumentare di malware targettizzati, quest'arte sta diventando un argomento molto discusso perchè necessita \r\nuna forte capacità di analisi, intuizione ed inventiva. Ma perchè è così importante analizzare un malware? Quali strumenti utlizzare, ma soprattutto come approcciare il problema?  Come gestire i meccanismi di protezione adottati? Niente di meglio \r\nper addentrarci nel mondo della malware analysis partendo proprio da alcuni casi reali",
+      "Speaker": "Andrea Pompili",
+      "SpeakerId": "190",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1024",
+      "Title": "Securing your apps with OAuth2 and OpenID Connect",
+      "TimeSlotId": "12:20/13:00",
+      "TrackId": "5",
+      "Abstract": "In the past you could come by with designing a login screen with a username and login textbox in your app and directly check the credentials in a database. But we're living in the age of (Web) APIs. With modern apps, like SPAs, just authenticating with the website isn't enough, you also want to connect on behalf of the logged in user in a Web API that is providing data for example.\r\nOpenId Connect and OAuth2 for authorisation together are the complete solution to this problem.\r\nIn this session after a furter explanation we'll look at a collection of .Net apps that demonstrate this process.",
+      "Speaker": "Roland Guijt",
+      "SpeakerId": "1064",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1027",
+      "Title": "Rendere sicure le esperienze dell'individuo nel mondo digitale allargato",
+      "TimeSlotId": "14:50/15:50",
+      "TrackId": "5",
+      "Abstract": "La User Experience si evolve guidata delle opportunità tecnologiche (Mobility, Active Spaces, Internet delle Cose, Wearable, ...). I nuovi servizi coinvolgono un sempre maggior numero di utenti e di Smart Objects. I volumi e la complessità degli scenari determinano una serie di nuove vulnerabilità che attirano l'interesse di un Cyber-crimine sempre più determinato e sofisticato. Riconoscere il rischo e sviluppare di conseguenza soluzioni &quot;sicure&quot; è il primo, fondamentale elemento per contribuire a mitigare il quadro complessivo della minaccia tecnologica.",
+      "Speaker": "Pietro Scarpino",
+      "SpeakerId": "1183",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1037",
+      "Title": "Every millisecond counts: Techniques, strategies, and tools for a Web Performance Jedi Wannabe",
+      "TimeSlotId": "14:00/14:40",
+      "TrackId": "6",
+      "Abstract": "Developers, Designers, and Project Managers love to promise high performance for their web apps.\r\nBut they know they're lying. In fact most of the websites fail from a performance point of view.\r\nIn this talk I focus on every aspect and strategy that you have to consider to to fulfill the promise: performance metrics, measurements and monitoring strategy, optimization best practices, the paradox of third-party content, image rendering, browser performance tools.\r\n\r\nWith one goal in mind: finding small changes that led to some of the biggest performance gains.",
+      "Speaker": "Marco  Casario",
+      "SpeakerId": "376",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1038",
+      "Title": "E' meglio Kanban o Scrum? (Prossima domanda, prego)",
+      "TimeSlotId": "14:50/15:50",
+      "TrackId": "6",
+      "Abstract": "Metto a confronto - con l'aiuto del pubblico -  i due &quot;metodi agili&quot; più di moda - Scrum, al top delle classifiche da qualche anno, e Kanban, stabile al secondo posto. Riassumo la loro storia ed evoluzione.  Riepilogo le loro &quot;regole&quot; (cosa prescrivono, in termini di ruoli, eventi. processi). Mostro un po' di dati sulla loro adozione, in Italia e all'estero. E concludo con un piccolo ragionamento sui valori che ci stanno dietro (a loro e altri metodi &quot;agili&quot;), che spiega perchè la domanda &quot;E' meglio x o y?&quot; è, in molti casi, poco significativa.",
+      "Speaker": "Carlo Beschi",
+      "SpeakerId": "583",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1039",
+      "Title": "The Value of Open Source",
+      "TimeSlotId": "16:10/17:10",
+      "TrackId": "6",
+      "Abstract": "Open Source is undoubtably valuable and has a strong intrinsic worth.  But where does this value exist?  Does the value lie in the software produced, or somewhere else?  How could Open Sourcing your software benefit your company?  In this talk we’ll explore the main benefits of Open Source, how it can benefit you and how it can lead to better software.",
+      "Speaker": "Robin Johnson",
+      "SpeakerId": "1073",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1040",
+      "Title": "Agile Project Management: Integrare metodologie di progetto tradizionali con Agile",
+      "TimeSlotId": "17:20/18:00",
+      "TrackId": "6",
+      "Abstract": "Negli ultimi anni, anche secondo l'approccio Lean Startup, il modo migliore per rilasciare prodotti - non solo software - è tramite framework Agili. Quando si è agili all'interno di un organizzazione più tradizionale, questo approccio spesso si scontra con le prassi di gestione progetti più tradizionali. Nonostante lo scontro - principalmente filosofico - è in realtà possibile integrare metodologie di progetto tradizionali con quelle agili.\r\nDurante il talk, dopo una breve introduzione, saranno presentati dei modelli di ciclo di vita Agile e Tradizionale e la struttura consigliata dei team.",
+      "Speaker": "Simone Onofri",
+      "SpeakerId": "156",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1043",
+      "Title": "Hands-on with BigQuery JavaScript User-Defined Functions",
+      "TimeSlotId": "10:00/11:00",
+      "TrackId": "7",
+      "Abstract": "Performing ETL on big data can be slow, expensive and painful - but it doesn't have to be! In this session, we'll take an in-depth look at several real-world examples of computations that don't fit well with the SQL language model and how to solve them with user-defined functions in Google BigQuery.\r\n\r\nBigQuery is a fully-managed SQL analytical engine, also used internally in Google, capable of analyzing terabytes of data per second. BigQuery executes user-defined functions on the same server shards that handle data processing and analytics, allowing extremely efficient execution.",
+      "Speaker": "Felipe Hoffa",
+      "SpeakerId": "338",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1046",
+      "Title": "GlusterFS : un file system open source per i big data di oggi e domani",
+      "TimeSlotId": "12:20/13:00",
+      "TrackId": "7",
+      "Abstract": "GlusterFS (www.gluster.org) è un file system distribuito open source, scalabile  fino ai petabytes.\r\nLa presentazione ha lo scopo di mostrare le feature di questo FS e la nostra esperineza, che parte nel 2010 con un  cluster da 4TB all'odierno da 30TB: perchè è stato scelto, principali features, evoluzione, fallimenti (anche quelli), futuro.  \r\nAlcune feature: accesso in user-space, protocolo nativo, NFS, SMB .  Replicazione, distribuzione, striping dei file o una loro  combinazione (e.g: distributed striped replicated).  All'interno dell'ecosistema Hadoop può sostituire HDFS.",
+      "Speaker": "Roberto Franchini",
+      "SpeakerId": "52",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1048",
+      "Title": "From Docker To Kubernetes: A Developer's Guide To Containers",
+      "TimeSlotId": "14:00/14:40",
+      "TrackId": "7",
+      "Abstract": "Everyone is talking about Containers, but mostly in the context of how they work and not why and when they are useful or how to apply them to your own often complex and unique Use Cases. We'll start by looking at how Docker works by manually creating a simple guestbook application using Docker Containers running Redis and PHP.  We'll then use the same application to show how you can use Kubernetes and Google Container Engine to create a cluster of nodes, declare to that cluster what you expect it to do, and then have the cluster assign resources as needed, run your work, recover from failures.",
+      "Speaker": "Mandy Waite",
+      "SpeakerId": "513",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1054",
+      "Title": "Kotlin, the Swift of Android",
+      "TimeSlotId": "10:00/11:00",
+      "TrackId": "8",
+      "Abstract": "Apple has introduced “a better language” for iOS developers. But what options do we have for Android? Surely Kotlin should be under consideration! Android Studio is now based on Intellij Idea, the “native” environment for Kotlin.\r\nKotlin is a modern language for industry. It can help you reduce the amount of code you write for Android applications and at the same time make it readable and more maintainable. In this session we’re going to see how certain constructs and DSL’s can be used to make Android more enjoyable.",
+      "Speaker": "Svetlana Isakova",
+      "SpeakerId": "943",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1056",
+      "Title": "Loving Beautiful Code - Alla Scoperta di Laravel 5",
+      "TimeSlotId": "11:30/12:10",
+      "TrackId": "8",
+      "Abstract": "Laravel 4 ha portato una ventata d'aria fresca nel mondo PHP. Adesso, nel 2015, l'uscita di Laravel 5 segna un ulteriore punto di svolta. In questo talk Francesco introdurrà l'ultima versione del Framework e spiegherà quanto è semplice creare applicazioni, in pochissimo tempo e con una sintassi piacevole ed espressiva. Verranno coperte tutte le basi necessarie ad iniziare a lavorare, partendo dal MVC arrivando ad Eloquent, il potente ORM in dotazione. Come degna conclusione, quindi, una veloce sessione di live coding per rendere l'idea del vero livello di flessibilità di Laravel.",
+      "Speaker": "Francesco Malatesta",
+      "SpeakerId": "1173",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1059",
+      "Title": "Una lista di cose che potresti non sapere su Python",
+      "TimeSlotId": "14:00/14:40",
+      "TrackId": "8",
+      "Abstract": "Dopo più di due anni di Python ho stilato una lista di librerie e trucchi che mi aiutano nella mia attività di sviluppo quotidiano, lista che penso valga la pena di essere condivisa. Non siate timidi e venite a seguire il talk, potreste scoprire qualcosa di nuovo (o insegnare qualcosa di nuovo a me).",
+      "Speaker": "Luca Lanziani",
+      "SpeakerId": "967",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1060",
+      "Title": "PHP is the king, nodejs is the prince and Python is the fool",
+      "TimeSlotId": "14:50/15:50",
+      "TrackId": "8",
+      "Abstract": "At Namshi, an e-commerce retailer based in Dubai serving the UAE and GCC, we are using different technologies to boost our architecture.\r\nWe started with a common architecture based on PHP Nginx, Mysql and Memcache: the usual suspects. \r\nDuring last year the architecture changed a lot, using an SOA paradigm to meet expectations and the huge increase of traffic from several millions users throughout the year. But there’s more…\r\nIn this talk we will show how funny, easy and rewarding is to integrate different technologies in your stack, with PHP always being the king of the whole system.",
+      "Speaker": "Alessandro Cinelli",
+      "SpeakerId": "470",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1061",
+      "Title": "Join The Dart Side Of Web Development 2 ( Use The Force )",
+      "TimeSlotId": "16:10/17:10",
+      "TrackId": "8",
+      "Abstract": "Hai seguito il precedente Talk su Dart a Codemotion Roma e Milano 2014? Ti ha incuriosito questo nuovo e potente linguaggio  &quot;battery included&quot; by Google?\r\nAllora proseguiamo questo viaggio all'interno del Dartiverse, visiteremo insieme Polymer.Dart, Dart Force, e StageXL alcune tra la più potenti librerie per realizzare Web App davvero potenti in maniera semplice.",
+      "Speaker": "Giovanni Laquidara",
+      "SpeakerId": "266",
+      "Day": "Friday"
+    },
+    {
+      "Id": "1062",
+      "Title": "My adventure with Elm",
+      "TimeSlotId": "17:20/18:00",
+      "TrackId": "8",
+      "Abstract": "Reactive Extensions (Rx) has brought reactive programming to the mainstream in recent years with successful adoption in languages such as C#, Java and JavaScript. But have you ever wondered what Rx will look like as a language?\r\n\r\nElm is a new programming language based on the idea of Functional Reactive Programming (FRP). Elm lets you create highly interactive web applications without all the messy callbacks tangling around shared states.\r\n\r\nIn this talk Yan Cui will give a gentle introduction to Elm and FRP and finish off with a live demo building a web-based game from scratch.",
+      "Speaker": "Yan Cui",
+      "SpeakerId": "948",
+      "Day": "Friday"
+    }
+  ]
+}

@@ -1,0 +1,404 @@
+{
+  "Tracks": [
+    {
+      "Id": "Startup",
+      "Identifier": "1"
+    },
+    {
+      "Id": "Enterprise - Architecture",
+      "Identifier": "2"
+    },
+    {
+      "Id": "UX",
+      "Identifier": "3"
+    },
+    {
+      "Id": "Inspiration",
+      "Identifier": "4"
+    },
+    {
+      "Id": "Front end",
+      "Identifier": "5"
+    },
+    {
+      "Id": "Functional and Reactive Programming",
+      "Identifier": "7"
+    },
+    {
+      "Id": "Server side - Full stack",
+      "Identifier": "8"
+    }
+  ],
+  "TimeSlots": [
+    {
+      "Id": "09:00/10:00",
+      "Info": null
+    },
+    {
+      "Id": "10:10/11:10",
+      "Info": "Keynote"
+    },
+    {
+      "Id": "11:10/11:40",
+      "Info": "Coffee break"
+    },
+    {
+      "Id": "11:40/12:20",
+      "Info": null
+    },
+    {
+      "Id": "12:30/13:10",
+      "Info": null
+    },
+    {
+      "Id": "13:10/14:10",
+      "Info": "Lunch time"
+    },
+    {
+      "Id": "14:10/14:50",
+      "Info": null
+    },
+    {
+      "Id": "15:00/16:00",
+      "Info": null
+    },
+    {
+      "Id": "16:00/16:20",
+      "Info": "Coffee break"
+    },
+    {
+      "Id": "16:20/17:20",
+      "Info": null
+    },
+    {
+      "Id": "17:30/18:10",
+      "Info": null
+    },
+    {
+      "Id": "18:15/18:20",
+      "Info": "Closing Keynote"
+    }
+  ],
+  "Sessions": [
+    {
+      "Id": "1064",
+      "Title": "Una Startup asincrona e distribuita",
+      "TimeSlotId": "09:00/10:00",
+      "TrackId": "1",
+      "Abstract": "Costruire una startup con un team tecnico completamente remoto non è un modo per evitare il traffico mattutino, ma un' opportunità per costruire una squadra migliore e più produttiva. Il lavoro remoto richiede un diverso approccio alla comunicazione ed ai processi, ma se gestito in modo corretto, può essere un arma capace di fare la differenza.",
+      "Speaker": "Bruno Bellissimo",
+      "SpeakerId": "724",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1071",
+      "Title": "Tecnologie e Startup: ICT &egrave; solo una commodity?",
+      "TimeSlotId": "15:00/16:00",
+      "TrackId": "1",
+      "Abstract": "Questa sessione vuole affrontare il tema della tecnologia e come questa possa essere una leva fondamentale per le nuove Startup. Nella prima parte saranno discussi i maggiori trend di mercato: le tecnologie più in voga e ricercate, quelle già mature e consolidate e quelle che sono in fase calante ma che avranno un alto impatto in futuro. Nella seconda parte mostrerò alcuni tool e tecniche che possono migliorare la gestione del lavoro di una start-up introducendo meccanismi di sviluppo agili.",
+      "Speaker": "Matteo Valoriani",
+      "SpeakerId": "359",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1073",
+      "Title": "How to create a product (Practical Guide)",
+      "TimeSlotId": "16:20/17:20",
+      "TrackId": "1",
+      "Abstract": "When developing a new product, two problems often arise:\r\n- Which features should be developed?\r\n- How to work with developers avoiding frustration?\r\n\r\nThe aim of the talk is to present a practical process to manage the development of new features. \r\nSpecifically, it illustrates the tricks that product managers use to navigate through the complexity of product development.\r\n\r\nThe process is described with practical examples and it is composed by 3 steps:\r\n1) Choosing the features \r\n2) Managing the development   \r\n3) Measuring the results",
+      "Speaker": "Giuseppe Laddomada",
+      "SpeakerId": "1172",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1077",
+      "Title": "Let's talk about the cache !",
+      "TimeSlotId": "09:00/10:00",
+      "TrackId": "2",
+      "Abstract": "We all know that caching is a solution for developers to increase the performance of an application. We will start by presenting the JSR-107 terminology and the most important cache patterns. Some use cases will also be discussed and you will see how you can scale your cache from a single node to a multi node cluster. If you are a beginners in caching or if the words Cache Aside, Write-Behind, Read/Write Through doesn’t means anything to you or if you are interesting about high availabilty and scalable architecture, that this is the place to be !",
+      "Speaker": "Mathilde Lemée",
+      "SpeakerId": "524",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1080",
+      "Title": "Stack Overflow - obiettivo performance",
+      "TimeSlotId": "11:40/12:20",
+      "TrackId": "2",
+      "Abstract": "Stack Exchange è uno dei 50 maggiori network al mondo ed è sviluppato con l'obiettivo di essere il sito più veloce in assoluto. \r\nNel talk racconto:\r\n* L'architettura fisica di Stack Overflow. Quanti server abbiamo? A cosa servono e cosa sono le loro spec?\r\n* L'architettura logica del software. Come scaliamo? Quali sono i pezzi principali dell'applicazione?\r\n* Il sistema di tool. Cosa usiamo per sostenere la nostra filosofia di &quot;extreme optimization&quot;?\r\n* Il team di sviluppo. Quali sono i nostri valori fondamentali? Che impronta volgiamo lasciare come sviluppatori?",
+      "Speaker": "Marco Cecconi",
+      "SpeakerId": "506",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1081",
+      "Title": "Domain Driven Design + Command Query Responsibility Segregation + Event Sourcing = l&rsquo;architettura del futuro",
+      "TimeSlotId": "12:30/13:10",
+      "TrackId": "2",
+      "Abstract": "Qual'è lo stato dell'arte delle architetture software? Costruiamo la soluzione con le ultime evoluzioni di Domain Driven Design, otteniamo ottime prestazioni con Command Query Responsibility Segregation e scaliamo alla grande con Event Sourcing, puntando ai microservice per ottenere un'architettura robusta, affidabile, veloce, distribuita e scalabile.",
+      "Speaker": "Valerio Del Bello",
+      "SpeakerId": "1111",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1083",
+      "Title": "The Fast and The Mobile",
+      "TimeSlotId": "14:10/14:50",
+      "TrackId": "2",
+      "Abstract": "Frameworks such as AngularJS and Polymer are great tools for building complex systems with less coding. But what if your client wants ultra-high performance? This talk shows you how to deal with some lower-level decisions in order to achieve a solid architecture and a highly performant JavaScript on mobile web applications using some old friends like Backbone, RequireJS, Mustache and a lot of trial-and-error. The examples shown are based on PagineGialle's mobile webapp, whose performance impressed Google Italy.",
+      "Speaker": "Matteo Antony Mistretta",
+      "SpeakerId": "1050",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1084",
+      "Title": "Advanced search for your legacy application",
+      "TimeSlotId": "15:00/16:00",
+      "TrackId": "2",
+      "Abstract": "How do you mix SQL and NoSQL worlds without starting a messy revolution?\r\n\r\nThis live coding talk will show you how to add Elasticsearch to your legacy application without changing all your current development habits. Your application will have suddenly have advanced search features, all without the need to write complex SQL code!\r\n\r\nDavid will start from a Spring, Hibernate and Postgresql based application and will add a complete integration of Elasticsearch, all live from the stage during his presentation.",
+      "Speaker": "David Pilato",
+      "SpeakerId": "116",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1085",
+      "Title": "Refactor your Java EE application using Microservices and Containers",
+      "TimeSlotId": "16:20/17:20",
+      "TrackId": "2",
+      "Abstract": "This talk will provide a quick introduction to Docker images (build time), containers (run time), and registry (distribution). It shows how to take an existing Java EE application and package it as a monolithic application as a single Docker image. The application will then be refactored in to multiple microservices and assembled together using orchestration. Unit and integration testing of such applications will be discussed and shown as well. Design patterns and anti-patterns that show how to create cluster of such applications will be demonstrated and discussed.",
+      "Speaker": "Arun Gupta",
+      "SpeakerId": "926",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1087",
+      "Title": "Come creare e manutenere una Styleguide visiva per i tuoi clienti",
+      "TimeSlotId": "17:30/18:10",
+      "TrackId": "2",
+      "Abstract": "In base alla maturità, tipologia e dimensione di un progetto i workflow di design e sviluppo possono cambiare. \r\nUna delle tecniche più 'breakthrough' dei workflow è quella delle styleguide.\r\nCosa sono (e cosa non sono)? Come si usano? Come si progettano? Quali sono i pro e i contro? Serve per forza BEM? arà un talk 20% metodo, 60% tecnica e 20% domande!",
+      "Speaker": "Fabio Fabbrucci",
+      "SpeakerId": "307",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1089",
+      "Title": "Integrating User Experience and Agile",
+      "TimeSlotId": "09:00/10:00",
+      "TrackId": "3",
+      "Abstract": "The web is no longer in it's infancy. We're growing up. The age old model of creating time consuming deliverables just to appease a client is over. Disciplines must now collaborate, reduce waste and learn to be truly agile in order to create high quality products. In this presentation attendees will discover: \r\n\r\n• a quick review of user experience\r\n• methodology tools in the toolbox (Agile, Scrum, Kanban, Lean)\r\n• the difference between a deliverable and an artifact \r\n• integrating user experience into agile processes\r\n• ways to reduce waste and get to market quickly",
+      "Speaker": "Bermon Painter",
+      "SpeakerId": "192",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1092",
+      "Title": "Mobile UX for user engagement and monetization",
+      "TimeSlotId": "11:40/12:20",
+      "TrackId": "3",
+      "Abstract": "The talk dives into the best practices for user engagement and monetization of mobile apps and games. Through examples and real-life scenarios, the key moments of the mobile user experience  will be examined to provide guidelines and hands-on practices to help monetize apps and turn average users into a marketing and revenue building resource.",
+      "Speaker": "Emilia Ciardi",
+      "SpeakerId": "1163",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1093",
+      "Title": "Beyond responsive design - UI for the modern web application",
+      "TimeSlotId": "12:30/13:10",
+      "TrackId": "3",
+      "Abstract": "Applications written for the modern web are being consumed not just on desktops, but also on a myriad of other devices... even watches and glasses. If you design your application with a pc screen in mind, you're either cutting your userbase in half or setting yourself up for an expensive redesign. In this talk I'll introduce you to some modern web design constructs, and the technologies that bring them to life. Learn how to create apps for phone, mobile and desktop with no extra effort, and without restrictive layout frameworks. Web has finally caught up with native apps... the future is now!",
+      "Speaker": "Pete Smith",
+      "SpeakerId": "977",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1107",
+      "Title": "The Wolf Method. Dall'Epic Fail al Problem Solving Creativo.",
+      "TimeSlotId": "14:10/14:50",
+      "TrackId": "4",
+      "Abstract": "Ogni problema può diventare un'opportunità se sai come trasformarlo a tuo vantaggio. \r\nPassando da McGyver al Signor Wolf l’intervento si propone di rispondere a una delle sfide più impegnative poste dalla programmazione così come dalla vita: la necessità di acquisire insieme ai linguaggi anche una nuova mentalità orientata alla risoluzione dei problemi. \r\nIl Problem Solving può aiutare a trovare soluzioni non convenzionali alle difficoltà quotidiane, purché si conoscano le strategie logiche che non sono frutto di un improvviso atto di creatività ma sono basate su decodificate metodologie.",
+      "Speaker": "Lucia Zappacosta",
+      "SpeakerId": "329",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1108",
+      "Title": "Waaaaaah! - Sviluppare Software con la Produzione Relazionale Ricombinante (RRP)",
+      "TimeSlotId": "15:00/16:00",
+      "TrackId": "4",
+      "Abstract": "Sviluppare il software richiede migliaia di piccole decisioni da parte di noi sviluppatori. Quale criterio usiamo per fare il nostro prossimo passo? La consapevolezza di questo criterio è la chiave per la nostra produttività. Francesco presenterà un nuovo approccio allo sviluppo del software basato su questa forma di consapevolezza. Essere consapevoli delle nostre decisioni può farci scoprire nuovi modi di fare design e di organizzare il nostro team in modo produrre più feature con meno costi e in modo sostenibile.",
+      "Speaker": "Francesco Cirillo",
+      "SpeakerId": "663",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1109",
+      "Title": "No more excuses left - let's build great things",
+      "TimeSlotId": "16:20/17:20",
+      "TrackId": "4",
+      "Abstract": "As developers, we know things break. We also know how to fix them. What we don't do is do this efficiently. Instead we seem to have a perverse fascination telling one another and the world how broken things are. If you look, however, how cool technology is these days, what tools we have at our disposal and the latest changes in the last excuse we had: &quot;What about IE?&quot; it is time to stop complaining and get to work. Our job is to build things that people want to use. Not to complain about our tools. This is what people looking for excuses do. We're better than that.",
+      "Speaker": "Christian Heilmann",
+      "SpeakerId": "1099",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1113",
+      "Title": "Typescript, Angular e Bootstrap assieme per applicazioni real world",
+      "TimeSlotId": "09:00/10:00",
+      "TrackId": "5",
+      "Abstract": "La recente affermazione in ambito web delle applicazioni rich basate su HTML5 e Javascript è diventato sorgente di una serie di librerie innovative e di strumenti che, se usati correttamente, possono semplificare enormemente lo sviluppo. In questa sessione sarà illustrato come sfruttare Typescript, in concomitanza con Angular e Bootstrap per realizzare applicazioni che sfruttino al massimo le possibilità dei browser e diano un feedback il più possibile simile alle applicazioni desktop",
+      "Speaker": "Andrea Boschin",
+      "SpeakerId": "287",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1116",
+      "Title": "CSS3 Layouts: Flexbox vs CSS Grid",
+      "TimeSlotId": "11:40/12:20",
+      "TrackId": "5",
+      "Abstract": "The way we create layouts is messy we have to admit it, those floats and inline-block's don't make anyone's life any easier and they aren't exactly tools for creating massive layouts, just properties we adapted for our layout needs because, well, they worked and we got used to them.\r\nWith CSS3 we got Flexbox and the CSS grid , two things created especially for the creation of layouts , in here I will talk about each one, the pros , the cons and why you should be looking forward to using these in production. All of this so you can go home with even more hope for the future of CSS.",
+      "Speaker": "Sara Vieira",
+      "SpeakerId": "1054",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1117",
+      "Title": "AbsurdJS - Hacking the front-end",
+      "TimeSlotId": "12:30/13:10",
+      "TrackId": "5",
+      "Abstract": "It's a talk about AbsurdJS (http://absurdjs.com/). JavaScript library that acts as a CSS and HTML preprocessor. At the same time is a template engine and client-side framework. The presentation is made of two parts. The first one presents the library and the second one is a real life example of its usage.",
+      "Speaker": "Krasimir Tsonev",
+      "SpeakerId": "998",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1119",
+      "Title": "lean frontend development",
+      "TimeSlotId": "14:10/14:50",
+      "TrackId": "5",
+      "Abstract": "Il processo di maturazione dello sviluppo frontend passa per l'adozione di metodologie agili e \r\nlean, vedremo una sequenza di tecniche e di metodologie per alleggerirlo, costruendo il nostro mvp \r\nin maniera modulare e realizzando progetti più scalabili",
+      "Speaker": "Matteo guidotto",
+      "SpeakerId": "908",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1120",
+      "Title": "AngularJS 2.0: A natural evolvement or a new beginning",
+      "TimeSlotId": "15:00/16:00",
+      "TrackId": "5",
+      "Abstract": "For only a couple of years AngularJS has become a standard when talking about single-page applications. Its modularity, testability and structure gives developers a well-defined scope and certain confidence in their projects. As Web changes, so a natural change is expected to happen in the project itself. Version 2.0 however brings a far new world. Although it builds on the existing foundation and governing principles behind the project, it reveals some aspects that have already provoked discussions in the community. In this talk I will go through the new components in AngularJS 2.0: ECMAScrip",
+      "Speaker": "Boyan Mihaylov",
+      "SpeakerId": "1091",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1123",
+      "Title": "Progressive Enhancement for JavaScript Apps",
+      "TimeSlotId": "17:30/18:10",
+      "TrackId": "5",
+      "Abstract": "When progressive enhancement was introduced as a concept, JavaScript applications seemed as relevant as flying cars. As JS became more powerful, it seemed we'd reach a point where we could forget PE entirely. For its original meaning, we now have rock-solid libraries and polyfills to provide abstractions that make PE easy. But as JS has advanced, we've started writing things that can't be polyfilled. We know now how to progressively enhance widgets and user interactions. We'll talk about how we progressively enhance entire applications, and why it's more important than ever that we do so.",
+      "Speaker": "Garann Means",
+      "SpeakerId": "1151",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1137",
+      "Title": "OOP and FP: become a better programmer",
+      "TimeSlotId": "09:00/10:00",
+      "TrackId": "7",
+      "Abstract": "Hear the story of Simon, an experienced OOP Java developer, exposed to the new lambda features of JDK 8.\r\nHis friend Mario, a long-bearded FP geek, will try to convince him that FP can help him develop more readable and maintainable code.\r\nA journey into the discovery of the main new feature - lambda expressions - of JDK 8.",
+      "Speaker": "Simone Bordet",
+      "SpeakerId": "299",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1140",
+      "Title": "Functional Programming You Already Know",
+      "TimeSlotId": "11:40/12:20",
+      "TrackId": "7",
+      "Abstract": "From JVM to .NET languages, from minor coding idioms to system-level architectures, functional programming is enjoying a long overdue surge in interest. Functional programming is certainly not a new idea and, although not apparently as mainstream as object-oriented and procedural programming, many of its concepts are also more familiar than many programmers believe.\r\n\r\nThis talk examines functional and declarative programming styles from the point of view of coding patterns, little languages and programming techniques already familiar to many programmers.",
+      "Speaker": "Kevlin Henney",
+      "SpeakerId": "1011",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1141",
+      "Title": "Fun with Functional JavaScript",
+      "TimeSlotId": "12:30/13:10",
+      "TrackId": "7",
+      "Abstract": "It might be a surprise for some of you, but JavaScript can be regarded as a functional programming language. Why don't we use more functional programming concepts in our JavaScript code, then? In this talk you will learn how to start including some of them in your applications and when they might be particularly beneficial. You will also get familiar with libraries that extend the functional capabilities of JavaScript (lodash and FunctionalJS) and the upcoming ES6 features that make JavaScript even more functional.",
+      "Speaker": "Kuba Waliński",
+      "SpeakerId": "749",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1143",
+      "Title": "import Golang; struct microservices",
+      "TimeSlotId": "14:10/14:50",
+      "TrackId": "7",
+      "Abstract": "Se anni fa abbiamo pensato applicazioni complesse con in mente l’omonogeneità,oggi facilmente ci ritroveremo un accumulo disordinato di codice lento e difficile da mantenere.\r\n\r\nIl talk ci porta violentemente nel 2015, nel mondo dei microservizi, dove \r\nil vero protagonista è GOlang, che fa della sua filosofia il punto di forza.\r\n\r\nIn questo viaggio nelle buone pratiche e negli esempi di come implementare applicazioni modulari e pronte a crescere verranno installati nella testa concetti come  Rest, Websocket, Json Web Token, Docker, httptest ...",
+      "Speaker": "Giulio De Donato",
+      "SpeakerId": "168",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1147",
+      "Title": "Meteor + Polymer, the Holy Grail of Web Development.",
+      "TimeSlotId": "17:30/18:10",
+      "TrackId": "7",
+      "Abstract": "Meteor is an open-source Javascript platform for building modern web apps. Polymer is a library for creating Web Components, which are a set of W3C standards and upcoming browser APIs for defining your own custom HTML elements. Let's combine them to build modern, reactive and beautiful web apps.",
+      "Speaker": "Enrico Risa",
+      "SpeakerId": "297",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1149",
+      "Title": "RealTime Ninja - Hands on MEAN",
+      "TimeSlotId": "09:00/10:00",
+      "TrackId": "8",
+      "Abstract": "Il talk sarà diviso in due parti.Nella prima analizzeremo brevemente le peculiarità di Node.js (e simili), le ragioni del suo successo e i domini applicativi di questo tipo di tecnologia. Vedremo anche cosa può aspettarsi uno sviluppatore frontend deciso a fare il grande passo e a cominciare a usare Javascript anche sul server. Nella seconda svilupperemo passo passo un servizio di API/REST in NodeJs, persistendo i dati su un database non relazionale (MongoDB). Sarà spiegato come impostare l’applicazione, definire rotte, middleware e modelli e infine come implementare notifiche realtime.",
+      "Speaker": "Matteo Scandolo Giovanni Lela",
+      "SpeakerId": "875",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1155",
+      "Title": "nginx for fun and performance",
+      "TimeSlotId": "14:10/14:50",
+      "TrackId": "8",
+      "Abstract": "Is it fast yet? Performance is getting ever more important and using nginx is one of the easiest hacks to make your system faster.\r\nThis talk takes a look at why and how nginx is so fast — it's all about being event-driven. Additionally, we discuss where you can make use of nginx's power, specifically for terminating SSL connections, providing a load balancer or proxy, and to run static websites as well as dynamic web-applications with PHP.",
+      "Speaker": "Philipp Krenn",
+      "SpeakerId": "1101",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1156",
+      "Title": "Develop and design RESTful web API in PHP using Apigility",
+      "TimeSlotId": "15:00/16:00",
+      "TrackId": "8",
+      "Abstract": "Develop a robust RESTful web API is not a simple task. How to manage the error handling? Which format to use for the data exchange? How to manage the content negotiation? What about the versioning? How to build an authentication system? How to produce the API documentation? In this talk we will show how to design and implement a REST architecture using Apigility, the open source API builder for PHP (http://apigility.org).",
+      "Speaker": "Enrico Zimuel",
+      "SpeakerId": "982",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1157",
+      "Title": "Fully Reactive - from Data to UI with OrientDB + Node.js + Socket.io",
+      "TimeSlotId": "16:20/17:20",
+      "TrackId": "8",
+      "Abstract": "Having both a reactive application layer and front-end is just not enough anymore. Today's reality demands a fully reactive architecture where all the layers, including the database, are able to interact with each other using a paradigm. In this presentation, you'll learn how to build a fully reactive application in a few minutes with just a few lines of code resulting in every database change propagating asynchronously between the application layer and the front-end.",
+      "Speaker": "Luigi Dell Aquila",
+      "SpeakerId": "141",
+      "Day": "Saturday"
+    },
+    {
+      "Id": "1159",
+      "Title": "Java EE facile con Spring Boot",
+      "TimeSlotId": "17:30/18:10",
+      "TrackId": "8",
+      "Abstract": "Costruiamo con Spring Boot una applicazione Java EE con transazioni multiple JDBC-JMS utilizzando  H2 e HornetQ (embedded in memory), il supporto di autoconfiguration JAX-RS (Jersey), le annotazioni JSR 250 per i lifecycle hooks, e le annotazioni JSR 330 utilizzabili per AS proprietari e per la portabilità in container di dependency injection come Spring. Per finire distribuiremo su Undertow embedded HTTTP server, su un AS standalone (Apache TomEE) e come PAAS su Cloud Foundry.",
+      "Speaker": "Luigi Bennardis",
+      "SpeakerId": "145",
+      "Day": "Saturday"
+    }
+  ]
+}

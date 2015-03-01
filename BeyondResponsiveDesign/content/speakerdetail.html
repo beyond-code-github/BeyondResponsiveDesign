@@ -33,6 +33,7 @@
         <div>
             <!-- ko foreach: Sessions -->
             <h2 data-bind="text: Title"></h2>
+            <p data-bind="text: Day + ' ' + TimeSlotId"></p>
             <div data-bind="html: Abstract"></div>
             <!-- /ko -->
         </div>
