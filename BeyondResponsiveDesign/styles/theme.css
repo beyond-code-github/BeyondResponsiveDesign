@@ -63,6 +63,7 @@ table > tbody > tr > td {
   padding: 0.5em 0.5em 0.5em 0.5em;
   overflow: hidden;
   min-height: 3rem;
+  min-width: 6em;
 }
 table > tbody > tr > td > h2 {
   font-weight: 400;

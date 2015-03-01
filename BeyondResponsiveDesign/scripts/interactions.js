@@ -278,6 +278,7 @@
 
     interactions.slideToTab = function (tab) {
         var tabLink = $("article > nav > ul > li#tab-" + tab);
+        tabLink[0].scrollIntoView();
         shiftElements(tabLink, "li");
 
         var tabContent = $("article > div.slideTabContainer > section#" + tab);

@@ -159,10 +159,12 @@ body > main > article > nav.toolbar > header {
 body > main > article > nav.toolbar > ul {
   min-height: 3em;
   height: 3em;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 body > main > article > nav.toolbar > ul > li {
-  display: block;
-  float: left;
+  display: inline-block;
 }
 .modalbackground,
 .popupbackground {

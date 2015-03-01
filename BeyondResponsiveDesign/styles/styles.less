@@ -174,10 +174,12 @@ body > main > article > nav.toolbar {
     > ul {
         min-height: @toolbar-height;
         height: @toolbar-height;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        white-space: nowrap;
 
         > li {
-            display: block;
-            float: left;
+            display: inline-block;
         }
     }
 }
