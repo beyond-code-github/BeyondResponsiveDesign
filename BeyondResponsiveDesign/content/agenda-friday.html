@@ -23,7 +23,7 @@
             <table class="agenda">
                 <tbody data-bind="foreach: { data: $root.TimeSlots, as: 'timeSlot' }">
                 <!-- ko with: $root.sessionInfo(track.Identifier, timeSlot.Id) -->
-                <tr data-bind="attr: { class: isSession(timeSlot, $data) }">
+                <tr data-bind="attr: { class: isSession(timeSlot, $data) }, click: $root.click">
                     <td><span data-bind="text: prettifyTime(timeSlot.Id)"></span></td>
                     <td>
                         <div>
@@ -42,6 +42,7 @@
         <!-- /ko -->
     </div>
 </article>
+<aside class="propertySheet wide offRight"></aside>
 <script type="text/javascript">
     var agendaLoaded = function (data) {
         var sessionInfo = function (trackId, timeSlotId) {
@@ -58,6 +59,14 @@
         viewModel.sessionInfo = sessionInfo;
         viewModel.prettifyTime = prettifyTime;
         viewModel.isSession = isSession;
+        viewModel.click = function (session, e) {
+            window.interactions.openPropertySheet("sessiondetail", session.Title).done(function () {
+                ko.applyBindings(session, $("main > aside.propertySheet > div")[0]);
+            });
+
+            e.stopPropagation();
+            e.preventDefault();
+        };
 
         ko.applyBindings(viewModel, $("article")[0]);
         interactions.slideToTab('1');

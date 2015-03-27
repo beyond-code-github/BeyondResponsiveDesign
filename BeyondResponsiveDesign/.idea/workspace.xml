@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12487dad-123d-497b-817a-130228b75904" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Code\BeyondResponsiveDesign\BeyondResponsiveDesign\content\team.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Code\BeyondResponsiveDesign\BeyondResponsiveDesign\images\Devoxx_Unknown.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Code\BeyondResponsiveDesign\BeyondResponsiveDesign\images\sponsors\Typesafe.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Code\BeyondResponsiveDesign\BeyondResponsiveDesign\images\sponsors\ejug.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Code\BeyondResponsiveDesign\BeyondResponsiveDesign\images\sponsors\gdg-vienna.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Code\BeyondResponsiveDesign\BeyondResponsiveDesign\images\sponsors\jsug.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Code\BeyondResponsiveDesign\BeyondResponsiveDesign\images\sponsors\pluralsight.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Code\BeyondResponsiveDesign\BeyondResponsiveDesign\images\sponsors\vienna-scala-user-group-logo.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/contact.html" afterPath="$PROJECT_DIR$/content/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/home.html" afterPath="$PROJECT_DIR$/content/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/sponsors.html" afterPath="$PROJECT_DIR$/content/sponsors.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/styles.css" afterPath="$PROJECT_DIR$/styles/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/styles.less" afterPath="$PROJECT_DIR$/styles/styles.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/sessiondetail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/agenda-friday.html" afterPath="$PROJECT_DIR$/content/agenda-friday.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BeyondResponsiveDesign.Menus.iws" />
@@ -40,21 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="theme.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/theme.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.966666" vertical-offset="1657" max-vertical-offset="11109">
-              <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content/home.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-8.4" vertical-offset="0" max-vertical-offset="861">
               <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="speakers.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/speakers.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-21.0" vertical-offset="0" max-vertical-offset="861">
+              <caret line="30" column="9" selection-start-line="12" selection-start-column="10" selection-end-line="30" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -70,31 +58,51 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="agenda-friday.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/agenda-friday.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.766666" vertical-offset="262" max-vertical-offset="2247">
+              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sessiondetail.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/content/sessiondetail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5428907" vertical-offset="0" max-vertical-offset="851">
+              <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="speakerdetail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/speakerdetail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.4" vertical-offset="0" max-vertical-offset="1197">
+              <caret line="22" column="17" selection-start-line="17" selection-start-column="8" selection-end-line="22" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="agenda-friday.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content/agenda-friday.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.689655" vertical-offset="1787" max-vertical-offset="8580">
-              <caret line="104" column="62" selection-start-line="104" selection-start-column="62" selection-end-line="104" selection-end-column="62" />
+            <state vertical-scroll-proportion="-10.433333" vertical-offset="1787" max-vertical-offset="9009">
+              <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/styles.less">
+      <file leaf-file-name="speakers.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/speakers.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.546875" vertical-offset="42" max-vertical-offset="4725">
-              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="26" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="transforms.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/transforms.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.90625" vertical-offset="43" max-vertical-offset="5145">
-              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="126">
+              <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -110,31 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interactions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/interactions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5384" max-vertical-offset="6300">
-              <caret line="282" column="0" selection-start-line="282" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41833138" vertical-offset="3550" max-vertical-offset="4431">
-              <caret line="186" column="36" selection-start-line="186" selection-start-column="36" selection-end-line="186" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.detect_swipe.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/jquery.detect_swipe.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="441" max-vertical-offset="1638">
-              <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+            <state vertical-scroll-proportion="-6.9666667" vertical-offset="3550" max-vertical-offset="4431">
+              <caret line="179" column="21" selection-start-line="179" selection-start-column="21" selection-end-line="179" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -161,7 +149,6 @@
         <option value="$PROJECT_DIR$/content/agenda-saturday.json" />
         <option value="$PROJECT_DIR$/content/speakerdetail.html" />
         <option value="$PROJECT_DIR$/content/agenda-saturday.html" />
-        <option value="$PROJECT_DIR$/content/agenda-friday.html" />
         <option value="$PROJECT_DIR$/scripts/interactions.js" />
         <option value="$PROJECT_DIR$/styles/theme.less" />
         <option value="$PROJECT_DIR$/content/contact.html" />
@@ -170,6 +157,8 @@
         <option value="$PROJECT_DIR$/content/sponsors.html" />
         <option value="$PROJECT_DIR$/content/sponsors.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/content/agenda-friday.html" />
+        <option value="$PROJECT_DIR$/content/sessiondetail.html" />
       </list>
     </option>
   </component>
@@ -661,13 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/speakers.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9186" max-vertical-offset="10143">
-          <caret line="466" column="7" selection-start-line="466" selection-start-column="7" selection-end-line="466" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/presentation.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="609" max-vertical-offset="1932">
@@ -703,21 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/speakerdetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.1" vertical-offset="105" max-vertical-offset="1197">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/speakers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="861">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/agenda-saturday.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1560" max-vertical-offset="8589">
@@ -734,14 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/agenda-friday.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="2058">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jquery.detect_swipe.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="441" max-vertical-offset="1638">
@@ -754,14 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5384" max-vertical-offset="6300">
           <caret line="282" column="0" selection-start-line="282" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/agenda-friday.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.689655" vertical-offset="1787" max-vertical-offset="8580">
-          <caret line="104" column="62" selection-start-line="104" selection-start-column="62" selection-end-line="104" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -816,8 +767,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41833138" vertical-offset="3550" max-vertical-offset="4431">
-          <caret line="186" column="36" selection-start-line="186" selection-start-column="36" selection-end-line="186" selection-end-column="36" />
+        <state vertical-scroll-proportion="-6.9666667" vertical-offset="3550" max-vertical-offset="4431">
+          <caret line="179" column="21" selection-start-line="179" selection-start-column="21" selection-end-line="179" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/speakers.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="126">
+          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/agenda-friday.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.766666" vertical-offset="262" max-vertical-offset="2247">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/speakers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.0" vertical-offset="0" max-vertical-offset="861">
+          <caret line="30" column="9" selection-start-line="12" selection-start-column="10" selection-end-line="30" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/agenda-friday.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.433333" vertical-offset="1787" max-vertical-offset="9009">
+          <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/speakerdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.4" vertical-offset="0" max-vertical-offset="1197">
+          <caret line="22" column="17" selection-start-line="17" selection-start-column="8" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/sessiondetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5428907" vertical-offset="0" max-vertical-offset="851">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
           <folding />
         </state>
       </provider>

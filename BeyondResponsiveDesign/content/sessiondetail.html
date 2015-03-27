@@ -1,0 +1,27 @@
+﻿<div class="scrollcontainer vscroll">
+    <section class="presentation">
+        <header>
+            <h2>
+                <i class="fa fa-lg fa-user"></i>
+                <span data-bind="text: Speaker"></span>
+            </h2>
+        </header>
+        <div class="responsiveimage speaker-photo">
+            <img class="rounded" data-bind="attr: { src: 'images/speakers/' + SpeakerId + '.jpg' }"/>
+        </div>
+    </section>
+    <section class="presentation">
+        <header>
+            <h2>
+                <i class="fa fa-lg fa-list"></i>
+                <span>Abstract</span>
+            </h2>
+        </header>
+        <div class="bio" data-bind="html: Abstract"></div>
+    </section>
+</div>
+<style>
+    .speaker-photo > img {
+        max-height: 25em;
+    }
+</style>
