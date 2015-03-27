@@ -129,19 +129,23 @@ body > header > h1 {
   margin: 0 auto;
 }
 body > header > ul {
-  float: left;
   color: #ffffff;
   margin: 0;
   padding: 0;
   list-style-type: none;
   white-space: nowrap;
 }
+body > header > ul:not(.headerIcons) {
+  margin-right: 2em;
+}
 body > header > ul.headerIcons {
-  float: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 body > header > ul > li {
+  overflow: hidden;
   position: relative;
-  float: left;
   margin: 0;
   white-space: nowrap;
   text-align: left;
@@ -152,6 +156,8 @@ body > header > ul > li {
   font-size: 1em;
 }
 body > header > ul > li > h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: #ffffff;
   font-weight: 400;
 }
@@ -339,7 +345,7 @@ body > main section > header > h2 > i.fa {
   font-size: 1.5rem;
 }
 body > main section > header > h2 > span {
-  padding: 0 3.75rem 0 1rem;
+  padding: 0 0 0 1rem;
   font-weight: 400;
   font-size: 1.125rem;
   text-indent: 0;

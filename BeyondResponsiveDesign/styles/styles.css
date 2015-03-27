@@ -53,14 +53,13 @@ body > header > h1 {
   width: 100%;
 }
 body > header > ul {
-  float: left;
   height: 3em;
   margin: 0;
 }
 body > header > ul > li {
   line-height: 3em;
   height: 3em;
-  display: inline-block;
+  display: inline;
 }
 body > header > ul > li.menuToggle {
   display: none;
