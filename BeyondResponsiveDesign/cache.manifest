@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# rev 2 - 2015-03-27T11:19:28.016Z
+# rev 4 - 2015-03-27T13:03:54.872Z
 
 CACHE:
 content/agenda-friday.html
@@ -239,15 +239,12 @@ styles/fonts/opensans_semibolditalic_macroman/specimen_files/specimen_stylesheet
 styles/fonts/opensans_semibolditalic_macroman/stylesheet.css
 styles/styles.css
 styles/styles.css.map
-styles/styles.less
 styles/styles.min.css
 styles/theme.css
 styles/theme.css.map
-styles/theme.less
 styles/theme.min.css
 styles/transforms.css
 styles/transforms.css.map
-styles/transforms.less
 styles/transforms.min.css
 styles/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot
 styles/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?iefix
@@ -262,6 +259,3 @@ styles/fonts/fontawesome-webfont.woff?v=4.1.0
 
 NETWORK:
 *
-
-FALLBACK:
-/ /offline.html

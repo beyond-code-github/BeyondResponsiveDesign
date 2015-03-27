@@ -8,7 +8,10 @@ module.exports = function(grunt) {
       all: {
         dest: 'BeyondResponsiveDesign/cache.manifest',
         cache: {
-          patterns: ['BeyondResponsiveDesign/**/*'],
+          patterns: [
+            'BeyondResponsiveDesign/**/*',
+            '!**/*.less'
+          ],
           literals: [
             'styles/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot',
             'styles/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?iefix',
@@ -21,8 +24,7 @@ module.exports = function(grunt) {
             'styles/fonts/fontawesome-webfont.ttf?v=4.1.0',
             'styles/fonts/fontawesome-webfont.woff?v=4.1.0']
         },
-        network: '*',
-        fallback: '/ /offline.html'
+        network: '*'
       }
     }
   });
