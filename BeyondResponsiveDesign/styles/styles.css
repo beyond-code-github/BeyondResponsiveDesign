@@ -11,6 +11,11 @@ body {
   bottom: 0;
   overflow: hidden;
 }
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 .scrollcontainer {
   overflow: hidden;
 }
