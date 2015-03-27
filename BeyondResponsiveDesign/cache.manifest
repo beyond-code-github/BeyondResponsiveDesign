@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# rev 4 - 2015-03-27T13:03:54.872Z
+# rev 2 - 2015-03-27T14:00:00.445Z
 
 CACHE:
 content/agenda-friday.html
@@ -10,6 +10,9 @@ content/cfp.html
 content/contact.html
 content/home.html
 content/presentation.html
+content/render-agenda-friday.html
+content/render-agenda-saturday.html
+content/render-speakers.html
 content/sessiondetail.html
 content/speakerdetail.html
 content/speakers.html
