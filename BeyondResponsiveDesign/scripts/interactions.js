@@ -199,6 +199,11 @@
                 e.stopPropagation();
             });
 
+        if (!location)
+        {
+            return $.Deferred().resolve().promise();
+        }
+
         return $.get("content/" + location + ".html").done(function (html) {
             var target = $("main > aside");
             target.empty();
