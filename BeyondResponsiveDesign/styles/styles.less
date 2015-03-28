@@ -68,11 +68,18 @@ body > header {
     > ul {
         height: @header-height;
         margin: 0;
+        padding: 0;
+
+        &.headerIcons {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
 
         > li {
             line-height: @header-height;
             height: @header-height;
-            display: inline;
+            display: inline-block;
 
             &.menuToggle {
                 display: none;

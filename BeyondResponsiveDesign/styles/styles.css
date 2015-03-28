@@ -55,11 +55,17 @@ body > header > h1 {
 body > header > ul {
   height: 3em;
   margin: 0;
+  padding: 0;
+}
+body > header > ul.headerIcons {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 body > header > ul > li {
   line-height: 3em;
   height: 3em;
-  display: inline;
+  display: inline-block;
 }
 body > header > ul > li.menuToggle {
   display: none;

@@ -130,20 +130,14 @@ body > header > h1 {
 }
 body > header > ul {
   color: #ffffff;
-  margin: 0;
-  padding: 0;
   list-style-type: none;
   white-space: nowrap;
 }
 body > header > ul:not(.headerIcons) {
   margin-right: 2em;
 }
-body > header > ul.headerIcons {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
 body > header > ul > li {
+  display: inline;
   overflow: hidden;
   position: relative;
   margin: 0;
